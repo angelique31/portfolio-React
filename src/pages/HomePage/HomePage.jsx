@@ -1,11 +1,19 @@
+import { useState } from "react";
 import NavBarColor from "../../components/NavBar/NavBarColor/NavBarColor";
 import Slider from "../../components/Slider/Slider";
+import Introduction from "../../components/Introduction/Introduction";
 
 const HomePage = () => {
+  const [showIntro, setShowIntro] = useState(true);
+
+  const handleCloseIntro = () => {
+    setShowIntro(false);
+  };
   return (
     <div>
       <NavBarColor />
       <Slider />
+      {showIntro && <Introduction onClose={handleCloseIntro} />}
     </div>
   );
 };
