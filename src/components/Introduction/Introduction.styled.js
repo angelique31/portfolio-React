@@ -1,38 +1,3 @@
-// import styled, { keyframes } from "styled-components";
-
-// const fadeIn = keyframes`
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// `;
-
-// export const IntroContainer = styled.div`
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   text-align: center;
-//   animation: ${fadeIn} 2s ease-in-out;
-// `;
-
-// export const IntroImage = styled.img`
-//   width: 200px; // You can adjust as needed
-//   height: 200px; // You can adjust as needed
-//   border-radius: 50%;
-//   transition: opacity 0.5s ease-in-out;
-//   &:hover {
-//     opacity: 0.7;
-//   }
-// `;
-
-// export const IntroTitle = styled.h1`
-//   color: #fff;
-//   font-size: 2em;
-// `;
-
 import styled, { keyframes } from "styled-components";
 
 const fadeIn = keyframes`
@@ -46,37 +11,59 @@ const fadeIn = keyframes`
 
 export const IntroContainer = styled.div`
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+
   animation: ${fadeIn} 2s ease-in-out;
   border: 2px solid #fff;
   padding: 20px;
   border-radius: 15px;
   background-color: rgb(78, 76, 76);
-  width: 50%;
+  width: 67%;
   opacity: 0.9;
+  display: flex;
+  align-items: center;
 `;
 
 export const CloseIcon = styled.div`
   position: absolute;
-  right: 15px; // Adjust as needed
-  top: 15px; // Adjust as needed
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  color: white;
   cursor: pointer;
 `;
 
 export const IntroImage = styled.img`
-  width: 200px; // You can adjust as needed
-  height: 200px; // You can adjust as needed
-  border-radius: 50%;
+  width: 300px;
+
   transition: opacity 0.5s ease-in-out;
   &:hover {
     opacity: 0.7;
   }
 `;
 
-export const IntroTitle = styled.h1`
+export const IntroTitle = styled.span`
   color: #fff;
-  font-size: 2em;
+  font-size: 1.5rem;
+  text-align: left;
+`;
+
+export const IntroHighlight = styled.span`
+  color: #e93de6;
+  font-weight: 100;
+`;
+
+export const NameSpan = styled.span``;
+export const IntroSubtitle = styled.div`
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 20px 0px 10px 0px;
+`;
+
+export const IntroDescription = styled.div`
+  color: #fff;
+  font-size: 1rem;
+  font-style: italic;
 `;
