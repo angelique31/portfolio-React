@@ -1,8 +1,9 @@
 import { StyledNavList, StyledNavItem } from "./NavList.styled";
+import PropTypes from "prop-types";
 
-function NavList() {
+function NavList({ isOpen }) {
   return (
-    <StyledNavList>
+    <StyledNavList $isOpen={isOpen}>
       <StyledNavItem>
         <a href="#">A propos</a>
       </StyledNavItem>
@@ -18,5 +19,9 @@ function NavList() {
     </StyledNavList>
   );
 }
+
+NavList.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+};
 
 export default NavList;
