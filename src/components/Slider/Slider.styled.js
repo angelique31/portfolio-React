@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// Defining styled components
 export const BackgroundImage = styled.div`
   background-image: url(${(props) => props.imageUrl});
   background-size: cover;

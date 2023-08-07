@@ -24,6 +24,9 @@ export const IntroContainer = styled.div`
   opacity: 0.9;
   display: flex;
   align-items: center;
+  @media (max-width: 700px) {
+    display: block;
+  }
 `;
 
 export const CloseIcon = styled.div`
@@ -37,8 +40,10 @@ export const CloseIcon = styled.div`
 
 export const IntroImage = styled.img`
   width: 300px;
-
   transition: opacity 0.5s ease-in-out;
+  @media (max-width: 900px) {
+    width: 200px;
+  }
 `;
 
 export const IntroTitle = styled.span`
