@@ -39,9 +39,6 @@ export const IntroImage = styled.img`
   width: 300px;
 
   transition: opacity 0.5s ease-in-out;
-  &:hover {
-    opacity: 0.7;
-  }
 `;
 
 export const IntroTitle = styled.span`

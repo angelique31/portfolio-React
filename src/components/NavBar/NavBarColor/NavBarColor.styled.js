@@ -7,8 +7,6 @@ export const NavBarStyled = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 20px 20px 10px 20px;
-  @media (max-width: 1009px) {
-    position: relative;
-    box-shadow: inset 0px -1px 0px #c5c5c6; /*pour faire la bordure sous la barre de navigation*/
-  }
+  position: relative;
+  box-shadow: inset 0px -1px 0px #c5c5c6; /*pour faire la bordure sous la barre de navigation*/
 `;

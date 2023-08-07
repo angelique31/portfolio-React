@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   IntroContainer,
   IntroImage,
@@ -24,5 +25,9 @@ const Introduction = ({ onClose }) => (
     <IntroImage src="/assets/photo-cv-angel_1-removebg.png" alt="Your Name" />
   </IntroContainer>
 );
+
+Introduction.propTypes = {
+  onClose: PropTypes.func.isRequired,
+};
 
 export default Introduction;
