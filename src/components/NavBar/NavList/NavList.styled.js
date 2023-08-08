@@ -8,10 +8,13 @@ export const StyledNavList = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
+    gap: 33px;
     position: absolute;
     top: 100%;
     /* background: #5472ae; */
-    background: #bb5cba;
+    // background: #bb5cba;
+    background: rgb(70, 70, 70);
     padding: 15px 22px 15px 20px;
     border-right: 1px solid #c5c5c6;
     height: 100vh;
