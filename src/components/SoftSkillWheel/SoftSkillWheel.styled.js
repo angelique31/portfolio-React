@@ -9,23 +9,20 @@ const rotate = keyframes`
   }
 `;
 
-// export const WheelWrapper = styled.div`
-//   position: relative;
-//   width: 300px;
-//   height: 300px;
-//   overflow: visible;
-// `;
-
 export const WheelWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-
+  width: 300px;
   height: 300px;
   overflow: visible;
   transform-origin: center;
   animation: ${rotate} 100s linear infinite;
+  margin-left: 100px;
+  @media (max-width: 542px) {
+    margin-left: 10px;
+  }
 `;
 
 export const SkillTab = styled.div`
@@ -53,7 +50,7 @@ export const SkillText = styled.p`
 `;
 
 export const RotateContainer = styled.div`
-  width: 100%;
+  // width: 100%;
   height: 100%;
   position: relative;
   transform-origin: center center;
@@ -61,7 +58,7 @@ export const RotateContainer = styled.div`
 `;
 
 export const RotationWrapper = styled.div`
-  height: 320px;
+  height: 300px;
   overflow: hidden; /* Cela masquera toute partie des languettes qui dépassent lors de la rotation */
   position: relative;
   display: flex;

@@ -18,6 +18,7 @@ const HomePage = () => {
       {showIntro && <Introduction onClose={handleCloseIntro} />}
       <Specialties />
       <SoftSkillWheel />
+      <Specialties />
     </div>
   );
 };

@@ -3,6 +3,8 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +12,14 @@ const GlobalStyles = createGlobalStyle`
     list-style-type: none;
     text-decoration: none;
     font-family: "Source Sans Pro", sans-serif;
+    
   }
+  body {
+    overflow-y: scroll;
+}
+html {
+  height: calc(100% - 2px); 
+}
 `;
 
 export default GlobalStyles;
