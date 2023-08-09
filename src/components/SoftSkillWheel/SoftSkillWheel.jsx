@@ -1,5 +1,5 @@
 import {
-  WheelWrapper,
+  // WheelWrapper,
   SkillTab,
   SkillText,
   RotateContainer,
@@ -31,20 +31,20 @@ function SoftSkillWheel() {
   const step = 360 / skills.length; // cela déterminera l'angle entre chaque languette
 
   return (
-    <WheelWrapper>
-      <RotateContainer>
-        {skills.map((skill, index) => (
-          <SkillTab
-            key={skill}
-            color={colors[index % colors.length]}
-            rotation={step * index}
-          >
-            <SkillText>{skill}</SkillText>
-          </SkillTab>
-        ))}
-        <CenterCircle />
-      </RotateContainer>
-    </WheelWrapper>
+    // <WheelWrapper>
+    <RotateContainer>
+      {skills.map((skill, index) => (
+        <SkillTab
+          key={skill}
+          color={colors[index % colors.length]}
+          rotation={step * index}
+        >
+          <SkillText>{skill}</SkillText>
+        </SkillTab>
+      ))}
+      <CenterCircle />
+    </RotateContainer>
+    // </WheelWrapper>
   );
 }
 

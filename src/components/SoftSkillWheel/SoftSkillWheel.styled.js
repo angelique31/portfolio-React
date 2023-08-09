@@ -9,18 +9,18 @@ const rotate = keyframes`
   }
 `;
 
-export const WheelWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  overflow: visible;
-  transform-origin: center;
-  animation: ${rotate} 100s linear infinite;
-`;
+// export const WheelWrapper = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: relative;
+//   width: 300px;
+//   height: 300px;
+//   margin: 0 auto;
+//   overflow: visible;
+//   transform-origin: center;
+//   animation: ${rotate} 100s linear infinite;
+// `;
 
 export const SkillTab = styled.div`
   width: 160px;
@@ -52,6 +52,7 @@ export const RotateContainer = styled.div`
   position: relative;
   transform-origin: center center;
   animation: ${rotate} 100s linear infinite;
+  height: 300px;
 `;
 
 export const CenterCircle = styled.div`
