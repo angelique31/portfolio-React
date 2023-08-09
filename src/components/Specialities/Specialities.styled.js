@@ -35,13 +35,14 @@ export const Title = styled.h2`
   .visible & {
     animation: ${fadeInTitle} 1s forwards;
   }
+  color: #ffb957;
 `;
 
 export const SpecialtiesContainer = styled.div`
   text-align: center;
-  margin: 50px 0;
   padding: 30px;
-  background-color: #f4f4f4; /* Couleur de fond, à personnaliser selon vos besoins */
+  // background-color: #f4f4f4;
+  background: #313552;
   border-radius: 8px;
 `;
 
@@ -99,7 +100,8 @@ export const LogoImage = styled.img`
 
 export const LogoText = styled.p`
   margin-top: 10px;
-  color: #e93de6;
+  // color: #e93de6;
+  color: #d1d5db;
   font-weight: 600;
 `;
 
@@ -110,4 +112,5 @@ export const ImageWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
+  filter: brightness(120%) saturate(110%);
 `;

@@ -7,7 +7,7 @@ export const StyledNavTitle = styled.h1`
   padding-bottom: 20px;
 
   span {
-    color: #e93de6;
+    color: #ffb957;
   }
   strong {
     font-weight: 100;

@@ -53,7 +53,8 @@ export const IntroTitle = styled.span`
 `;
 
 export const IntroHighlight = styled.span`
-  color: #e93de6;
+  // color: #e93de6;
+  color: #ffb957;
   font-weight: 100;
 `;
 

@@ -22,6 +22,7 @@ const fadeInTitle = keyframes`
 
 export const Container = styled.div`
   position: relative;
+  background: rgb(78, 76, 76);
 `;
 
 export const Title = styled.h2`
@@ -30,6 +31,8 @@ export const Title = styled.h2`
   }
   text-align: center;
   margin-bottom: 20px;
+  padding-top: 20px;
+  color: #ffb957;
 `;
 
 export const FlexContainer = styled.div`
@@ -51,6 +54,7 @@ export const BioText = styled.p`
   line-height: 1.5;
   width: 600px;
   text-align: justify;
+  color: #d1d5db;
   @media (max-width: 665px) {
     width: 500px;
   }
