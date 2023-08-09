@@ -1,39 +1,4 @@
-// import { WheelWrapper, SkillTab } from "./SoftSkillWheel.styled";
-
-// function SoftSkillWheel() {
-//   const skills = [
-//     { name: "Empathie", angle: 0 },
-//     { name: "Adaptabilité", angle: 45 },
-//     { name: "Réceptivité aux feedbacks", angle: 90 },
-//     { name: "Travail d'équipe", angle: 135 },
-//     { name: "Communication", angle: 180 },
-//     { name: "Gestion du temps et organisation", angle: 225 },
-//     { name: "Attention aux détails", angle: 270 },
-//     // Ajoutez plus si besoin
-//   ];
-
-//   return (
-//     <WheelWrapper>
-//       {skills.map((skill) => (
-//         <SkillTab
-//           key={skill.name}
-//           style={{
-//             transform: `rotate(${skill.angle}deg)`,
-//             left: `${50 + 60 * Math.cos((skill.angle * Math.PI) / 180)}%`,
-//             top: `${50 + 60 * Math.sin((skill.angle * Math.PI) / 180)}%`,
-//           }}
-//         >
-//           {skill.name}
-//         </SkillTab>
-//       ))}
-//     </WheelWrapper>
-//   );
-// }
-
-// export default SoftSkillWheel;
-
 import {
-  RotationWrapper,
   WheelWrapper,
   SkillTab,
   SkillText,
@@ -64,27 +29,6 @@ function SoftSkillWheel() {
   ];
 
   const step = 360 / skills.length; // cela déterminera l'angle entre chaque languette
-
-  //   return (
-  //     <RotationWrapper>
-  //       <WheelWrapper>
-  //         <RotateContainer>
-  //           {skills.map((skill, index) => (
-  //             <SkillTab
-  //               key={skill}
-  //               color={colors[index % colors.length]}
-  //               style={{
-  //                 transform: `rotate(${step * index}deg)`,
-  //               }}
-  //             >
-  //               <SkillText>{skill}</SkillText>
-  //             </SkillTab>
-  //           ))}
-  //         </RotateContainer>
-  //         <CenterCircle />
-  //       </WheelWrapper>
-  //     </RotationWrapper>
-  //   );
 
   return (
     <WheelWrapper>

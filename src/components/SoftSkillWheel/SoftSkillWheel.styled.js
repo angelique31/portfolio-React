@@ -16,13 +16,10 @@ export const WheelWrapper = styled.div`
   position: relative;
   width: 300px;
   height: 300px;
+  margin: 0 auto;
   overflow: visible;
   transform-origin: center;
   animation: ${rotate} 100s linear infinite;
-  margin-left: 100px;
-  @media (max-width: 542px) {
-    margin-left: 10px;
-  }
 `;
 
 export const SkillTab = styled.div`
@@ -55,15 +52,6 @@ export const RotateContainer = styled.div`
   position: relative;
   transform-origin: center center;
   animation: ${rotate} 100s linear infinite;
-`;
-
-export const RotationWrapper = styled.div`
-  height: 300px;
-  overflow: hidden; /* Cela masquera toute partie des languettes qui dépassent lors de la rotation */
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 export const CenterCircle = styled.div`

@@ -17,9 +17,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     overflow-y: scroll;
 }
-html {
-  height: calc(100% - 2px); 
-}
+
 `;
 
 export default GlobalStyles;
