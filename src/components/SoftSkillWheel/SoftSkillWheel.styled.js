@@ -51,7 +51,7 @@ export const Container = styled.div`
     height: 900px;
   }
   @media (max-width: 610px) {
-    height: 950px;
+    height: 1000px;
   }
 `;
 
@@ -64,7 +64,7 @@ export const Title = styled.h2`
   padding-top: 120px;
   color: #ffb957;
   @media (max-width: 1010px) {
-    margin-bottom: 80px;
+    margin-bottom: 100px;
   }
   // @media (max-width: 610px) {
   //   margin-bottom: 120px;
@@ -86,8 +86,7 @@ export const FlexContainer = styled.div`
 
 export const BioText = styled.p`
   font-size: 1.1rem;
-  // margin-top: 60px;
-  margin-bottom: 85px
+  margin-bottom: 85px;
   line-height: 1.5;
   width: 600px;
   text-align: justify;
