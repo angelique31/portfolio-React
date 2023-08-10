@@ -20,9 +20,39 @@ const fadeInTitle = keyframes`
   }
 `;
 
+const fadeInText = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+// Animation pour l'étoile
+const fadeInSun = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
+
 export const Container = styled.div`
   position: relative;
   background: rgb(78, 76, 76);
+  height: 600px;
+  @media (max-width: 1010px) {
+    height: 900px;
+  }
+  @media (max-width: 610px) {
+    height: 950px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -30,9 +60,15 @@ export const Title = styled.h2`
     animation: ${fadeInTitle} 1s forwards;
   }
   text-align: center;
-  margin-bottom: 20px;
-  padding-top: 20px;
+  margin-bottom: 50px;
+  padding-top: 120px;
   color: #ffb957;
+  @media (max-width: 1010px) {
+    margin-bottom: 80px;
+  }
+  // @media (max-width: 610px) {
+  //   margin-bottom: 120px;
+  // }
 `;
 
 export const FlexContainer = styled.div`
@@ -40,7 +76,7 @@ export const FlexContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   @media (max-width: 1010px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: 524px;
   }
   @media (max-width: 446px) {
@@ -49,17 +85,25 @@ export const FlexContainer = styled.div`
 `;
 
 export const BioText = styled.p`
-  font-size: 0.9rem;
-  margin-top: 40px;
+  font-size: 1.1rem;
+  // margin-top: 60px;
+  margin-bottom: 85px
   line-height: 1.5;
   width: 600px;
   text-align: justify;
   color: #d1d5db;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 1s;
+  .visible & {
+    animation: ${fadeInText} 1.5s forwards 1s; // 1s delay after the title
+  }
   @media (max-width: 665px) {
     width: 500px;
   }
   @media (max-width: 550px) {
     width: 400px;
+    font-size: 1rem;
   }
   @media (max-width: 446px) {
     width: 300px;
@@ -72,6 +116,12 @@ export const SunWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 1s;
+  .visible & {
+    animation: ${fadeInSun} 1.5s forwards 1.3s;
+  }
 `;
 
 export const SkillTab = styled.div`

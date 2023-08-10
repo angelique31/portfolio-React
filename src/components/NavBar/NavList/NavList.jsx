@@ -5,16 +5,16 @@ function NavList({ isOpen }) {
   return (
     <StyledNavList $isOpen={isOpen}>
       <StyledNavItem>
-        <a href="#">A propos</a>
+        <a href="#">Qui je suis?</a>
       </StyledNavItem>
       <StyledNavItem>
         <a href="#">Mon cv</a>
       </StyledNavItem>
       <StyledNavItem>
-        <a href="#">Réalisations</a>
+        <a href="#">Mes réalisations</a>
       </StyledNavItem>
       <StyledNavItem>
-        <a href="#">Contact</a>
+        <a href="#">Contactez-moi</a>
       </StyledNavItem>
     </StyledNavList>
   );

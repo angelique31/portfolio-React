@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import {
   SpecialtiesContainer,
   Title,
@@ -7,43 +8,24 @@ import {
   LogoImage,
   LogoText,
 } from "./Specialities.styled";
-import { useEffect, useRef } from "react";
 
 import ReactLogo from "../../assets/logos/logoReact.svg";
 import SassLogo from "../../assets/logos/SassLogo.png";
 import StyledCompLogo from "../../assets/logos/logo_styled_component.png";
 import GitLogo from "../../assets/logos/GitLogo.png";
+import UseIntersectionObserver from "../useIntersectionObserver/useIntersectionObserver";
 
 const Specialties = () => {
   const containerRef = useRef(null);
+  const isVisible = UseIntersectionObserver(containerRef);
 
   useEffect(() => {
-    // Assignez la valeur courante de la référence à une variable
-    const refCourante = containerRef.current;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          // Ajoutez la classe "visible" lorsque l'élément est dans la vue
-          refCourante && refCourante.classList.add("visible");
-        } else {
-          // Supprimez la classe "visible" lorsque l'élément est hors de la vue
-          refCourante && refCourante.classList.remove("visible");
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (refCourante) {
-      observer.observe(refCourante);
+    if (isVisible) {
+      containerRef.current.classList.add("visible");
+    } else {
+      containerRef.current.classList.remove("visible");
     }
-
-    return () => {
-      if (refCourante) {
-        observer.unobserve(refCourante);
-      }
-    };
-  }, []);
+  }, [isVisible]);
 
   return (
     <SpecialtiesContainer ref={containerRef}>

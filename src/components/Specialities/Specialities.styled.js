@@ -36,6 +36,7 @@ export const Title = styled.h2`
     animation: ${fadeInTitle} 1s forwards;
   }
   color: #ffb957;
+  padding-top: 90px;
 `;
 
 export const SpecialtiesContainer = styled.div`
@@ -43,7 +44,6 @@ export const SpecialtiesContainer = styled.div`
   padding: 30px;
   // background-color: #f4f4f4;
   background: #313552;
-  border-radius: 8px;
 `;
 
 export const LogoContainer = styled.div`
@@ -52,6 +52,8 @@ export const LogoContainer = styled.div`
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
+
+  margin: 30px 0px 90px 0px;
 `;
 
 export const LogoItem = styled.div`

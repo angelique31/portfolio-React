@@ -1,3 +1,5 @@
+import { useRef, useEffect } from "react";
+import UseIntersectionObserver from "../useIntersectionObserver/useIntersectionObserver";
 import {
   Container,
   Title,
@@ -33,9 +35,19 @@ function SoftSkillWheel() {
   ];
 
   const step = 360 / skills.length; // cela déterminera l'angle entre chaque languette
+  const containerRef = useRef(null);
+  const isVisible = UseIntersectionObserver(containerRef);
+
+  useEffect(() => {
+    if (isVisible) {
+      containerRef.current.classList.add("visible");
+    } else {
+      containerRef.current.classList.remove("visible");
+    }
+  }, [isVisible]);
 
   return (
-    <Container>
+    <Container ref={containerRef}>
       <Title>Compétences transverses</Title>
       <FlexContainer>
         <BioText>
