@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import UseIntersectionObserver from "../useIntersectionObserver/useIntersectionObserver";
+
 import {
   Container,
   Title,
@@ -11,6 +11,8 @@ import {
   RotateContainer,
   CenterCircle,
 } from "./SoftSkillWheel.styled";
+
+import UseIntersectionObservers from "../UseIntersectionObservers/UseIntersectionObservers";
 
 function SoftSkillWheel() {
   const skills = [
@@ -36,7 +38,7 @@ function SoftSkillWheel() {
 
   const step = 360 / skills.length; // cela déterminera l'angle entre chaque languette
   const containerRef = useRef(null);
-  const isVisible = UseIntersectionObserver(containerRef);
+  const isVisible = UseIntersectionObservers(containerRef);
 
   useEffect(() => {
     if (isVisible) {

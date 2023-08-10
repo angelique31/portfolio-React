@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const UseIntersectionObserver = (ref) => {
+const UseIntersectionObservers = (ref) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -30,4 +30,4 @@ const UseIntersectionObserver = (ref) => {
   return isVisible;
 };
 
-export default UseIntersectionObserver;
+export default UseIntersectionObservers;
