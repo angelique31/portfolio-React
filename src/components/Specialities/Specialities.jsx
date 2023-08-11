@@ -13,11 +13,11 @@ import ReactLogo from "../../assets/logos/logoReact.svg";
 import SassLogo from "../../assets/logos/SassLogo.png";
 import StyledCompLogo from "../../assets/logos/logo_styled_component.png";
 import GitLogo from "../../assets/logos/GitLogo.png";
-import UseIntersectionObserver from "../useIntersectionObserver/useIntersectionObserver";
+import UseIntersectionObservers from "../UseIntersectionObservers/UseIntersectionObservers";
 
 const Specialties = () => {
   const containerRef = useRef(null);
-  const isVisible = UseIntersectionObserver(containerRef);
+  const isVisible = UseIntersectionObservers(containerRef);
 
   useEffect(() => {
     if (isVisible) {
