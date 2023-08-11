@@ -16,7 +16,7 @@ export const IntroContainer = styled.div`
   transform: translate(-50%, -50%);
 
   animation: ${fadeIn} 2s ease-in-out;
-  border: 2px solid #fff;
+  border: 2px solid #dfe0dc;
   padding: 20px;
   border-radius: 15px;
   background-color: rgb(78, 76, 76);

@@ -5,6 +5,7 @@ import {
   Title,
   FlexContainer,
   BioText,
+  Highlighted,
   SkillTab,
   SkillText,
   SunWrapper,
@@ -53,12 +54,29 @@ function SoftSkillWheel() {
       <Title>Compétences transverses</Title>
       <FlexContainer>
         <BioText>
-          {`Après avoir exercé le métier d'infirmière pendant 20 ans, j'ai développé des compétences essentielles qui me sont aujourd'hui bénéfiques 
-        en développement web. 
-        Ma rigueur, mon anticipation et ma capacité à aborder des situations délicates se reflètent dans chacun de mes projets. 
-        Malgré les différences entre la médecine et la programmation, la nécessité d'une écoute active reste la même. 
-        Chaque ligne de code que j'écris est informée par cette attention aux détails et cette focalisation sur l'utilisateur, 
-        rendant chaque projet techniquement robuste et axé sur l'expérience humaine.`}
+          Après avoir exercé le métier{" "}
+          <Highlighted>
+            d{`'`}
+            infirmière
+          </Highlighted>{" "}
+          pendant 20 ans, j{`'`}ai appris la valeur du{" "}
+          <Highlighted>travail en équipe</Highlighted>. Cette expérience m{`'`}
+          aide énormément en développement web. Ma{" "}
+          <Highlighted>rigueur</Highlighted> et mon sens de{" "}
+          <Highlighted>
+            l{`'`}
+            écoute
+          </Highlighted>
+          , acquis dans le monde médical, me guident dans chaque projet. Je sais
+          combien il est important de collaborer et de comprendre les besoins
+          des autres, que ce soit des patients ou des{" "}
+          <Highlighted>utilisateurs</Highlighted> d{`'`}un site web. Chaque
+          ligne de code que je rédige reflète cette approche centrée sur{" "}
+          <Highlighted>
+            l{`'`}
+            humain
+          </Highlighted>
+          .
         </BioText>
         <SunWrapper>
           <RotateContainer>

@@ -111,6 +111,11 @@ export const BioText = styled.p`
   }
 `;
 
+export const Highlighted = styled.strong`
+  font-weight: bold;
+  color: #ffb957;
+`;
+
 export const SunWrapper = styled.div`
   width: 345px;
   height: 345px;
