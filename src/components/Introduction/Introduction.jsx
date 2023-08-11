@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 import {
   IntroContainer,
   IntroImage,
@@ -10,21 +11,25 @@ import {
   CloseIcon,
 } from "./Introduction.styled";
 
-const Introduction = ({ onClose }) => (
-  <IntroContainer>
-    <CloseIcon onClick={onClose}>&#10005;</CloseIcon>
-    <div>
-      <IntroTitle>
-        <IntroHighlight>Bonjour, je suis</IntroHighlight>{" "}
-        <NameSpan>Angélique Rosin</NameSpan>
-      </IntroTitle>
+const Introduction = ({ onClose }) => {
+  const { t } = useTranslation();
 
-      <IntroSubtitle>Développeuse Javascript React</IntroSubtitle>
-      <IntroDescription>{`"Passionnée par la création d'expériences utilisateur intuitives, je transforme les idées en réalités concrètes à travers la programmation."`}</IntroDescription>
-    </div>
-    <IntroImage src="/assets/photo-cv-angel_1-removebg.png" alt="Your Name" />
-  </IntroContainer>
-);
+  return (
+    <IntroContainer>
+      <CloseIcon onClick={onClose}>&#10005;</CloseIcon>
+      <div>
+        <IntroTitle>
+          <IntroHighlight>{t("intro_greeting")}</IntroHighlight>{" "}
+          <NameSpan>Angélique Rosin</NameSpan>
+        </IntroTitle>
+
+        <IntroSubtitle>{t("intro_role")}</IntroSubtitle>
+        <IntroDescription>{t("intro_description")}</IntroDescription>
+      </div>
+      <IntroImage src="/assets/photo-cv-angel_1-removebg.png" alt="Your Name" />
+    </IntroContainer>
+  );
+};
 
 Introduction.propTypes = {
   onClose: PropTypes.func.isRequired,

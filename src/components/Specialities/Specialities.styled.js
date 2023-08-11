@@ -52,8 +52,12 @@ export const LogoContainer = styled.div`
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
-
   margin: 30px 0px 90px 0px;
+  opacity: 0;
+  .visible & {
+    animation: ${fadeIn} 1s forwards;
+    animation-delay: 0.5s;
+  }
 `;
 
 export const LogoItem = styled.div`
@@ -61,28 +65,28 @@ export const LogoItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0; // initialement, le logo est invisible
+  // opacity: 0;
 
   /* L'animation fadeIn ne se déclenchera que lorsque le parent (SpecialtiesContainer) aura la classe .visible */
-  .visible & {
-    animation: ${fadeIn} 0.3s forwards;
+  // .visible & {
+  //   animation: ${fadeIn} 0.3s forwards;
 
-    &:nth-child(1) {
-      animation-delay: 0.6s;
-    }
+  //   &:nth-child(1) {
+  //     animation-delay: 0.6s;
+  //   }
 
-    &:nth-child(2) {
-      animation-delay: 0.9s;
-    }
+  //   &:nth-child(2) {
+  //     animation-delay: 0.9s;
+  //   }
 
-    &:nth-child(3) {
-      animation-delay: 1.2s;
-    }
+  //   &:nth-child(3) {
+  //     animation-delay: 1.2s;
+  //   }
 
-    &:nth-child(4) {
-      animation-delay: 1.5s;
-    }
-  }
+  //   &:nth-child(4) {
+  //     animation-delay: 1.5s;
+  //   }
+  // }
 `;
 
 export const LogoImage = styled.img`

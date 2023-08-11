@@ -8,8 +8,9 @@ const NavBarColor = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <NavBarStyled>
-      <NavTitle />
       <MenuHamburger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
+      <NavTitle />
+
       <NavList isOpen={isOpen} />
     </NavBarStyled>
   );

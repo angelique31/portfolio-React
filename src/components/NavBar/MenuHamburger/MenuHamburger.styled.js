@@ -8,8 +8,8 @@ export const StyledHamburger = styled.button`
   display: flex;
   align-items: center;
   position: absolute;
-  margin-left: 30px;
-  margin-top: 20px;
+  margin-left: 20px;
+
   background: transparent;
   left: 0;
 

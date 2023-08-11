@@ -86,7 +86,6 @@ export const FlexContainer = styled.div`
 
 export const BioText = styled.p`
   font-size: 1.1rem;
-  margin-bottom: 85px;
   line-height: 1.5;
   width: 600px;
   text-align: justify;
@@ -96,6 +95,9 @@ export const BioText = styled.p`
   transition: all 1s;
   .visible & {
     animation: ${fadeInText} 1.5s forwards 1s; // 1s delay after the title
+  }
+  @media (max-width: 1010px) {
+    margin-bottom: 85px;
   }
   @media (max-width: 665px) {
     width: 500px;
