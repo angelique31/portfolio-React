@@ -42,8 +42,7 @@ export const Title = styled.h2`
 export const SpecialtiesContainer = styled.div`
   text-align: center;
   padding: 30px;
-  // background-color: #f4f4f4;
-  background: #313552;
+  background-color: rgb(31, 34, 53);
 `;
 
 export const LogoContainer = styled.div`

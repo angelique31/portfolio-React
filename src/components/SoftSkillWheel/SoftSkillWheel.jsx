@@ -56,11 +56,6 @@ function SoftSkillWheel() {
     <Container ref={containerRef}>
       <Title>{t("comp_transverses")}</Title>
       <FlexContainer>
-        {/* <BioText>
-          {t("bio.part1")}
-          <Highlighted>{t("bio.part2")}</Highlighted>
-          {t("bio.part3")}
-        </BioText> */}
         <BioText>
           <Trans i18nKey="bio" components={{ Highlight: <Highlighted /> }}>
             Après avoir exercé le métier{" "}

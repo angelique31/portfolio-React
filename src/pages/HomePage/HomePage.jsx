@@ -4,6 +4,7 @@ import Slider from "../../components/Slider/Slider";
 import Introduction from "../../components/Introduction/Introduction";
 import Specialties from "../../components/Specialities/Specialities";
 import SoftSkillWheel from "../../components/SoftSkillWheel/SoftSkillWheel";
+import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 
 const HomePage = () => {
   const [showIntro, setShowIntro] = useState(true);
@@ -18,7 +19,7 @@ const HomePage = () => {
       {showIntro && <Introduction onClose={handleCloseIntro} />}
       <Specialties />
       <SoftSkillWheel />
-      <Specialties />
+      <ProjectsSection />
     </div>
   );
 };
