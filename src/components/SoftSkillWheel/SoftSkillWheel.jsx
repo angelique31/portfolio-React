@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { useTranslation, Trans } from "react-i18next";
 
 import {
   Container,
@@ -41,6 +42,8 @@ function SoftSkillWheel() {
   const containerRef = useRef(null);
   const isVisible = UseIntersectionObservers(containerRef);
 
+  const { t } = useTranslation();
+
   useEffect(() => {
     if (isVisible) {
       containerRef.current.classList.add("visible");
@@ -51,32 +54,40 @@ function SoftSkillWheel() {
 
   return (
     <Container ref={containerRef}>
-      <Title>Compétences transverses</Title>
+      <Title>{t("comp_transverses")}</Title>
       <FlexContainer>
+        {/* <BioText>
+          {t("bio.part1")}
+          <Highlighted>{t("bio.part2")}</Highlighted>
+          {t("bio.part3")}
+        </BioText> */}
         <BioText>
-          Après avoir exercé le métier{" "}
-          <Highlighted>
-            d{`'`}
-            infirmière
-          </Highlighted>{" "}
-          pendant 20 ans, j{`'`}ai appris la valeur du{" "}
-          <Highlighted>travail en équipe</Highlighted>. Cette expérience m{`'`}
-          aide énormément en développement web. Ma{" "}
-          <Highlighted>rigueur</Highlighted> et mon sens de{" "}
-          <Highlighted>
-            l{`'`}
-            écoute
-          </Highlighted>
-          , acquis dans le monde médical, me guident dans chaque projet. Je sais
-          combien il est important de collaborer et de comprendre les besoins
-          des autres, que ce soit des patients ou des{" "}
-          <Highlighted>utilisateurs</Highlighted> d{`'`}un site web. Chaque
-          ligne de code que je rédige reflète cette approche centrée sur{" "}
-          <Highlighted>
-            l{`'`}
-            humain
-          </Highlighted>
-          .
+          <Trans i18nKey="bio" components={{ Highlight: <Highlighted /> }}>
+            Après avoir exercé le métier{" "}
+            <Highlighted>
+              d{`'`}
+              infirmière
+            </Highlighted>{" "}
+            pendant 20 ans, j{`'`}ai appris la valeur du{" "}
+            <Highlighted>travail en équipe</Highlighted>. Cette expérience m
+            {`'`}
+            aide énormément en développement web. Ma{" "}
+            <Highlighted>rigueur</Highlighted> et mon sens de{" "}
+            <Highlighted>
+              l{`'`}
+              écoute
+            </Highlighted>
+            , acquis dans le monde médical, me guident dans chaque projet. Je
+            sais combien il est important de collaborer et de comprendre les
+            besoins des autres, que ce soit des patients ou des{" "}
+            <Highlighted>utilisateurs</Highlighted> d{`'`}un site web. Chaque
+            ligne de code que je rédige reflète cette approche centrée sur{" "}
+            <Highlighted>
+              l{`'`}
+              humain
+            </Highlighted>
+            .
+          </Trans>
         </BioText>
         <SunWrapper>
           <RotateContainer>
@@ -86,7 +97,7 @@ function SoftSkillWheel() {
                 color={colors[index % colors.length]}
                 rotation={step * index}
               >
-                <SkillText>{skill}</SkillText>
+                <SkillText>{t(`skills.${index}`)}</SkillText>
               </SkillTab>
             ))}
             <CenterCircle />

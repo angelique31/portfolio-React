@@ -5,5 +5,17 @@
   "Contactez-moi": "Contact me",
   "intro_greeting": "Hello, I am",
   "intro_role": "Javascript React Developer",
-  "intro_description": "Passionate about creating intuitive user experiences, I turn ideas into concrete realities through programming."
+  "intro_description": "Passionate about creating intuitive user experiences, I turn ideas into concrete realities through programming.",
+  "Mes spécialités": "My specialties",
+  "comp_transverses": "My Soft Skills",
+  "bio": "After working as a nurse for 20 years, I've learned the value of <Highlight>team work</Highlight>. This experience greatly benefits me in web development. My <Highlight>rigor</Highlight> and <Highlight>listening skills</Highlight>, acquired in the medical world, guide me in every project. I know how important it is to collaborate and understand the needs of others, whether they are patients or <Highlight>website users</Highlight>. Every line of code I write reflects this <Highlight>human-centered</Highlight> approach.",
+  "skills": [
+    "Empathy",
+    "Adaptability",
+    "Receptivity to feedback",
+    "Teamwork",
+    "Communication",
+    "Organization",
+    "Attention to details"
+  ]
 }

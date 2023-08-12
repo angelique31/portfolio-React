@@ -19,9 +19,13 @@ i18n.use(initReactI18next).init({
       translation: frTranslations,
     },
   },
-  lng: "en", // langue par défaut
+  lng: "fr", // langue par défaut
   interpolation: {
     escapeValue: false,
+  },
+  react: {
+    transSupportBasicHtmlNodes: true,
+    transKeepBasicHtmlNodesFor: ["br", "strong", "i", "highlight"],
   },
 });
 

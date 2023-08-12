@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import {
   SpecialtiesContainer,
   Title,
@@ -16,6 +17,7 @@ import GitLogo from "../../assets/logos/GitLogo.png";
 import UseIntersectionObservers from "../UseIntersectionObservers/UseIntersectionObservers";
 
 const Specialties = () => {
+  const { t } = useTranslation();
   const containerRef = useRef(null);
   const isVisible = UseIntersectionObservers(containerRef);
 
@@ -29,7 +31,7 @@ const Specialties = () => {
 
   return (
     <SpecialtiesContainer ref={containerRef}>
-      <Title>Mes spécialités</Title>
+      <Title>{t("Mes spécialités")}</Title>
       <LogoContainer>
         <LogoItem>
           <ImageWrapper>

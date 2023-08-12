@@ -1,21 +1,24 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { StyledNavList, StyledNavItem } from "./NavLinks.styled";
 import PropTypes from "prop-types";
 
 function NavLinks({ isOpen }) {
+  const { t } = useTranslation();
+
   return (
     <StyledNavList $isOpen={isOpen}>
       <StyledNavItem>
-        <Link to="/about">Qui je suis?</Link>
+        <Link to="/about">{t("Qui je suis?")}</Link>
       </StyledNavItem>
       <StyledNavItem>
-        <Link to="/cv">Mon cv</Link>
+        <Link to="/cv">{t("Mon cv")}</Link>
       </StyledNavItem>
       <StyledNavItem>
-        <Link to="/realisations">Mes réalisations</Link>
+        <Link to="/realisations">{t("Mes réalisations")}</Link>
       </StyledNavItem>
       <StyledNavItem>
-        <Link to="/contact">Contactez-moi</Link>
+        <Link to="/contact">{t("Contactez-moi")}</Link>
       </StyledNavItem>
     </StyledNavList>
   );
