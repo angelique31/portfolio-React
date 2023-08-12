@@ -17,5 +17,11 @@
     "Communication",
     "Organization",
     "Attention to details"
-  ]
+  ],
+  "projects_title": "My projects",
+  "projects_learn_more": "Learn more",
+  "project_0_title": "Cooking recipes website",
+  "project_0_description": "Personal project developed in React, this website presents a variety of cooking recipes.",
+  "project_1_title": "Météo France Home Page",
+  "project_1_description": "Clone of the Météo France homepage made solely with HTML and CSS."
 }

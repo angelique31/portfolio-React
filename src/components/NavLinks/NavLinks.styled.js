@@ -18,7 +18,7 @@ export const StyledNavList = styled.ul`
     padding: 15px 22px 15px 20px;
     border-right: 1px solid #c5c5c6;
     height: 100vh;
-    left: -181px; /*pour cacher vers la gauche les li*/
+    left: -212px; /*pour cacher vers la gauche les li*/
     transition: 0.5s ease-out;
     ${({ $isOpen }) =>
       $isOpen &&
@@ -44,7 +44,7 @@ export const StyledNavItem = styled.li`
     outline: none;
     position: relative; 
     overflow: hidden; // pour s'assurer que l'animation reste à l'intérieur du lien
-
+    font-size: ${(props) => (props.isScrolled ? "0.8rem" : "1.1rem")};
     &::after {
       content: '';
       display: block;

@@ -1,8 +1,8 @@
 import { StyledNavTitle } from "./NavTitle.styled";
 
-function NavTitle() {
+function NavTitle({ isScrolled }) {
   return (
-    <StyledNavTitle>
+    <StyledNavTitle isScrolled={isScrolled}>
       <strong>
         <span>P</span>ortfolio
         <br />

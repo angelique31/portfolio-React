@@ -66,9 +66,6 @@ export const Title = styled.h2`
   @media (max-width: 1010px) {
     margin-bottom: 100px;
   }
-  // @media (max-width: 610px) {
-  //   margin-bottom: 120px;
-  // }
 `;
 
 export const FlexContainer = styled.div`

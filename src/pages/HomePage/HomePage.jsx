@@ -1,10 +1,11 @@
 import { useState } from "react";
-import NavBarColor from "../../components/NavBar/NavBarColor/NavBarColor";
+// import NavBarColor from "../../components/NavBar/NavBarColor/NavBarColor";
 import Slider from "../../components/Slider/Slider";
 import Introduction from "../../components/Introduction/Introduction";
 import Specialties from "../../components/Specialities/Specialities";
 import SoftSkillWheel from "../../components/SoftSkillWheel/SoftSkillWheel";
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
+import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollAwareNavBar";
 
 const HomePage = () => {
   const [showIntro, setShowIntro] = useState(true);
@@ -14,7 +15,8 @@ const HomePage = () => {
   };
   return (
     <div>
-      <NavBarColor />
+      {/* <NavBarColor /> */}
+      <ScrollAwareNavBar />
       <Slider />
       {showIntro && <Introduction onClose={handleCloseIntro} />}
       <Specialties />

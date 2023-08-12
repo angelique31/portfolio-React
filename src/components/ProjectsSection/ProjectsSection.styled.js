@@ -1,6 +1,31 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeInTitle = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const Title = styled.h2`
+  .visible & {
+    animation: ${fadeInTitle} 1s forwards;
+  }
   color: #ffb957;
   text-align: center;
   margin-bottom: 60px;
@@ -26,6 +51,14 @@ export const ProjectCard = styled.div`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   border-radius: 10px;
+  opacity: 0;
+  .visible & {
+    animation: ${fadeIn} 1.5s forwards 0.5s;
+    animation-delay: ${(props) =>
+      0.5 +
+      props.delayIndex *
+        0.4}s; // Chaque carte a un délai de 0.4s plus long que la précédente
+  }
 `;
 
 export const ProjectImageWrapper = styled.div`
@@ -77,6 +110,7 @@ export const ProjectLink = styled.a`
   border: 1px solid #ffb957;
   color: #ffc576;
   font-size: 0.9rem;
+  cursor: pointer;
   &:hover {
     background-color: #ffb957;
     color: #313552;
