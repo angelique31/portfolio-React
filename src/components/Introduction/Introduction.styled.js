@@ -50,6 +50,10 @@ export const IntroTitle = styled.span`
   color: #fff;
   font-size: 1.5rem;
   text-align: left;
+  @media (max-width: 664px) {
+    display: block;
+    width: 80%;
+  }
 `;
 
 export const IntroHighlight = styled.span`
