@@ -8,6 +8,7 @@ import UseIntersectionObservers from "../UseIntersectionObservers/UseIntersectio
 
 import {
   Title,
+  Subtitle,
   ProjectsWrapper,
   ProjectsContainer,
   ProjectCard,
@@ -36,6 +37,8 @@ const ProjectsSection = () => {
     <div id="mes-realisations">
       <ProjectsContainer ref={containerRef}>
         <Title>{t("projects_title")}</Title>
+        <Subtitle>{t("projects_subtitle")}</Subtitle>
+
         <ProjectsWrapper>
           {projectsData.map((project, index) => (
             <ProjectCard key={index} delayIndex={index}>

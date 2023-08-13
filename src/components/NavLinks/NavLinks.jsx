@@ -5,7 +5,6 @@ import { StyledNavList, StyledNavItem } from "./NavLinks.styled";
 import PropTypes from "prop-types";
 
 function NavLinks({ isOpen, isScrolled, onAboutClick, closeMenu }) {
-  // ajoutez closeMenu ici
   const { t } = useTranslation();
 
   return (
@@ -40,12 +39,11 @@ function NavLinks({ isOpen, isScrolled, onAboutClick, closeMenu }) {
   );
 }
 
-NavLinks.displayName = "NavLinks";
-
 NavLinks.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   isScrolled: PropTypes.bool.isRequired,
   onAboutClick: PropTypes.func.isRequired,
+  closeMenu: PropTypes.func,
 };
 
 export default NavLinks;

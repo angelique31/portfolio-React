@@ -31,6 +31,17 @@ export const Title = styled.h2`
   margin-bottom: 60px;
 `;
 
+export const Subtitle = styled.p`
+  font-size: 1.1rem;
+  color: #d1d5db;
+  text-align: center;
+  margin: 0 0 60px 0;
+  font-style: italic;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
 export const ProjectsWrapper = styled.div`
   display: flex;
   align-items: center;

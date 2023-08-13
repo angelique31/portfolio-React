@@ -20,5 +20,6 @@ export const NavBarStyled = styled.nav`
   @media (max-width: 1010px) {
     position: relative;
     background: rgb(78, 76, 76);
+    transition: none;
   }
 `;
