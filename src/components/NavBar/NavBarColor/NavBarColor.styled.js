@@ -17,4 +17,8 @@ export const NavBarStyled = styled.nav`
   &.scrolled {
     height: 50px;
   }
+  @media (max-width: 1010px) {
+    position: relative;
+    background: rgb(78, 76, 76);
+  }
 `;

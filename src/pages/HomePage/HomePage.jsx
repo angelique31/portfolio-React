@@ -9,6 +9,9 @@ import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollA
 
 const HomePage = () => {
   const [showIntro, setShowIntro] = useState(true);
+  const handleShowIntro = () => {
+    setShowIntro(true);
+  };
 
   const handleCloseIntro = () => {
     setShowIntro(false);
@@ -16,7 +19,7 @@ const HomePage = () => {
   return (
     <div>
       {/* <NavBarColor /> */}
-      <ScrollAwareNavBar />
+      <ScrollAwareNavBar onAboutClick={handleShowIntro} />
       <Slider />
       {showIntro && <Introduction onClose={handleCloseIntro} />}
       <Specialties />

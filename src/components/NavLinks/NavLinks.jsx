@@ -3,13 +3,13 @@ import { useTranslation } from "react-i18next";
 import { StyledNavList, StyledNavItem } from "./NavLinks.styled";
 import PropTypes from "prop-types";
 
-function NavLinks({ isOpen, isScrolled }) {
+function NavLinks({ isOpen, isScrolled, onAboutClick }) {
   const { t } = useTranslation();
 
   return (
     <StyledNavList $isOpen={isOpen}>
       <StyledNavItem isScrolled={isScrolled}>
-        <Link to="/about">{t("Qui je suis?")}</Link>
+        <Link onClick={onAboutClick}>{t("Qui je suis?")}</Link>
       </StyledNavItem>
       <StyledNavItem isScrolled={isScrolled}>
         <Link to="/cv">{t("Mon cv")}</Link>
