@@ -10,12 +10,21 @@ function NavLinks({ isOpen, isScrolled, onAboutClick }) {
     <StyledNavList $isOpen={isOpen}>
       <StyledNavItem isScrolled={isScrolled}>
         <Link onClick={onAboutClick}>{t("Qui je suis?")}</Link>
+        {/* <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            onAboutClick();
+          }}
+        >
+          {t("Qui je suis?")}
+        </a> */}
       </StyledNavItem>
       <StyledNavItem isScrolled={isScrolled}>
         <Link to="/cv">{t("Mon cv")}</Link>
       </StyledNavItem>
       <StyledNavItem isScrolled={isScrolled}>
-        <Link to="/realisations">{t("Mes réalisations")}</Link>
+        <a href="#mes-realisations">{t("Mes réalisations")}</a>
       </StyledNavItem>
       <StyledNavItem isScrolled={isScrolled}>
         <Link to="/contact">{t("Contactez-moi")}</Link>

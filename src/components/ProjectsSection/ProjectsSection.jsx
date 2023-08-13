@@ -33,7 +33,7 @@ const ProjectsSection = () => {
     }
   }, [isVisible]);
   return (
-    <div>
+    <div id="mes-realisations">
       <ProjectsContainer ref={containerRef}>
         <Title>{t("projects_title")}</Title>
         <ProjectsWrapper>
