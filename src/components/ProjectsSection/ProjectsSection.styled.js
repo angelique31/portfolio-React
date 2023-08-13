@@ -41,6 +41,7 @@ export const Subtitle = styled.p`
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px;
 `;
 
 export const ProjectsWrapper = styled.div`

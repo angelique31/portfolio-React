@@ -1,6 +1,8 @@
 const projectsDataDetail = [
   {
     title: "Site de recettes de cuisine",
+    description:
+      "Projet personnel développé en React, ce site présente une variété de recettes de cuisine.",
     longDescription:
       "Description détaillée du projet, avec plus d'informations, de contexte, de défis rencontrés, etc.",
     additionalImages: [
@@ -16,6 +18,8 @@ const projectsDataDetail = [
   },
   {
     title: "Page d'accueil Météo France",
+    description:
+      "Réplique de la page d'accueil de Météo France réalisée uniquement avec HTML et CSS.",
     longDescription: "Description détaillée du projet Météo France...",
     additionalImages: ["/assets/clone_meteoFrance/meteoFrance_mobile.png"],
     features: ["Feature 1 for Météo France", "Feature 2 for Météo France"],

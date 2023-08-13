@@ -7,12 +7,12 @@ const ProjectsDetailPage = () => {
   // Si projectId est un index :
   const projectDetail = projectsDataDetail[projectId];
 
-  // Assurez-vous que le projet est valide
   if (!projectDetail) return <div>Projet non trouvé</div>;
 
   return (
     <div>
       <h1>{projectDetail.title}</h1>
+      <h2>{projectDetail.description}</h2>
       <p>{projectDetail.longDescription}</p>
 
       <div>
