@@ -18,8 +18,7 @@ export const NavBarStyled = styled.nav`
     height: 50px;
   }
   @media (max-width: 1010px) {
-    position: relative;
+    position: fixed;
     background: rgb(78, 76, 76);
-    transition: none;
   }
 `;

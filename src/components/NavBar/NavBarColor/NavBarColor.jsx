@@ -8,7 +8,7 @@ import NavLinks from "../../NavLinks/NavLinks";
 import LanguageSelector from "../../LangageSelector/LangageSelector";
 import PropTypes from "prop-types";
 
-const NavBarColor = ({ isScrolled, onAboutClick }) => {
+const NavBarColor = ({ isScrolled, isMobile, onAboutClick }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -23,7 +23,11 @@ const NavBarColor = ({ isScrolled, onAboutClick }) => {
   }, [isOpen]);
 
   return (
-    <NavBarStyled className={isScrolled ? "scrolled" : ""}>
+    <NavBarStyled
+      className={isScrolled ? "scrolled" : ""}
+      isScrolled={isScrolled}
+      isMobile={isMobile}
+    >
       <MenuHamburger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
       {/* <Overlay $isOpen={isOpen} onClick={() => setIsOpen(false)} /> */}
       <Overlay $isOpen={isOpen} onClick={() => setIsOpen(false)} />

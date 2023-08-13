@@ -76,11 +76,11 @@ export const StyledNavItem = styled.li`
     }
   `}
 
-  @media (max-width: 1010px) {
-    &.intro-link {
-      display: block;
-    }
-  }
+  // @media (max-width: 1010px) {
+  //   &.intro-link {
+  //     display: block;
+  //   }
+  // }
   
     @media (max-width: 1009px) {
       border: none;

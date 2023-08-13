@@ -18,7 +18,7 @@ import {
   ProjectTechnologies,
   ProjectTitle,
   ProjectDescription,
-  ProjectLink,
+  StyledLink,
 } from "./ProjectsSection.styled";
 
 const ProjectsSection = () => {
@@ -59,7 +59,9 @@ const ProjectsSection = () => {
                 <ProjectDescription>
                   {t(`project_${index}_description`)}
                 </ProjectDescription>
-                <ProjectLink>{t("projects_learn_more")}</ProjectLink>
+                <StyledLink to={`/project-detail/${index}`}>
+                  {t("projects_learn_more")}
+                </StyledLink>
               </ProjectInfoWrapper>
             </ProjectCard>
           ))}

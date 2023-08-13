@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 
 const fadeInTitle = keyframes`
   0% {
@@ -113,7 +114,7 @@ export const ProjectDescription = styled.p`
   font-size: 0.8rem;
 `;
 
-export const ProjectLink = styled.a`
+export const StyledLink = styled(Link)`
   display: inline-block;
   margin-top: 1em;
   padding: 0.5em 1em;
