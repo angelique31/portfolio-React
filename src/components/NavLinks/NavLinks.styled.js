@@ -66,6 +66,22 @@ export const StyledNavItem = styled.li`
         }
       }
   }
+
+  /* Masquez "Qui je suis?" par défaut lorsque la navbar est défilée */
+  ${({ isScrolled }) =>
+    isScrolled &&
+    `
+    &.intro-link {
+      display: none;
+    }
+  `}
+
+  @media (max-width: 1010px) {
+    &.intro-link {
+      display: block;
+    }
+  }
+  
     @media (max-width: 1009px) {
       border: none;
       padding: 0;
@@ -86,4 +102,22 @@ export const StyledNavItem = styled.li`
       }
     }
   }
+`;
+
+export const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* noir avec 70% d'opacité */
+  z-index: 1;
+  display: none; /* Par défaut, il sera caché */
+
+  ${({ $isOpen }) =>
+    $isOpen &&
+    `
+    display: block;
+    
+  `}
 `;

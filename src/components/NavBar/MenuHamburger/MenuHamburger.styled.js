@@ -9,7 +9,7 @@ export const StyledHamburger = styled.button`
   align-items: center;
   position: absolute;
   margin-left: 20px;
-
+  z-index: 10;
   background: transparent;
   left: 0;
 
