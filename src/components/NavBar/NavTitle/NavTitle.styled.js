@@ -12,6 +12,9 @@ export const StyledNavTitle = styled.h1`
   strong {
     font-weight: 100;
   }
+  a {
+    color: white;
+  }
   @media (max-width: 1009px) {
     margin: auto;
     text-align: center;
