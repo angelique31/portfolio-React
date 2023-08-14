@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import projectsData from "../Datas/projectsData";
+import projectsData from "../../datas/projectsData";
 
 import UseIntersectionObservers from "../UseIntersectionObservers/UseIntersectionObservers";
 
@@ -18,8 +18,15 @@ import {
   ProjectTechnologies,
   ProjectTitle,
   ProjectDescription,
+  FlexContainer,
   StyledLink,
+  IconWrapper,
+  LogoImage,
+  StyledExternalIcon,
 } from "./ProjectsSection.styled";
+
+import GitLogo from "../../assets/logos/GitLogo.png";
+// import ExternalLink from "../../assets/Icons/external-link.svg";
 
 const ProjectsSection = () => {
   const containerRef = useRef(null);
@@ -59,9 +66,25 @@ const ProjectsSection = () => {
                 <ProjectDescription>
                   {t(`project_${index}_description`)}
                 </ProjectDescription>
-                <StyledLink to={`/project-detail/${index}`}>
-                  {t("projects_learn_more")}
-                </StyledLink>
+                <FlexContainer>
+                  <StyledLink to={`/project-detail/${index}`}>
+                    {t("projects_learn_more")}
+                  </StyledLink>
+                  <IconWrapper>
+                    <LogoImage
+                      className="git-logo"
+                      src={GitLogo}
+                      alt="Git Logo"
+                    />
+                    <Link
+                      to={project.projectLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <StyledExternalIcon />
+                    </Link>
+                  </IconWrapper>
+                </FlexContainer>
               </ProjectInfoWrapper>
             </ProjectCard>
           ))}

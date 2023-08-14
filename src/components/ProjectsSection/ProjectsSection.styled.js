@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
+import ExternalLinkIcon from "../ExternalLinkIcon/ExternalLinkIcon";
 
 const fadeInTitle = keyframes`
   0% {
@@ -72,6 +73,9 @@ export const ProjectCard = styled.div`
       props.delayIndex *
         0.4}s; // Chaque carte a un délai de 0.4s plus long que la précédente
   }
+  @media (max-width: 446px) {
+    height: 429px;
+  }
 `;
 
 export const ProjectImageWrapper = styled.div`
@@ -115,6 +119,12 @@ export const ProjectDescription = styled.p`
   font-size: 0.8rem;
 `;
 
+export const FlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const StyledLink = styled(Link)`
   display: inline-block;
   margin-top: 1em;
@@ -127,5 +137,26 @@ export const StyledLink = styled(Link)`
   &:hover {
     background-color: #ffb957;
     color: #313552;
+  }
+`;
+
+export const IconWrapper = styled.div`
+  display: flex;
+  gap: 20px;
+`;
+
+export const LogoImage = styled.img`
+  width: 35px;
+`;
+
+export const StyledExternalIcon = styled(ExternalLinkIcon)`
+  width: 18px;
+  height: 18px;
+  color: #d1d5db;
+  transition: color 0.3s, transform 0.3s;
+  margin-top: 12px;
+  &:hover {
+    color: #ffb957;
+    transform: scale(1.1);
   }
 `;

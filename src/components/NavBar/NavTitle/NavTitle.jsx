@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { StyledNavTitle } from "./NavTitle.styled";
 
 function NavTitle({ isScrolled }) {
@@ -18,5 +19,9 @@ function NavTitle({ isScrolled }) {
     </StyledNavTitle>
   );
 }
+
+NavTitle.propTypes = {
+  isScrolled: PropTypes.bool.isRequired,
+};
 
 export default NavTitle;

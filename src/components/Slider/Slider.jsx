@@ -1,5 +1,5 @@
 // Slider.js
-import { imageDetails } from "../Datas/picturesData";
+import { imageDetails } from "../../datas/picturesData";
 import { useState, useEffect } from "react";
 import { BackgroundImage, ImageSlider } from "./Slider.styled";
 

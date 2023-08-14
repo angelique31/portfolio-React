@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import NavTitle from "../NavTitle/NavTitle";
 import { NavBarStyled } from "./NavBarColor.styled";
-import { Overlay } from "../../NavLinks/NavLinks.styled";
+import { Overlay } from "../NavLinks/NavLinks.styled";
 
 import MenuHamburger from "../MenuHamburger/MenuHamburger";
-import NavLinks from "../../NavLinks/NavLinks";
+import NavLinks from "../NavLinks/NavLinks";
 import LanguageSelector from "../../LangageSelector/LangageSelector";
 import PropTypes from "prop-types";
 
