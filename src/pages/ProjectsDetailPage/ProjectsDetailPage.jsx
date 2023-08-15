@@ -3,58 +3,98 @@ import { useParams } from "react-router-dom";
 import PortfolioContext from "../../context/portfolioContext";
 import projectsDataDetail from "../../datas/projectsDataDetail";
 import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollAwareNavBar";
+import {
+  ProjectDetailContainer,
+  IntroContainer,
+  ObjectiveContainer,
+  ChallengeContainer,
+  CollaborationContainer,
+  MainTitle,
+  SectionTitle,
+  TechnologyContainer,
+  TextParagraph,
+  UnorderedList,
+  ListItem,
+  ImageContainer,
+  ImageWrapper,
+  ProjectImage,
+} from "./ProjectsDetailPage.styled";
 
 const ProjectsDetailPage = () => {
   const { handleShowIntro } = useContext(PortfolioContext);
   const { projectId } = useParams();
-
-  // Si projectId est un index :
   const projectDetail = projectsDataDetail[projectId];
 
   if (!projectDetail) return <div>Projet non trouvé</div>;
 
   return (
-    <div>
+    <>
       <ScrollAwareNavBar onAboutClick={handleShowIntro} />
-      <h1>{projectDetail.title}</h1>
-      <h2>Présentation du Projet</h2>
-      <p>{projectDetail.description.intro}</p>
-      <h2>Objectifs du Projet</h2>
-      <p>{projectDetail.description.objective}</p>
-      <h2>Défis et Réalisations</h2>
-      <p>{projectDetail.description.challenge}</p>
-      <h2>{`Vers une Collaboration : Comment le travail d'équipe aurait pu enrichir le projet`}</h2>
-      <ul>
-        {projectDetail.description.collaboration.map((point, index) => (
-          <li key={index}>{point}</li>
-        ))}
-      </ul>
-      {projectDetail.optimizationAndAccessibility && (
-        <>
-          <h2>Optimisation et Accessibilité</h2>
-          <p>{projectDetail.optimizationAndAccessibility}</p>
-        </>
-      )}
+      <ProjectDetailContainer>
+        <IntroContainer>
+          <MainTitle>{projectDetail.title}</MainTitle>
+          <TextParagraph>{projectDetail.description.intro}</TextParagraph>
+        </IntroContainer>
 
-      <div>
-        {projectDetail.additionalImages.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`${projectDetail.title} - Image ${index + 1}`}
-          />
-        ))}
-      </div>
+        <ObjectiveContainer>
+          <SectionTitle>Objectifs du Projet</SectionTitle>
+          <TextParagraph>{projectDetail.description.objective}</TextParagraph>
+        </ObjectiveContainer>
 
-      <h2>Outils et Technologies utilisés</h2>
-      <ul>
-        {projectDetail.toolsAndTech.map((toolOrTech, index) => (
-          <li key={index}>{toolOrTech}</li>
-        ))}
-      </ul>
+        <ChallengeContainer>
+          <SectionTitle>Défis et Réalisations</SectionTitle>
+          <TextParagraph>{projectDetail.description.challenge}</TextParagraph>
+        </ChallengeContainer>
 
-      {/* Ajoutez d'autres sections ou détails que vous souhaitez afficher ici */}
-    </div>
+        <ProjectImage
+          src={projectDetail.additionalImages[0]}
+          alt={`${projectDetail.title} - Image 1`}
+        />
+
+        <CollaborationContainer>
+          <SectionTitle>
+            {`Vers une Collaboration : Comment le travail d'équipe aurait pu
+            enrichir le projet`}
+          </SectionTitle>
+          <UnorderedList>
+            {projectDetail.description.collaboration.map((point, index) => (
+              <ListItem key={`collab-${index}`}>{point}</ListItem>
+            ))}
+          </UnorderedList>
+        </CollaborationContainer>
+
+        {projectDetail.optimizationAndAccessibility && (
+          <ObjectiveContainer>
+            {" "}
+            {/* Consider using another container or renaming for better semantics */}
+            <SectionTitle>Optimisation et Accessibilité</SectionTitle>
+            <TextParagraph>
+              {projectDetail.optimizationAndAccessibility}
+            </TextParagraph>
+          </ObjectiveContainer>
+        )}
+
+        <ImageContainer>
+          {projectDetail.additionalImages.map((image, index) => (
+            <ImageWrapper key={`img-${index}`}>
+              <ProjectImage
+                src={image}
+                alt={`${projectDetail.title} - Image ${index + 1}`}
+              />
+            </ImageWrapper>
+          ))}
+        </ImageContainer>
+
+        <TechnologyContainer>
+          <SectionTitle>Outils et Technologies utilisés</SectionTitle>
+          <UnorderedList>
+            {projectDetail.toolsAndTech.map((toolOrTech, index) => (
+              <ListItem key={`tech-${index}`}>{toolOrTech}</ListItem>
+            ))}
+          </UnorderedList>
+        </TechnologyContainer>
+      </ProjectDetailContainer>
+    </>
   );
 };
 

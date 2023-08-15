@@ -1,19 +1,19 @@
 const projectsDataDetail = [
   {
-    title: "Site de recettes de cuisine",
+    title: "Délices Culinaires",
     description: {
       intro:
-        "Projet personnel développé en React, ce site présente une variété de recettes de cuisine.",
+        "Projet personnel développé en React. Ce site présente une variété de recettes de cuisine.",
       objective:
         "L'objectif principal était de créer une plateforme intuitive et réactive de recettes de cuisine, tout en maîtrisant la gestion d'état avec Redux. Je voulais également concevoir une architecture modulaire avec des composants réutilisables, optimiser les performances de l'application et garantir sa fluidité sur tous les appareils grâce à un design adapté.",
       challenge:
         "La principale difficulté du projet a été de réfléchir à la structure à adopter pour une navigation intuitive de l'utilisateur. La conceptualisation de l'UI/UX m'a demandé une réflexion approfondie, particulièrement dans l'anticipation des besoins et des comportements des utilisateurs. L’outil Figma m’a permis de tester différents prototypes avant d'arriver à la version finale.",
       collaboration: [
         "En travaillant en équipe, et notamment en adoptant des méthodologies comme Agile et Scrum, plusieurs améliorations auraient été possibles pour ce projet.",
-        "Des revues de code régulières auraient assuré une meilleure qualité grâce aux échanges et au partage de connaissances.",
-        "La collaboration lors des phases de conception UI/UX aurait apporté différentes perspectives, contribuant à un design plus riche et abouti.",
-        "En collaborant avec une équipe, nous aurions pu solliciter un éventail plus large d'utilisateurs pour tester le projet, offrant ainsi des retours plus variés.",
-        "Le partage des tâches aurait accéléré le développement, chaque membre apportant ses compétences spécifiques.",
+        "1. Des revues de code régulières auraient assuré une meilleure qualité grâce aux échanges et au partage de connaissances.",
+        "2. La collaboration lors des phases de conception UI/UX aurait apporté différentes perspectives, contribuant à un design plus riche et abouti.",
+        "3. En collaborant avec une équipe, nous aurions pu solliciter un éventail plus large d'utilisateurs pour tester le projet, offrant ainsi des retours plus variés.",
+        "4. Le partage des tâches aurait accéléré le développement, chaque membre apportant ses compétences spécifiques.",
       ],
       optimizationAndAccessibility:
         "J'ai activement cherché à rendre ce site inclusif en mettant l'accent sur l'accessibilité. En utilisant le Color Contrast Checker de WebAIM, j'ai sélectionné des contrastes de couleurs conformes aux normes WCAG, assurant une meilleure lisibilité pour tous, y compris ceux ayant des troubles de la vision des couleurs.     Comme pour tous les développements la performance est au centre des priorités. Aussi, on utilise le moins de modules et librairies possible.",
@@ -23,13 +23,12 @@ const projectsDataDetail = [
       "/assets/delices_culinaires/delice culinaire_exemple.png",
     ],
     toolsAndTech: [
-      "React & React-Router-Dom: Création et gestion de l'interface utilisateur, y compris la navigation.",
-      "Redux & React-Redux: Gestion centralisée de l'état de l'application.",
-      "Styled-Components: Styling CSS-in-JS pour une conception personnalisée.",
-      "Vite: Outil de développement pour une construction rapide et un développement efficace.",
-      "Font Awesome: Embellissement de l'interface avec des icônes.",
-      "Figma: Conception et prototypage de l'UI/UX.",
-      "Vercel: Déploiement et hébergement de l'application.",
+      "- React & React-Router-Dom: Création et gestion de l'interface utilisateur, y compris la navigation.",
+      "- Redux & React-Redux: Gestion centralisée de l'état de l'application.",
+      "- Styled-Components: Styling CSS-in-JS pour une conception personnalisée.",
+      "- Vite: Outil de développement pour une construction rapide et un développement efficace.",
+      "- Figma: Conception et prototypage de l'UI/UX.",
+      "- Vercel: Déploiement et hébergement de l'application.",
     ],
     // ... Autres champs que vous voulez ajouter pour les détails
   },

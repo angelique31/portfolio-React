@@ -24,6 +24,17 @@ const fadeIn = keyframes`
   }
 `;
 
+export const pulseEffect = keyframes`
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);  
+    opacity: 0.7;          
+  }
+`;
+
 export const Title = styled.h2`
   .visible & {
     animation: ${fadeInTitle} 1s forwards;
@@ -123,40 +134,63 @@ export const FlexContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
 `;
 
 export const StyledLink = styled(Link)`
   display: inline-block;
-  margin-top: 1em;
   padding: 0.5em 1em;
   border-radius: 5px;
   border: 1px solid #ffb957;
   color: #ffc576;
   font-size: 0.9rem;
   cursor: pointer;
+
+  transition: box-shadow 0.2s;
+  box-shadow: 0 0 10px rgba(255, 185, 87, 0.6);
   &:hover {
     background-color: #ffb957;
     color: #313552;
+    box-shadow: 1px 4px 0px rgba(255, 185, 87, 0.8);
+  }
+  &:active {
+    transform: scale(0.95); // réduit légèrement le bouton
+    box-shadow: 0px 1px 7px rgba(255, 185, 87, 0.6); // réduit l'ombre pour l'effet d'enfoncement
   }
 `;
 
 export const IconWrapper = styled.div`
   display: flex;
   gap: 20px;
+  align-items: center;
 `;
 
 export const LogoImage = styled.img`
-  width: 35px;
+  width: 40px;
+  border-radius: 50%;
+  opacity: 0.3;
+  transition: color 0.3s, transform 0.3s;
+  // animation: ${pulseEffect} 2s infinite;
+  &:hover {
+    opacity: 1;
+    color: white;
+    transform: scale(1.1);
+    // box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  }
 `;
 
 export const StyledExternalIcon = styled(ExternalLinkIcon)`
   width: 18px;
   height: 18px;
+
   color: #d1d5db;
-  transition: color 0.3s, transform 0.3s;
-  margin-top: 12px;
+  transition: color 0.3s, transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+  // animation: ${pulseEffect} 2s infinite;
+
   &:hover {
-    color: #ffb957;
-    transform: scale(1.1);
+    opacity: 1;
+    color: white;
+    transform: scale(1.15);
+    // box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
   }
 `;

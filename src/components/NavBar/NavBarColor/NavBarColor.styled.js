@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavBarStyled = styled.nav`
   // background: rgb(78, 76, 76);
-  background-color: rgba(78, 76, 76, 0.7);
+  background-color: rgba(78, 76, 76, 0.8);
   position: fixed;
   z-index: 20;
   width: 100%;

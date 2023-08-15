@@ -25,8 +25,7 @@ import {
   StyledExternalIcon,
 } from "./ProjectsSection.styled";
 
-import GitLogo from "../../assets/logos/GitLogo.png";
-// import ExternalLink from "../../assets/Icons/external-link.svg";
+import GitLogo from "../../assets/logos/GitLogo2.png";
 
 const ProjectsSection = () => {
   const containerRef = useRef(null);
@@ -51,7 +50,7 @@ const ProjectsSection = () => {
             <ProjectCard key={index} delayIndex={index}>
               <ProjectImageWrapper>
                 <Link
-                  to={project.projectLink}
+                  to={project.externalLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -70,14 +69,22 @@ const ProjectsSection = () => {
                   <StyledLink to={`/project-detail/${index}`}>
                     {t("projects_learn_more")}
                   </StyledLink>
+
                   <IconWrapper>
-                    <LogoImage
-                      className="git-logo"
-                      src={GitLogo}
-                      alt="Git Logo"
-                    />
                     <Link
-                      to={project.projectLink}
+                      to={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <LogoImage
+                        className="git-logo"
+                        src={GitLogo}
+                        alt="Git Logo"
+                      />
+                    </Link>
+
+                    <Link
+                      to={project.externalLink}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
