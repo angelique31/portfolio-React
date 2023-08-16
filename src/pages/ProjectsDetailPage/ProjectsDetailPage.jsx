@@ -10,6 +10,9 @@ import {
   IntroContainer,
   ObjectiveContainer,
   ChallengeContainer,
+  AlignedImageContainer,
+  ResponsiveContainer,
+  AccessibilityContainer,
   CollaborationContainer,
   MainTitle,
   StyledAnchorLink,
@@ -20,7 +23,10 @@ import {
   ListItem,
   ImageContainer,
   ImageWrapper,
+  ImageChallengeContainer,
   ProjectImage,
+  AccessibilityImage,
+  MobileImage,
 } from "./ProjectsDetailPage.styled";
 
 const ProjectsDetailPage = () => {
@@ -58,11 +64,38 @@ const ProjectsDetailPage = () => {
           <SectionTitle>Défis et Réalisations</SectionTitle>
           <TextParagraph>{projectDetail.description.challenge}</TextParagraph>
         </ChallengeContainer>
+        <AlignedImageContainer>
+          <ImageChallengeContainer>
+            <ProjectImage
+              src={projectDetail.additionalImages[0]}
+              alt={`${projectDetail.title} - Image 1`}
+            />
+            <MobileImage
+              src={projectDetail.additionalImages[1]}
+              alt={`${projectDetail.title} - Image 1`}
+            />
+          </ImageChallengeContainer>
 
-        <ProjectImage
-          src={projectDetail.additionalImages[0]}
-          alt={`${projectDetail.title} - Image 1`}
-        />
+          <ResponsiveContainer>
+            <SectionTitle>
+              Adaptabilité : Répondre à Chaque Dispositif
+            </SectionTitle>
+            <TextParagraph>
+              {projectDetail.description.responsive}
+            </TextParagraph>
+          </ResponsiveContainer>
+        </AlignedImageContainer>
+
+        <AccessibilityContainer>
+          <SectionTitle>Performance et Accessibilité</SectionTitle>
+          <TextParagraph>
+            {projectDetail.description.optimizationAndAccessibility}
+          </TextParagraph>
+          <AccessibilityImage
+            src={projectDetail.additionalImages[2]}
+            alt={`${projectDetail.title} - Image 1`}
+          />
+        </AccessibilityContainer>
 
         <CollaborationContainer>
           <SectionTitle>
@@ -75,28 +108,6 @@ const ProjectsDetailPage = () => {
             ))}
           </UnorderedList>
         </CollaborationContainer>
-
-        {projectDetail.optimizationAndAccessibility && (
-          <ObjectiveContainer>
-            {" "}
-            {/* Consider using another container or renaming for better semantics */}
-            <SectionTitle>Optimisation et Accessibilité</SectionTitle>
-            <TextParagraph>
-              {projectDetail.optimizationAndAccessibility}
-            </TextParagraph>
-          </ObjectiveContainer>
-        )}
-
-        <ImageContainer>
-          {projectDetail.additionalImages.map((image, index) => (
-            <ImageWrapper key={`img-${index}`}>
-              <ProjectImage
-                src={image}
-                alt={`${projectDetail.title} - Image ${index + 1}`}
-              />
-            </ImageWrapper>
-          ))}
-        </ImageContainer>
 
         <TechnologyContainer>
           <SectionTitle>Outils et Technologies utilisés</SectionTitle>

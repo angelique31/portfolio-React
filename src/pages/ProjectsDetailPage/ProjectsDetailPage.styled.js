@@ -44,7 +44,7 @@ export const ObjectiveContainer = styled.div`
   ${SharedContainerStyles}
 
   width: 70%;
-  margin: 70px 0;
+  margin: 70px auto;
   &:hover {
     ${SectionTitle} {
       color: #ffc576;
@@ -59,8 +59,9 @@ export const ObjectiveContainer = styled.div`
 
 export const ChallengeContainer = styled.div`
   ${SharedContainerStyles}
-  width: 60%;
-  float: right;
+
+  width: 70%;
+  margin: 70px auto;
   &:hover {
     ${SectionTitle} {
       color: #ffc576;
@@ -69,6 +70,48 @@ export const ChallengeContainer = styled.div`
   @media (max-width: 872px) {
     width: 100%;
     margin: 80px 0;
+  }
+`;
+
+export const AlignedImageContainer = styled.div`
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  @media (max-width: 1060px) {
+    flex-direction: column;
+  }
+`;
+
+export const ResponsiveContainer = styled.div`
+  ${SharedContainerStyles}
+  width: 50%;
+
+  &:hover {
+    ${SectionTitle} {
+      color: #ffc576;
+    }
+  }
+  @media (max-width: 1060px) {
+    width: 70%;
+  }
+  @media (max-width: 872px) {
+    width: 100%;
+    margin: 80px 0;
+  }
+  @media (max-width: 514px) {
+    margin: 20px 0;
+  }
+`;
+
+export const AccessibilityContainer = styled.div`
+  ${SharedContainerStyles}
+  margin: 70px 0;
+
+  width: 100%;
+  &:hover {
+    ${SectionTitle} {
+      color: #ffc576;
+    }
   }
 `;
 
@@ -154,8 +197,46 @@ export const ImageWrapper = styled.div`
   }
 `;
 
+export const ImageChallengeContainer = styled.div`
+  display: flex;
+  gap: 30px;
+  @media (max-width: 532px) {
+    flex-direction: column;
+  }
+`;
+
 export const ProjectImage = styled.img`
+  width: 60%;
+
+  display: block;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  height: 200px;
+  overflow: hidden;
+
+  @media (max-width: 872px) {
+    margin: auto;
+  }
+  @media (max-width: 532px) {
+    width: 100%;
+  }
+`;
+
+export const AccessibilityImage = styled.img`
   width: 100%;
+  max-width: 300px;
+  display: block;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  max-height: 462px;
+  overflow: hidden;
+  margin: auto;
+  // @media (max-width: 872px) {
+  //   margin: auto;
+  // }
+`;
+export const MobileImage = styled.img`
+  height: 300px;
   max-width: 300px;
   display: block;
   border-radius: 7px;
