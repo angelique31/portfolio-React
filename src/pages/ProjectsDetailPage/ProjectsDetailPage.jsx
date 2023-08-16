@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import PortfolioContext from "../../context/portfolioContext";
 import projectsDataDetail from "../../datas/projectsDataDetail";
 import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollAwareNavBar";
+import projectsData from "../../datas/projectsData";
+
 import {
   ProjectDetailContainer,
   IntroContainer,
@@ -10,6 +12,7 @@ import {
   ChallengeContainer,
   CollaborationContainer,
   MainTitle,
+  StyledAnchorLink,
   SectionTitle,
   TechnologyContainer,
   TextParagraph,
@@ -25,6 +28,9 @@ const ProjectsDetailPage = () => {
   const { projectId } = useParams();
   const projectDetail = projectsDataDetail[projectId];
 
+  const projectData = projectsData[projectId];
+  const externalLink = projectData.externalLink;
+  console.log(externalLink);
   if (!projectDetail) return <div>Projet non trouvé</div>;
 
   return (
@@ -33,8 +39,15 @@ const ProjectsDetailPage = () => {
       <ProjectDetailContainer>
         <IntroContainer>
           <MainTitle>{projectDetail.title}</MainTitle>
-          <TextParagraph>{projectDetail.description.intro}</TextParagraph>
+          <StyledAnchorLink
+            href={externalLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir le site
+          </StyledAnchorLink>
         </IntroContainer>
+        <TextParagraph>{projectDetail.description.intro}</TextParagraph>
 
         <ObjectiveContainer>
           <SectionTitle>Objectifs du Projet</SectionTitle>

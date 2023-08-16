@@ -151,7 +151,7 @@ export const StyledLink = styled(Link)`
   &:hover {
     background-color: #ffb957;
     color: #313552;
-    box-shadow: 1px 4px 0px rgba(255, 185, 87, 0.8);
+    box-shadow: 2px 1px 0px rgba(255, 185, 87, 0.8);
   }
   &:active {
     transform: scale(0.95); // réduit légèrement le bouton

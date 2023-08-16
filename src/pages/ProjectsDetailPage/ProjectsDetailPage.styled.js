@@ -15,11 +15,12 @@ export const SharedTextStyles = `
   font-size: 1rem;
   line-height: 1.5;
   color: rgb(209, 213, 219);
+  margin-top: 20px;
 `;
 
 export const SectionTitle = styled.h2`
   font-size: 1.5rem;
-  margin-top: 30px;
+  margin-top: 15px;
   margin-bottom: 15px;
   color: white;
 `;
@@ -31,7 +32,12 @@ export const ProjectDetailContainer = styled.div`
 `;
 
 export const IntroContainer = styled.div`
-  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 514px) {
+    flex-direction: column;
+  }
 `;
 
 export const ObjectiveContainer = styled.div`
@@ -47,6 +53,7 @@ export const ObjectiveContainer = styled.div`
   @media (max-width: 872px) {
     width: 100%;
     margin: 0;
+    margin-top: 70px;
   }
 `;
 
@@ -78,8 +85,33 @@ export const CollaborationContainer = styled.div`
 
 export const MainTitle = styled.h1`
   font-size: 2rem;
-  margin-bottom: 20px;
+
   color: #ffb957;
+`;
+
+export const StyledAnchorLink = styled.a`
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: 1px solid #ffb957;
+  color: #ffc576;
+  font-size: 0.9rem;
+  cursor: pointer;
+
+  transition: box-shadow 0.2s;
+  box-shadow: 0 0 10px rgba(255, 185, 87, 0.6);
+  &:hover {
+    background-color: #ffb957;
+    color: #313552;
+    box-shadow: 2px 1px 0px rgba(255, 185, 87, 0.8);
+  }
+  &:active {
+    transform: scale(0.95);
+    box-shadow: 0px 1px 7px rgba(255, 185, 87, 0.6);
+  }
+  @media (max-width: 514px) {
+    margin: 20px;
+  }
 `;
 
 export const TechnologyContainer = styled.div`

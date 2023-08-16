@@ -39,6 +39,7 @@ const ProjectsSection = () => {
       containerRef.current.classList.remove("visible");
     }
   }, [isVisible]);
+
   return (
     <div id="mes-realisations">
       <ProjectsContainer ref={containerRef}>
