@@ -18,39 +18,33 @@ function NavLinks({ isOpen, isScrolled, onAboutClick, closeMenu }) {
             closeMenu();
           }}
         >
-          {t("Qui je suis?")}
+          {t("homepage.Qui je suis?")}
         </Link>
       </StyledNavItem>
 
       <StyledNavItem isScrolled={isScrolled}>
         <Link to="/cv" onClick={closeMenu}>
-          {t("Mon cv")}
+          {t("homepage.Mon cv")}
         </Link>
       </StyledNavItem>
-      {/* <StyledNavItem isScrolled={isScrolled}> */}
-      {/* <a href="#mes-realisations" onClick={closeMenu}>
-          {t("Mes réalisations")}
-        </a> */}
-      {/* <Link to="/mes-realisations" onClick={closeMenu}>
-          {t("Mes réalisations")}
-        </Link> */}
+
       {location.pathname.startsWith("/project-detail/") ? (
         <StyledNavItem isScrolled={isScrolled}>
           <Link to="/mes-realisations" onClick={closeMenu}>
-            {t("Mes réalisations")}
+            {t("homepage.Mes réalisations")}
           </Link>
         </StyledNavItem>
       ) : (
         <StyledNavItem isScrolled={isScrolled}>
           <a href="#mes-realisations" onClick={closeMenu}>
-            {t("Mes réalisations")}
+            {t("homepage.Mes réalisations")}
           </a>
         </StyledNavItem>
       )}
       {/* </StyledNavItem> */}
       <StyledNavItem isScrolled={isScrolled}>
         <Link to="/contact" onClick={closeMenu}>
-          {t("Contactez-moi")}
+          {t("homepage.Contactez-moi")}
         </Link>
       </StyledNavItem>
     </StyledNavList>

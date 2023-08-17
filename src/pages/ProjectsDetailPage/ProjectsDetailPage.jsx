@@ -21,8 +21,6 @@ import {
   TextParagraph,
   UnorderedList,
   ListItem,
-  ImageContainer,
-  ImageWrapper,
   ImageChallengeContainer,
   ProjectImage,
   AccessibilityImage,
@@ -32,11 +30,12 @@ import {
 const ProjectsDetailPage = () => {
   const { handleShowIntro } = useContext(PortfolioContext);
   const { projectId } = useParams();
+
   const projectDetail = projectsDataDetail[projectId];
 
   const projectData = projectsData[projectId];
   const externalLink = projectData.externalLink;
-  console.log(externalLink);
+
   if (!projectDetail) return <div>Projet non trouvé</div>;
 
   return (

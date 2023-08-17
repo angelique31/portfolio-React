@@ -1,28 +1,84 @@
 {
-  "Qui je suis?": "Who I am ?",
-  "Mon cv": "CV",
-  "Mes réalisations": "projects",
-  "Contactez-moi": "Contact me",
-  "intro_greeting": "Hello, I am",
-  "intro_role": "Javascript React Developer",
-  "intro_description": "Passionate about creating intuitive user experiences, I turn ideas into concrete realities through programming.",
-  "Mes spécialités": "My specialties",
-  "comp_transverses": "My Soft Skills",
-  "bio": "After working as a nurse for 20 years, I've learned the value of <Highlight>team work</Highlight>. This experience greatly benefits me in web development. My <Highlight>rigor</Highlight> and <Highlight>listening skills</Highlight>, acquired in the medical world, guide me in every project. I know how important it is to collaborate and understand the needs of others, whether they are patients or <Highlight>website users</Highlight>. Every line of code I write reflects this <Highlight>human-centered</Highlight> approach.",
-  "skills": [
-    "Empathy",
-    "Adaptability",
-    "Receptivity to feedback",
-    "Teamwork",
-    "Communication",
-    "Organization",
-    "Attention to details"
-  ],
-  "projects_title": "My projects",
-  "projects_learn_more": "Learn more",
-  "project_0_title": "Cooking recipes website",
-  "project_0_description": "Personal project developed in React, this website presents a variety of cooking recipes.",
-  "project_1_title": "Météo France Home Page",
-  "project_1_description": "Clone of the Météo France homepage made solely with HTML and CSS.",
-  "projects_subtitle": "Personal achievements conducted independently of my academic journey, reflecting my passion and commitment to development."
+  "homepage": {
+    "Qui je suis?": "Who I am ?",
+    "Mon cv": "CV",
+    "Mes réalisations": "projects",
+    "Contactez-moi": "Contact me",
+    "intro_greeting": "Hello, I am",
+    "intro_role": "Javascript React Developer",
+    "intro_description": "Passionate about creating intuitive user experiences, I turn ideas into concrete realities through programming.",
+    "Mes spécialités": "My specialties",
+    "comp_transverses": "My Soft Skills",
+    "bio": "After working as a nurse for 20 years, I've learned the value of <Highlight>team work</Highlight>. This experience greatly benefits me in web development. My <Highlight>rigor</Highlight> and <Highlight>listening skills</Highlight>, acquired in the medical world, guide me in every project. I know how important it is to collaborate and understand the needs of others, whether they are patients or <Highlight>website users</Highlight>. Every line of code I write reflects this <Highlight>human-centered</Highlight> approach.",
+    "skills": [
+      "Empathy",
+      "Adaptability",
+      "Receptivity to feedback",
+      "Teamwork",
+      "Communication",
+      "Organization",
+      "Attention to details"
+    ],
+    "projects_title": "My projects",
+    "projects_learn_more": "Learn more",
+    "project_0_title": "Cooking recipes website",
+    "project_0_description": "Personal project developed in React, this website presents a variety of cooking recipes.",
+    "project_1_title": "Météo France Home Page",
+    "project_1_description": "Clone of the Météo France homepage made solely with HTML and CSS.",
+    "projects_subtitle": "Personal achievements conducted independently of my academic journey, reflecting my passion and commitment to development."
+  },
+
+  "projectDetails": {
+    "viewWebsite": "View Website",
+    "projectObjectives": "Project Objectives",
+    "challengesAndAchievements": "Challenges and Achievements",
+    "adaptability": "Adaptability: Catering to Every Device",
+    "performanceAndAccessibility": "Performance and Accessibility",
+    "towardsCollaboration": "Towards Collaboration: How teamwork could have enriched the project",
+    "toolsAndTechnologies": "Tools and Technologies Used"
+  },
+
+  "projects": {
+    "delicesCulinaires": {
+      "title": "Culinary Delights",
+      "description": {
+        "intro": "A personal project developed in React. This site presents a variety of cooking recipes.",
+        "objective": "The main goal was to create an intuitive and responsive cooking recipe platform, while mastering state management with Redux. I also wanted to design a modular architecture with reusable components, optimize the application's performance and ensure its fluidity on all devices thanks to a responsive design.",
+        "challenge": "The main challenge of the project was to think about the structure to adopt for intuitive user navigation. The conceptualization of the UI/UX required deep reflection, especially in anticipating the needs and behaviors of users. The Figma tool allowed me to test different prototypes before arriving at the final version.",
+        "responsive": "The site's responsiveness ensures an optimal user experience on all devices, from mobiles to desktop computers.",
+        "optimizationAndAccessibility": "I actively sought to make this site inclusive by focusing on accessibility. Thus, I adapted the color contrasts according to WCAG standards. I also favored a custom design with minimal use of external libraries, ensuring performance and fast loadings.",
+        "collaboration": [
+          "Working in a team, and especially adopting methodologies like Agile and Scrum, several improvements would have been possible for this project.",
+          "1. Regular code reviews would have ensured better quality through exchanges and knowledge sharing.",
+          "2. Collaboration during UI/UX design phases would have brought different perspectives, contributing to a richer and more refined design.",
+          "3. By collaborating with a team, we could have solicited a wider range of users to test the project, thus offering more varied feedback.",
+          "4. Task sharing would have accelerated development, with each member bringing their specific skills."
+        ]
+      },
+
+      "toolsAndTech": [
+        "- React & React-Router-Dom: Creation and management of the user interface, including navigation.",
+        "- Redux & React-Redux: Centralized management of the application's state.",
+        "- Styled-Components: CSS-in-JS styling for a custom design.",
+        "- Vite: Development tool for fast builds and efficient development.",
+        "- Figma: Design and prototyping of the UI/UX.",
+        "- Vercel: Deployment and hosting of the application."
+      ]
+    },
+    "meteoFrance": {
+      "title": "Météo France Homepage Clone",
+      "description": {
+        "intro": "This project consisted of faithfully reproducing the homepage of the Météo France site using exclusively HTML and CSS.",
+        "objective": "The main goal of this project was to understand and master the fundamental basics of web development. Working without frameworks or libraries, I sought to hone my skills in layout, typography, and responsiveness.",
+        "challenge": "The biggest challenge of this project was to accurately reproduce the various design elements of the original site while ensuring compatibility across different browsers and screen sizes. This challenge allowed me to deepen my understanding of the nuances and subtleties of CSS.",
+        "responsive": "The site's responsiveness ensures an optimal user experience on all devices, from mobiles to desktop computers.",
+        "optimizationAndAccessibility": "In reproducing the Météo France homepage, I emphasized accessibility while respecting the original design. Through exclusive work in HTML and CSS, I optimized the site's lightness for fast loadings.",
+        "collaboration": "Being an individual reproduction project, I did not collaborate with others. However, the input of a team could have offered different perspectives on layout and design, and would have allowed me to learn new tricks and techniques.",
+        "toolsAndTech": [
+          "- HTML: Basic site structure and setting up main elements.",
+          "- CSS: Customization, design, and responsive layout of the site."
+        ]
+      }
+    }
+  }
 }

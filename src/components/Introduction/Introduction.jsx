@@ -19,12 +19,12 @@ const Introduction = ({ onClose }) => {
       <CloseIcon onClick={onClose}>&#10005;</CloseIcon>
       <div>
         <IntroTitle>
-          <IntroHighlight>{t("intro_greeting")}</IntroHighlight>{" "}
+          <IntroHighlight>{t("homepage.intro_greeting")}</IntroHighlight>{" "}
           <NameSpan>Angélique Rosin</NameSpan>
         </IntroTitle>
 
-        <IntroSubtitle>{t("intro_role")}</IntroSubtitle>
-        <IntroDescription>{t("intro_description")}</IntroDescription>
+        <IntroSubtitle>{t("homepage.intro_role")}</IntroSubtitle>
+        <IntroDescription>{t("homepage.intro_description")}</IntroDescription>
       </div>
       <IntroImage src="/assets/photo-cv-angel_1-removebg.png" alt="Your Name" />
     </IntroContainer>

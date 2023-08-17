@@ -1,11 +1,8 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
 import projectsData from "../../datas/projectsData";
-
 import UseIntersectionObservers from "../UseIntersectionObservers/UseIntersectionObservers";
-
 import {
   Title,
   Subtitle,
@@ -24,7 +21,6 @@ import {
   LogoImage,
   StyledExternalIcon,
 } from "./ProjectsSection.styled";
-
 import GitLogo from "../../assets/logos/GitLogo2.png";
 
 const ProjectsSection = () => {
@@ -43,8 +39,9 @@ const ProjectsSection = () => {
   return (
     <div id="mes-realisations">
       <ProjectsContainer ref={containerRef}>
-        <Title>{t("projects_title")}</Title>
-        <Subtitle>{t("projects_subtitle")}</Subtitle>
+        <Title>{t("homepage.projects_title")}</Title>
+
+        <Subtitle>{t("homepage.projects_subtitle")}</Subtitle>
 
         <ProjectsWrapper>
           {projectsData.map((project, index) => (
@@ -62,13 +59,15 @@ const ProjectsSection = () => {
                 <ProjectTechnologies>
                   {project.technologies.join(", ")}
                 </ProjectTechnologies>
-                <ProjectTitle>{t(`project_${index}_title`)}</ProjectTitle>
+                <ProjectTitle>
+                  {t(`homepage.project_${index}_title`)}
+                </ProjectTitle>
                 <ProjectDescription>
-                  {t(`project_${index}_description`)}
+                  {t(`homepage.project_${index}_description`)}
                 </ProjectDescription>
                 <FlexContainer>
                   <StyledLink to={`/project-detail/${index}`}>
-                    {t("projects_learn_more")}
+                    {t("homepage.projects_learn_more")}
                   </StyledLink>
 
                   <IconWrapper>

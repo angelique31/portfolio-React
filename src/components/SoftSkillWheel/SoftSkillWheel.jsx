@@ -54,10 +54,13 @@ function SoftSkillWheel() {
 
   return (
     <Container ref={containerRef}>
-      <Title>{t("comp_transverses")}</Title>
+      <Title>{t("homepage.comp_transverses")}</Title>
       <FlexContainer>
         <BioText>
-          <Trans i18nKey="bio" components={{ Highlight: <Highlighted /> }}>
+          <Trans
+            i18nKey="homepage.bio"
+            components={{ Highlight: <Highlighted /> }}
+          >
             Après avoir exercé le métier{" "}
             <Highlighted>
               d{`'`}
@@ -92,7 +95,7 @@ function SoftSkillWheel() {
                 color={colors[index % colors.length]}
                 rotation={step * index}
               >
-                <SkillText>{t(`skills.${index}`)}</SkillText>
+                <SkillText>{t(`homepage.skills.${index}`)}</SkillText>
               </SkillTab>
             ))}
             <CenterCircle />

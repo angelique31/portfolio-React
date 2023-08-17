@@ -31,7 +31,7 @@ const Specialties = () => {
 
   return (
     <SpecialtiesContainer ref={containerRef}>
-      <Title>{t("Mes spécialités")}</Title>
+      <Title>{t("homepage.Mes spécialités")}</Title>
       <LogoContainer>
         <LogoItem>
           <ImageWrapper>
