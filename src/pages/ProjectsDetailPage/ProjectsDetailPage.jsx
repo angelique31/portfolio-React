@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import PortfolioContext from "../../context/portfolioContext";
 import projectsDataDetail from "../../datas/projectsDataDetail";
 import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollAwareNavBar";
@@ -27,9 +28,14 @@ import {
   MobileImage,
 } from "./ProjectsDetailPage.styled";
 
+// import frTranslations from "../../../locales/fr/translation.json";
+// console.log(frTranslations.projects.delicesCulinaires.toolsAndTech);
+
 const ProjectsDetailPage = () => {
   const { handleShowIntro } = useContext(PortfolioContext);
   const { projectId } = useParams();
+
+  const { t } = useTranslation();
 
   const projectDetail = projectsDataDetail[projectId];
 
@@ -43,25 +49,34 @@ const ProjectsDetailPage = () => {
       <ScrollAwareNavBar onAboutClick={handleShowIntro} />
       <ProjectDetailContainer>
         <IntroContainer>
-          <MainTitle>{projectDetail.title}</MainTitle>
+          <MainTitle>{t("projects.delicesCulinaires.title")}</MainTitle>
           <StyledAnchorLink
             href={externalLink}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Voir le site
+            {t("projectDetails.viewWebsite")}
           </StyledAnchorLink>
         </IntroContainer>
-        <TextParagraph>{projectDetail.description.intro}</TextParagraph>
+        <TextParagraph>
+          {" "}
+          {t("projects.delicesCulinaires.description.intro")}
+        </TextParagraph>
 
         <ObjectiveContainer>
-          <SectionTitle>Objectifs du Projet</SectionTitle>
-          <TextParagraph>{projectDetail.description.objective}</TextParagraph>
+          <SectionTitle>{t("projectDetails.projectObjectives")}</SectionTitle>
+          <TextParagraph>
+            {t("projects.delicesCulinaires.description.objective")}
+          </TextParagraph>
         </ObjectiveContainer>
 
         <ChallengeContainer>
-          <SectionTitle>Défis et Réalisations</SectionTitle>
-          <TextParagraph>{projectDetail.description.challenge}</TextParagraph>
+          <SectionTitle>
+            {t("projectDetails.challengesAndAchievements")}
+          </SectionTitle>
+          <TextParagraph>
+            {t("projects.delicesCulinaires.description.challenge")}
+          </TextParagraph>
         </ChallengeContainer>
         <AlignedImageContainer>
           <ImageChallengeContainer>
@@ -76,19 +91,21 @@ const ProjectsDetailPage = () => {
           </ImageChallengeContainer>
 
           <ResponsiveContainer>
-            <SectionTitle>
-              Adaptabilité : Répondre à Chaque Dispositif
-            </SectionTitle>
+            <SectionTitle>{t("projectDetails.adaptability")}</SectionTitle>
             <TextParagraph>
-              {projectDetail.description.responsive}
+              {t("projects.delicesCulinaires.description.responsive")}
             </TextParagraph>
           </ResponsiveContainer>
         </AlignedImageContainer>
 
         <AccessibilityContainer>
-          <SectionTitle>Performance et Accessibilité</SectionTitle>
+          <SectionTitle>
+            {t("projectDetails.performanceAndAccessibility")}
+          </SectionTitle>
           <TextParagraph>
-            {projectDetail.description.optimizationAndAccessibility}
+            {t(
+              "projects.delicesCulinaires.description.optimizationAndAccessibility"
+            )}
           </TextParagraph>
           <AccessibilityImage
             src={projectDetail.additionalImages[2]}
@@ -98,21 +115,28 @@ const ProjectsDetailPage = () => {
 
         <CollaborationContainer>
           <SectionTitle>
-            {`Vers une Collaboration : Comment le travail d'équipe aurait pu
-            enrichir le projet`}
+            {t("projectDetails.towardsCollaboration")}
           </SectionTitle>
+
           <UnorderedList>
-            {projectDetail.description.collaboration.map((point, index) => (
+            {t("projects.delicesCulinaires.description.collaboration", {
+              returnObjects: true,
+            }).map((point, index) => (
               <ListItem key={`collab-${index}`}>{point}</ListItem>
             ))}
           </UnorderedList>
         </CollaborationContainer>
 
         <TechnologyContainer>
-          <SectionTitle>Outils et Technologies utilisés</SectionTitle>
+          <SectionTitle>
+            {t("projectDetails.toolsAndTechnologies")}
+          </SectionTitle>
+
           <UnorderedList>
-            {projectDetail.toolsAndTech.map((toolOrTech, index) => (
-              <ListItem key={`tech-${index}`}>{toolOrTech}</ListItem>
+            {t("projects.delicesCulinaires.toolsAndTech", {
+              returnObjects: true,
+            }).map((point, index) => (
+              <ListItem key={`collab-${index}`}>{point}</ListItem>
             ))}
           </UnorderedList>
         </TechnologyContainer>

@@ -30,13 +30,13 @@
   },
 
   "projectDetails": {
-    "viewWebsite": "View Website",
-    "projectObjectives": "Project Objectives",
-    "challengesAndAchievements": "Challenges and Achievements",
-    "adaptability": "Adaptability: Catering to Every Device",
-    "performanceAndAccessibility": "Performance and Accessibility",
-    "towardsCollaboration": "Towards Collaboration: How teamwork could have enriched the project",
-    "toolsAndTechnologies": "Tools and Technologies Used"
+    "viewWebsite": "Voir le site",
+    "projectObjectives": "Objectifs du Projet",
+    "challengesAndAchievements": "Défis et Réalisations",
+    "adaptability": "Adaptabilité : Répondre à Chaque Dispositif",
+    "performanceAndAccessibility": "Performance et Accessibilité",
+    "towardsCollaboration": "Vers une Collaboration : Comment le travail d'équipe aurait pu enrichir le projet",
+    "toolsAndTechnologies": "Outils et Technologies utilisés"
   },
 
   "projects": {
