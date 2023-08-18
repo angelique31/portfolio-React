@@ -27,40 +27,23 @@ import {
   AccessibilityImage,
   MobileImage,
 } from "./ProjectsDetailPage.styled";
+import projectsJson from "../../../locales/fr/translation.json";
+console.log(projectsJson.projects.meteoFrance.description.toolsAndTech);
 
 const ProjectsDetailPage = () => {
   const { handleShowIntro } = useContext(PortfolioContext);
   const { projectId } = useParams();
-  // console.log("ID récupéré:", projectId);
   const { t } = useTranslation();
 
-  // const toolsAndTechPoints = t(`projects.${projectId}.toolsAndTech`, {
-  //   returnObjects: true,
-  // });
-  // console.log(toolsAndTechPoints);
-
-  // const projectDetail = projectsDataDetail[projectId];
-  // console.log(projectDetail);
-  // const projectData = projectsData[projectId];
-  // const projectData= projectsData.find((project) => project.id === projectId);
-  // console.log("Données des projets:", projectsData);
-  // console.log("Projet trouvé:", projectData);
-  let projectDetail;
-  for (let i = 0; i < projectsDataDetail.length; i++) {
-    if (projectsDataDetail[i].id === projectId) {
-      projectDetail = projectsDataDetail[i];
-      break;
-    }
-  }
-  // console.log("Projet correspondant à l'ID avec la boucle for:", projectDetail);
+  const projectDetail = projectsDataDetail.find(
+    (project) => project.id === projectId
+  );
 
   const externalLink = projectsData.externalLink;
 
   if (!projectDetail) {
     return <div>Projet non trouvé</div>;
   }
-
-  console.log("Rendu du détail du projet");
 
   return (
     <>

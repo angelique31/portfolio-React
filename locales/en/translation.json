@@ -77,12 +77,12 @@
         "optimizationAndAccessibility": "In reproducing the Météo France homepage, I emphasized accessibility while respecting the original design. Through exclusive work in HTML and CSS, I optimized the site's lightness for fast loadings.",
         "collaboration": [
           "Being an individual reproduction project, I did not collaborate with others. However, the input of a team could have offered different perspectives on layout and design, and would have allowed me to learn new tricks and techniques."
-        ],
-        "toolsAndTech": [
-          "- HTML: Basic site structure and setting up main elements.",
-          "- CSS: Customization, design, and responsive layout of the site."
         ]
-      }
+      },
+      "toolsAndTech": [
+        "- HTML: Basic site structure and setting up main elements.",
+        "- CSS: Customization, design, and responsive layout of the site."
+      ]
     }
   }
 }

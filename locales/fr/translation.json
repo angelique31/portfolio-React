@@ -78,13 +78,12 @@
         "optimizationAndAccessibility": "En reproduisant la page d'accueil de Météo France, j'ai mis l'accent sur l'accessibilité tout en respectant le design original. Grâce à un travail exclusif en HTML et CSS, j'ai optimisé la légèreté du site pour des chargements rapides.",
         "collaboration": [
           "Ce projet étant une reproduction individuelle, je n'ai pas travaillé en collaboration avec d'autres. Toutefois, l'apport d'une équipe aurait pu offrir des perspectives différentes sur la mise en page et le design, et m'aurait permis d'apprendre de nouvelles astuces et techniques."
-        ],
-
-        "toolsAndTech": [
-          "- HTML: Structure de base du site et mise en place des éléments principaux..",
-          "- CSS: Personnalisation, design, et mise en page responsive du site."
         ]
-      }
+      },
+      "toolsAndTech": [
+        "- HTML: Structure de base du site et mise en place des éléments principaux..",
+        "- CSS: Personnalisation, design, et mise en page responsive du site."
+      ]
     }
   }
 }
