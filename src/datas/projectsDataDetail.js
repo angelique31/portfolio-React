@@ -1,5 +1,6 @@
 const projectsDataDetail = [
   {
+    id: "delicesCulinaires",
     title: "Délices Culinaires",
     description: {
       intro:
@@ -37,6 +38,7 @@ const projectsDataDetail = [
   },
 
   {
+    id: "meteoFrance",
     title: "Clone de la page d'accueil Météo France",
     description: {
       intro:

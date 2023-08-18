@@ -28,28 +28,46 @@ import {
   MobileImage,
 } from "./ProjectsDetailPage.styled";
 
-// import frTranslations from "../../../locales/fr/translation.json";
-// console.log(frTranslations.projects.delicesCulinaires.toolsAndTech);
-
 const ProjectsDetailPage = () => {
   const { handleShowIntro } = useContext(PortfolioContext);
   const { projectId } = useParams();
-
+  // console.log("ID récupéré:", projectId);
   const { t } = useTranslation();
 
-  const projectDetail = projectsDataDetail[projectId];
+  // const toolsAndTechPoints = t(`projects.${projectId}.toolsAndTech`, {
+  //   returnObjects: true,
+  // });
+  // console.log(toolsAndTechPoints);
 
-  const projectData = projectsData[projectId];
-  const externalLink = projectData.externalLink;
+  // const projectDetail = projectsDataDetail[projectId];
+  // console.log(projectDetail);
+  // const projectData = projectsData[projectId];
+  // const projectData= projectsData.find((project) => project.id === projectId);
+  // console.log("Données des projets:", projectsData);
+  // console.log("Projet trouvé:", projectData);
+  let projectDetail;
+  for (let i = 0; i < projectsDataDetail.length; i++) {
+    if (projectsDataDetail[i].id === projectId) {
+      projectDetail = projectsDataDetail[i];
+      break;
+    }
+  }
+  // console.log("Projet correspondant à l'ID avec la boucle for:", projectDetail);
 
-  if (!projectDetail) return <div>Projet non trouvé</div>;
+  const externalLink = projectsData.externalLink;
+
+  if (!projectDetail) {
+    return <div>Projet non trouvé</div>;
+  }
+
+  console.log("Rendu du détail du projet");
 
   return (
     <>
       <ScrollAwareNavBar onAboutClick={handleShowIntro} />
       <ProjectDetailContainer>
         <IntroContainer>
-          <MainTitle>{t("projects.delicesCulinaires.title")}</MainTitle>
+          <MainTitle>{t(`projects.${projectId}.title`)}</MainTitle>
           <StyledAnchorLink
             href={externalLink}
             target="_blank"
@@ -60,13 +78,13 @@ const ProjectsDetailPage = () => {
         </IntroContainer>
         <TextParagraph>
           {" "}
-          {t("projects.delicesCulinaires.description.intro")}
+          {t(`projects.${projectId}.description.intro`)}
         </TextParagraph>
 
         <ObjectiveContainer>
-          <SectionTitle>{t("projectDetails.projectObjectives")}</SectionTitle>
+          <SectionTitle>{t(`projectDetails.projectObjectives`)}</SectionTitle>
           <TextParagraph>
-            {t("projects.delicesCulinaires.description.objective")}
+            {t(`projects.${projectId}.description.objective`)}
           </TextParagraph>
         </ObjectiveContainer>
 
@@ -75,7 +93,7 @@ const ProjectsDetailPage = () => {
             {t("projectDetails.challengesAndAchievements")}
           </SectionTitle>
           <TextParagraph>
-            {t("projects.delicesCulinaires.description.challenge")}
+            {t(`projects.${projectId}.description.challenge`)}
           </TextParagraph>
         </ChallengeContainer>
         <AlignedImageContainer>
@@ -93,7 +111,7 @@ const ProjectsDetailPage = () => {
           <ResponsiveContainer>
             <SectionTitle>{t("projectDetails.adaptability")}</SectionTitle>
             <TextParagraph>
-              {t("projects.delicesCulinaires.description.responsive")}
+              {t(`projects.${projectId}.description.responsive`)}
             </TextParagraph>
           </ResponsiveContainer>
         </AlignedImageContainer>
@@ -104,7 +122,7 @@ const ProjectsDetailPage = () => {
           </SectionTitle>
           <TextParagraph>
             {t(
-              "projects.delicesCulinaires.description.optimizationAndAccessibility"
+              `projects.${projectId}.description.optimizationAndAccessibility`
             )}
           </TextParagraph>
           <AccessibilityImage
@@ -119,7 +137,7 @@ const ProjectsDetailPage = () => {
           </SectionTitle>
 
           <UnorderedList>
-            {t("projects.delicesCulinaires.description.collaboration", {
+            {t(`projects.${projectId}.description.collaboration`, {
               returnObjects: true,
             }).map((point, index) => (
               <ListItem key={`collab-${index}`}>{point}</ListItem>
@@ -133,7 +151,7 @@ const ProjectsDetailPage = () => {
           </SectionTitle>
 
           <UnorderedList>
-            {t("projects.delicesCulinaires.toolsAndTech", {
+            {t(`projects.${projectId}.toolsAndTech`, {
               returnObjects: true,
             }).map((point, index) => (
               <ListItem key={`collab-${index}`}>{point}</ListItem>

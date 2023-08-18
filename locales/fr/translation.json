@@ -41,6 +41,7 @@
 
   "projects": {
     "delicesCulinaires": {
+      "id": "delicesCulinaires",
       "title": "Délices Culinaires",
       "description": {
         "intro": "Projet personnel développé en React. Ce site présente une variété de recettes de cuisine.",
@@ -67,6 +68,7 @@
       ]
     },
     "meteoFrance": {
+      "id": "meteoFrance",
       "title": "Clone de la page d'accueil Météo France",
       "description": {
         "intro": "Ce projet consistait à reproduire fidèlement la page d'accueil du site Météo France en utilisant exclusivement HTML et CSS.",
@@ -74,7 +76,10 @@
         "challenge": "La plus grande difficulté de ce projet a été de reproduire avec précision les différents éléments de design du site original, tout en assurant une compatibilité sur les différents navigateurs et tailles d'écran. Ce défi m'a permis d'approfondir ma compréhension des nuances et subtilités du CSS.",
         "responsive": "La responsivité du site garantit une expérience utilisateur optimale sur tous les dispositifs, des mobiles aux ordinateurs de bureau.",
         "optimizationAndAccessibility": "En reproduisant la page d'accueil de Météo France, j'ai mis l'accent sur l'accessibilité tout en respectant le design original. Grâce à un travail exclusif en HTML et CSS, j'ai optimisé la légèreté du site pour des chargements rapides.",
-        "collaboration": "Ce projet étant une reproduction individuelle, je n'ai pas travaillé en collaboration avec d'autres. Toutefois, l'apport d'une équipe aurait pu offrir des perspectives différentes sur la mise en page et le design, et m'aurait permis d'apprendre de nouvelles astuces et techniques.",
+        "collaboration": [
+          "Ce projet étant une reproduction individuelle, je n'ai pas travaillé en collaboration avec d'autres. Toutefois, l'apport d'une équipe aurait pu offrir des perspectives différentes sur la mise en page et le design, et m'aurait permis d'apprendre de nouvelles astuces et techniques."
+        ],
+
         "toolsAndTech": [
           "- HTML: Structure de base du site et mise en place des éléments principaux..",
           "- CSS: Personnalisation, design, et mise en page responsive du site."

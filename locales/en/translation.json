@@ -40,6 +40,7 @@
 
   "projects": {
     "delicesCulinaires": {
+      "id": "delicesCulinaires",
       "title": "Culinary Delights",
       "description": {
         "intro": "A personal project developed in React. This site presents a variety of cooking recipes.",
@@ -66,6 +67,7 @@
       ]
     },
     "meteoFrance": {
+      "id": "meteoFrance",
       "title": "Météo France Homepage Clone",
       "description": {
         "intro": "This project consisted of faithfully reproducing the homepage of the Météo France site using exclusively HTML and CSS.",
@@ -73,7 +75,9 @@
         "challenge": "The biggest challenge of this project was to accurately reproduce the various design elements of the original site while ensuring compatibility across different browsers and screen sizes. This challenge allowed me to deepen my understanding of the nuances and subtleties of CSS.",
         "responsive": "The site's responsiveness ensures an optimal user experience on all devices, from mobiles to desktop computers.",
         "optimizationAndAccessibility": "In reproducing the Météo France homepage, I emphasized accessibility while respecting the original design. Through exclusive work in HTML and CSS, I optimized the site's lightness for fast loadings.",
-        "collaboration": "Being an individual reproduction project, I did not collaborate with others. However, the input of a team could have offered different perspectives on layout and design, and would have allowed me to learn new tricks and techniques.",
+        "collaboration": [
+          "Being an individual reproduction project, I did not collaborate with others. However, the input of a team could have offered different perspectives on layout and design, and would have allowed me to learn new tricks and techniques."
+        ],
         "toolsAndTech": [
           "- HTML: Basic site structure and setting up main elements.",
           "- CSS: Customization, design, and responsive layout of the site."

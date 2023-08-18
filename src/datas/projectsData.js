@@ -1,5 +1,6 @@
 const projectsData = [
   {
+    id: "delicesCulinaires",
     title: "Site de recettes de cuisine",
     description:
       "Projet personnel développé en React, ce site présente une variété de recettes de cuisine.",
@@ -9,6 +10,7 @@ const projectsData = [
     githubLink: "https://github.com/angelique31/cooking-recipes-site",
   },
   {
+    id: "meteoFrance",
     title: "Page d'accueil Météo France",
     description:
       "Réplique de la page d'accueil de Météo France réalisée uniquement avec HTML et CSS.",

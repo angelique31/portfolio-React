@@ -66,7 +66,10 @@ const ProjectsSection = () => {
                   {t(`homepage.project_${index}_description`)}
                 </ProjectDescription>
                 <FlexContainer>
-                  <StyledLink to={`/project-detail/${index}`}>
+                  {/* <StyledLink to={`/project-detail/${index}`}>
+                    {t("homepage.projects_learn_more")}
+                  </StyledLink> */}
+                  <StyledLink to={`/project-detail/${project.id}`}>
                     {t("homepage.projects_learn_more")}
                   </StyledLink>
 

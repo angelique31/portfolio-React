@@ -30,6 +30,7 @@ const App = () => {
               path="/project-detail/:projectId"
               element={<ProjectsDetailPage />}
             />
+
             {/* <Route path="*" element={<NotFoundPage />} /> */}
           </Routes>
         </BrowserRouter>
