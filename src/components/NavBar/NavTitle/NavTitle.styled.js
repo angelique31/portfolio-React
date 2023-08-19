@@ -4,7 +4,7 @@ export const StyledNavTitle = styled.h1`
   color: white;
   font-family: "Poppins", sans-serif;
   padding-bottom: 20px;
-  font-size: ${(props) => (props.isScrolled ? "1.2rem" : "1.5rem")};
+  font-size: ${(props) => (props.$isScrolled ? "1.2rem" : "1.5rem")};
   visibility: visible;
   span {
     color: #ffb957;
@@ -18,6 +18,6 @@ export const StyledNavTitle = styled.h1`
   @media (max-width: 1009px) {
     margin: auto;
     text-align: center;
-    visibility: ${(props) => (props.isScrolled ? "hidden" : "visible")};
+    visibility: ${(props) => (props.$isScrolled ? "hidden" : "visible")};
   }
 `;

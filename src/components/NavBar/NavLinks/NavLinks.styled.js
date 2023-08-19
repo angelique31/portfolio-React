@@ -44,7 +44,7 @@ export const StyledNavItem = styled.li`
     outline: none;
     position: relative; 
     overflow: hidden; // pour s'assurer que l'animation reste à l'intérieur du lien
-    font-size: ${(props) => (props.isScrolled ? "0.8rem" : "1.1rem")};
+    font-size: ${(props) => (props.$isScrolled ? "0.8rem" : "1.1rem")};
     &::after {
       content: '';
       display: block;
@@ -68,8 +68,8 @@ export const StyledNavItem = styled.li`
   }
 
   /* Masquez "Qui je suis?" par défaut lorsque la navbar est défilée */
-  ${({ isScrolled }) =>
-    isScrolled &&
+  ${({ $isScrolled }) =>
+    $isScrolled &&
     `
     &.intro-link {
       display: none;

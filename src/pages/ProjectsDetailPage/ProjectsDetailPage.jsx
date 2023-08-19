@@ -27,8 +27,6 @@ import {
   AccessibilityImage,
   MobileImage,
 } from "./ProjectsDetailPage.styled";
-import projectsJson from "../../../locales/fr/translation.json";
-console.log(projectsJson.projects.meteoFrance.description.toolsAndTech);
 
 const ProjectsDetailPage = () => {
   const { handleShowIntro } = useContext(PortfolioContext);

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import NavBar from "../NavBarColor/NavBarColor";
+import PropTypes from "prop-types";
 
 const ScrollAwareNavBar = ({ onAboutClick }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,6 +32,10 @@ const ScrollAwareNavBar = ({ onAboutClick }) => {
       onAboutClick={onAboutClick}
     />
   );
+};
+
+ScrollAwareNavBar.propTypes = {
+  onAboutClick: PropTypes.func.isRequired,
 };
 
 export default ScrollAwareNavBar;

@@ -36,8 +36,8 @@ export const StyledHamburger = styled.button`
     transform: translateY(-7px);
   }
 
-  ${({ isOpen }) =>
-    isOpen &&
+  ${({ $isOpen }) =>
+    $isOpen &&
     `
   span:nth-child(1) {
     transform: translate(0) rotate(135deg);

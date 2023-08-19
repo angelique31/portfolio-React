@@ -7,6 +7,7 @@ import Specialties from "../../components/Specialities/Specialities";
 import SoftSkillWheel from "../../components/SoftSkillWheel/SoftSkillWheel";
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollAwareNavBar";
+import ContactForm from "../../components/ContactForm/ContactForm";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -42,11 +43,13 @@ const HomePage = () => {
       <Slider />
 
       {showIntro && <Introduction onClose={handleCloseAndNavigate} />}
+      <ContactForm />
       <Specialties />
       <SoftSkillWheel />
       {/* <ProjectsSection /> */}
       <div id="mes-realisations">
         <ProjectsSection />
+        <ContactForm />
       </div>
     </div>
   );

@@ -25,16 +25,15 @@ const NavBarColor = ({ isScrolled, isMobile, onAboutClick }) => {
   return (
     <NavBarStyled
       className={isScrolled ? "scrolled" : ""}
-      isScrolled={isScrolled}
-      isMobile={isMobile}
+      $isScrolled={isScrolled}
+      $isMobile={isMobile}
     >
       <MenuHamburger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
-      {/* <Overlay $isOpen={isOpen} onClick={() => setIsOpen(false)} /> */}
       <Overlay $isOpen={isOpen} onClick={() => setIsOpen(false)} />
       <NavTitle isScrolled={isScrolled} />
 
       <NavLinks
-        closeMenu={() => setIsOpen(false)} // ajoutez cette ligne
+        closeMenu={() => setIsOpen(false)}
         isOpen={isOpen}
         isScrolled={isScrolled}
         onAboutClick={onAboutClick}
@@ -47,6 +46,7 @@ const NavBarColor = ({ isScrolled, isMobile, onAboutClick }) => {
 NavBarColor.propTypes = {
   isScrolled: PropTypes.bool.isRequired,
   onAboutClick: PropTypes.func.isRequired,
+  isMobile: PropTypes.bool.isRequired,
 };
 
 export default NavBarColor;

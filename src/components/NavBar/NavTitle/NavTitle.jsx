@@ -8,7 +8,7 @@ function NavTitle({ isScrolled }) {
   };
 
   return (
-    <StyledNavTitle isScrolled={isScrolled}>
+    <StyledNavTitle $isScrolled={isScrolled}>
       <Link to="/" onClick={handleClick}>
         <strong>
           <span>P</span>ortfolio
