@@ -7,7 +7,7 @@ import Specialties from "../../components/Specialities/Specialities";
 import SoftSkillWheel from "../../components/SoftSkillWheel/SoftSkillWheel";
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollAwareNavBar";
-import ContactForm from "../../components/ContactForm/ContactForm";
+import ContactForm from "../../components/Form/ContactForm/ContactForm";
 
 const HomePage = () => {
   const navigate = useNavigate();

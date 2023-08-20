@@ -68,9 +68,32 @@ export const ProjectsContainer = styled.section`
   background-color: rgb(31, 34, 53);
 `;
 
-export const ProjectCard = styled.div`
-  margin: 2em;
+// export const ProjectCard = styled.div`
+//   margin: 2em;
 
+//   width: 400px;
+//   height: 462px;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//   background-color: #ffffff;
+//   border-radius: 10px;
+//   opacity: 0;
+//   .visible & {
+//     animation: ${fadeIn} 1.5s forwards 0.5s;
+//     animation-delay: ${(props) =>
+//       0.5 +
+//       props.delayIndex *
+//         0.4}s; // Chaque carte a un délai de 0.4s plus long que la précédente
+//   }
+//   @media (max-width: 446px) {
+//     height: 429px;
+//   }
+// `;
+
+//withConfig et shouldForwardProp, pour que la prop delayIndex ne soit pas transmise au DOM
+export const ProjectCard = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== "delayIndex",
+})`
+  margin: 2em;
   width: 400px;
   height: 462px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -79,10 +102,7 @@ export const ProjectCard = styled.div`
   opacity: 0;
   .visible & {
     animation: ${fadeIn} 1.5s forwards 0.5s;
-    animation-delay: ${(props) =>
-      0.5 +
-      props.delayIndex *
-        0.4}s; // Chaque carte a un délai de 0.4s plus long que la précédente
+    animation-delay: ${(props) => 0.5 + props.delayIndex * 0.4}s;
   }
   @media (max-width: 446px) {
     height: 429px;
@@ -154,8 +174,8 @@ export const StyledLink = styled(Link)`
     box-shadow: 2px 1px 0px rgba(255, 185, 87, 0.8);
   }
   &:active {
-    transform: scale(0.95); // réduit légèrement le bouton
-    box-shadow: 0px 1px 7px rgba(255, 185, 87, 0.6); // réduit l'ombre pour l'effet d'enfoncement
+    transform: scale(0.95);
+    box-shadow: 0px 1px 7px rgba(255, 185, 87, 0.6);
   }
 `;
 
