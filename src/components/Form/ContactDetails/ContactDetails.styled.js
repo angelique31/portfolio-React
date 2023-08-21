@@ -25,14 +25,11 @@ export const Aside = styled.aside`
     font-size: 1.2rem;
     color: #daddee;
     font-family: inherit;
+    @media (max-width: 460px) {
+      font-size: 1rem;
+    }
   }
 
-  h4 {
-    font-size: 1.3rem;
-    font-weight: 500;
-    font-family: inherit;
-    color: rgb(0 0 0 / 60%);
-  }
   @media (max-width: 1115px) {
     margin-left: 0;
   }

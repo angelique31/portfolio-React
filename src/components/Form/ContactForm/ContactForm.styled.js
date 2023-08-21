@@ -184,4 +184,9 @@ export const StyledButton = styled.input.attrs({ type: "submit" })`
     position: static;
     margin: auto;
   }
+  @media (max-width: 460px) {
+    width: 140px;
+    height: 59px;
+    font-size: 1rem;
+  }
 `;
