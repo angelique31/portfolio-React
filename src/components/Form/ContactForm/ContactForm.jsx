@@ -9,6 +9,7 @@ import {
   StyledForm,
   FlexColumnDiv,
   ContactLeftStyled,
+  ButtonDetailsWrapper,
   StyledLabel,
   StyledInput,
   StyledTextarea,
@@ -64,10 +65,11 @@ function ContactForm() {
                 style={{ height: "200px" }}
               ></StyledTextarea>
             </FlexColumnDiv>
-
-            <StyledButton type="submit" value="Envoyer" />
           </ContactLeftStyled>
-          <ContactDetails />
+          <ButtonDetailsWrapper>
+            <StyledButton type="submit" value="Envoyer" />
+            <ContactDetails className="contact-details-component" />
+          </ButtonDetailsWrapper>
         </StyledForm>
       </ModalContent>
     </ModalContainer>

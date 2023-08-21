@@ -56,14 +56,26 @@ export const StyledH2 = styled.h2`
   }
 `;
 
+export const ContactLeftStyled = styled.div`
+  width: 50%;
+  @media (max-width: 1115px) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+`;
+
 export const StyledForm = styled.form`
   display: flex;
   width: 100%;
   align-items: flex-start;
-  @media (max-width: 1050px) {
+  @media (max-width: 1115px) {
     flex-direction: column;
     align-items: center;
   }
+`;
+export const ButtonDetailsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const FlexColumnDiv = styled.div`
@@ -71,16 +83,9 @@ export const FlexColumnDiv = styled.div`
   flex-direction: column;
 `;
 
-export const ContactLeftStyled = styled.div`
-  width: 50%;
-  @media (max-width: 1050px) {
-    width: 100%;
-  }
-`;
-
 export const StyledLabel = styled.label`
   color: #d1d5db;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
 `;
 
@@ -117,7 +122,8 @@ export const StyledTextarea = styled.textarea`
   resize: none;
   font-size: 1rem;
   height: 170px;
-  width: 100%;
+
+  width: 800px;
   background-color: transparent;
   border: 1px solid hsla(0, 0%, 100%, 0.9);
   border-radius: 15px;
@@ -134,6 +140,10 @@ export const StyledTextarea = styled.textarea`
   }
   &:hover {
     border-color: #ffc576;
+  }
+  @media (max-width: 1115px) {
+    // width: 750px;
+    width: 100%;
   }
   @media (max-width: 460px) {
     font-size: 1rem;
@@ -155,7 +165,7 @@ export const StyledButton = styled.input.attrs({ type: "submit" })`
   cursor: pointer;
   position: absolute;
   bottom: 5px;
-  right: auto;
+  left: 35px;
   background-color: transparent;
   border: 1px solid #ffb957;
   color: #daddee;
@@ -169,5 +179,9 @@ export const StyledButton = styled.input.attrs({ type: "submit" })`
 
   &:active {
     transform: scale(1.1);
+  }
+  @media (max-width: 1115px) {
+    position: static;
+    margin: auto;
   }
 `;

@@ -30,7 +30,7 @@ export const ContactDetails = () => {
           <LogoImage className="Envelope" src={Envelope} alt="Envelope Logo" />
           <p>
             <a href="mailto:angie1979.capucine@yahoo.fr">
-              angie1979.capucine@yahoo.fr
+              pro.rosin.angel@gmail.com
             </a>
           </p>
         </Box>

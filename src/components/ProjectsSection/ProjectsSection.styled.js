@@ -68,27 +68,6 @@ export const ProjectsContainer = styled.section`
   background-color: rgb(31, 34, 53);
 `;
 
-// export const ProjectCard = styled.div`
-//   margin: 2em;
-
-//   width: 400px;
-//   height: 462px;
-//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-//   background-color: #ffffff;
-//   border-radius: 10px;
-//   opacity: 0;
-//   .visible & {
-//     animation: ${fadeIn} 1.5s forwards 0.5s;
-//     animation-delay: ${(props) =>
-//       0.5 +
-//       props.delayIndex *
-//         0.4}s; // Chaque carte a un délai de 0.4s plus long que la précédente
-//   }
-//   @media (max-width: 446px) {
-//     height: 429px;
-//   }
-// `;
-
 //withConfig et shouldForwardProp, pour que la prop delayIndex ne soit pas transmise au DOM
 export const ProjectCard = styled.div.withConfig({
   shouldForwardProp: (prop) => prop !== "delayIndex",

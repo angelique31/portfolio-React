@@ -1,11 +1,21 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
+export const pulseEffect = keyframes`
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);  
+    opacity: 0.7;          
+  }
+`;
 export const Aside = styled.aside`
-  margin-left: 81px;
+  margin-left: 130px;
 
   a {
-    color: #daddee;
-
+    color: white;
+    animation: ${pulseEffect} 2s infinite;
     &:hover {
       color: #ffb957;
     }
@@ -23,7 +33,7 @@ export const Aside = styled.aside`
     font-family: inherit;
     color: rgb(0 0 0 / 60%);
   }
-  @media (max-width: 1050px) {
+  @media (max-width: 1115px) {
     margin-left: 0;
   }
 `;
