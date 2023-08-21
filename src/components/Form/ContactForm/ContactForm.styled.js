@@ -97,7 +97,7 @@ export const StyledInput = styled.input`
   background-color: transparent;
   border: 1px solid hsla(0, 0%, 100%, 0.9);
   outline: none;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   margin-top: 10px;
   color: white;
   padding-left: 20px;
@@ -116,6 +116,9 @@ export const StyledInput = styled.input`
   &::placeholder {
     font-size: 0.8rem;
   }
+  @media (max-width: 396px) {
+    padding-left: 2px;
+  }
 `;
 
 export const StyledTextarea = styled.textarea`
@@ -128,7 +131,7 @@ export const StyledTextarea = styled.textarea`
   border: 1px solid hsla(0, 0%, 100%, 0.9);
   border-radius: 15px;
   outline: none;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   margin-top: 10px;
   color: white;
   padding-left: 20px;
