@@ -3,8 +3,6 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
 
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -14,8 +12,13 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Source Sans Pro", sans-serif;
     
   }
-  body {
-    overflow-y: scroll;
+//   body {
+//     overflow-y: scroll;
+// }
+body.modal-open {
+  overflow: hidden;
+}
+
 }
 
 `;

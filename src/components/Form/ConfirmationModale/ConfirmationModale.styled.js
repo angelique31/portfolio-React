@@ -1,20 +1,19 @@
 import styled from "styled-components";
 
-// Conteneur de la modale
 export const ConfirmationModalContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(78, 76, 76, 0.9);
+  // background-color: rgba(78, 76, 76, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 `;
 
-// Contenu de la modale
 export const ConfirmationModalContent = styled.div`
   width: 80%;
   position: relative;
@@ -25,7 +24,6 @@ export const ConfirmationModalContent = styled.div`
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 `;
 
-// Bouton de fermeture
 export const ConfirmationModalCloseButton = styled.button`
   position: absolute;
   right: 10px;
@@ -40,7 +38,6 @@ export const ConfirmationModalCloseButton = styled.button`
   }
 `;
 
-// Titre de la modale
 export const ConfirmationModalH2 = styled.h2`
   font-size: 1.5rem;
   margin-bottom: 10px;

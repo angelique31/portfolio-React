@@ -10,12 +10,32 @@ const modalopen = keyframes`
   }
 `;
 
+// Ajout d'un style pour le fond de la modale
+export const ModalBackdrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  // backdrop-filter: blur(5px);
+  z-index: 7; // Assurez-vous que ce z-index est inférieur à celui de votre modale mais supérieur au reste du contenu
+`;
+
 export const ModalContainer = styled.div`
   //   display: none;
-  position: absolute;
-  width: 100%;
-  z-index: 8;
+  // position: absolute;
+  // width: 100%;
+  // z-index: 8;
   top: 108px;
+
+  position: fixed;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; // Assurez-vous que ce nombre est assez élevé pour être au-dessus des autres éléments
+  overflow-y: auto;
 `;
 
 export const ModalContent = styled.div`

@@ -1,6 +1,7 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import PortfolioContext from "../../../context/portfolioContext";
 import {
+  ModalBackdrop,
   ModalContainer,
   ModalContent,
   HeaderModal,
@@ -86,6 +87,14 @@ function ContactForm() {
     }
   };
 
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
+    }
+  }, [isModalOpen]);
+
   // Si la modale n'est pas ouverte, ne rien retourner
   if (!isModalOpen) {
     return null;
@@ -93,6 +102,7 @@ function ContactForm() {
 
   return (
     <>
+      <ModalBackdrop />
       <ModalContainer>
         <ModalContent>
           <HeaderModal className="header_modal">
