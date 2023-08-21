@@ -13,6 +13,7 @@ import {
 import ContactDetails from "../ContactDetails/ContactDetails";
 import ContactFormFields from "../ContactFormFields/ContactFormFields";
 import ValidateFormData from "../ValidateFormData/ValidateFormData";
+import ConfirmationModal from "../ConfirmationModale/ConfirmationModale";
 
 function ContactForm() {
   const { isModalOpen, closeModal } = useContext(PortfolioContext);
@@ -26,6 +27,45 @@ function ContactForm() {
   const [successMessage, setSuccessMessage] = useState("");
   const [error, setError] = useState("");
   const [formErrors, setFormErrors] = useState({});
+  const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   const validationResults = ValidateFormData(formData);
+  //   setFormErrors(validationResults.errors);
+
+  //   if (validationResults.isValid) {
+  //     try {
+  //       const response = await fetch("YOUR_FORMSPREE_API_URL", {
+  //         method: "POST",
+  //         headers: {
+  //           Accept: "application/json",
+  //           "Content-Type": "application/x-www-form-urlencoded",
+  //         },
+  //         body: new URLSearchParams(formData).toString(),
+  //       });
+
+  //       if (response.ok) {
+  //         setSuccessMessage("Merci ! Votre message a été envoyé.");
+  //         setIsConfirmationModalOpen(true);
+  //         setFormData({
+  //           fullname: "",
+  //           email: "",
+  //           message: "",
+  //         });
+  //       } else {
+  //         setError(
+  //           "Il y a eu une erreur lors de l'envoi de votre message. Veuillez réessayer."
+  //         );
+  //       }
+  //     } catch (error) {
+  //       setError(
+  //         "Il y a eu une erreur lors de l'envoi de votre message. Veuillez vérifier votre connexion et réessayer."
+  //       );
+  //     }
+  //   }
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,33 +74,15 @@ function ContactForm() {
     setFormErrors(validationResults.errors);
 
     if (validationResults.isValid) {
-      try {
-        const response = await fetch("YOUR_FORMSPREE_API_URL", {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams(formData).toString(),
+      // Simuler une attente de requête réseau
+      setTimeout(() => {
+        setSuccessMessage("Merci ! Votre message a été envoyé.");
+        setFormData({
+          fullname: "",
+          email: "",
+          message: "",
         });
-
-        if (response.ok) {
-          setSuccessMessage("Merci ! Votre message a été envoyé.");
-          setFormData({
-            fullname: "",
-            email: "",
-            message: "",
-          });
-        } else {
-          setError(
-            "Il y a eu une erreur lors de l'envoi de votre message. Veuillez réessayer."
-          );
-        }
-      } catch (error) {
-        setError(
-          "Il y a eu une erreur lors de l'envoi de votre message. Veuillez vérifier votre connexion et réessayer."
-        );
-      }
+      }, 1000); // Attente d'une seconde
     }
   };
 
@@ -70,28 +92,38 @@ function ContactForm() {
   }
 
   return (
-    <ModalContainer>
-      <ModalContent>
-        <HeaderModal className="header_modal">
-          <CloseButton className="close" onClick={closeModal}>
-            &times;
-          </CloseButton>
-          <StyledH2>{`Vous souhaitez discuter d'un projet, poser une question ou juste échanger un "Hello World"?`}</StyledH2>
-        </HeaderModal>
-        <StyledForm id="contact" onSubmit={handleSubmit}>
-          <ContactFormFields
-            formData={formData}
-            setFormData={setFormData}
-            formErrors={formErrors}
-            setFormErrors={setFormErrors}
-          />
-          <ButtonDetailsWrapper>
-            <StyledButton type="submit" value="Envoyer" />
-            <ContactDetails className="contact-details-component" />
-          </ButtonDetailsWrapper>
-        </StyledForm>
-      </ModalContent>
-    </ModalContainer>
+    <>
+      <ModalContainer>
+        <ModalContent>
+          <HeaderModal className="header_modal">
+            <CloseButton className="close" onClick={closeModal}>
+              &times;
+            </CloseButton>
+            <StyledH2>{`Vous souhaitez discuter d'un projet, poser une question ou juste échanger un "Hello World"?`}</StyledH2>
+          </HeaderModal>
+          <StyledForm id="contact" onSubmit={handleSubmit}>
+            <ContactFormFields
+              formData={formData}
+              setFormData={setFormData}
+              formErrors={formErrors}
+              setFormErrors={setFormErrors}
+            />
+            <ButtonDetailsWrapper>
+              <StyledButton type="submit" value="Envoyer" />
+              <ContactDetails className="contact-details-component" />
+            </ButtonDetailsWrapper>
+          </StyledForm>
+        </ModalContent>
+      </ModalContainer>
+      {/* <ConfirmationModal
+        isOpen={isConfirmationModalOpen}
+        onClose={() => setIsConfirmationModalOpen(false)}
+      /> */}
+      <ConfirmationModal
+        isOpen={!!successMessage}
+        onClose={() => setSuccessMessage("")}
+      />
+    </>
   );
 }
 
