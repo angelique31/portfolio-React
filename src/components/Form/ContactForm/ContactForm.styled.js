@@ -51,8 +51,8 @@ export const ModalContent = styled.div`
   margin-bottom: -16px;
   animation: ${modalopen};
   animation-duration: 0.8s;
-  @media (max-width: 598px) {
-    padding: 10px 10px 10px 20px;
+  @media (max-width: 722px) {
+    width: 90%;
   }
 `;
 
