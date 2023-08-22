@@ -5,7 +5,13 @@ import PortfolioContext from "../../../context/portfolioContext";
 import { StyledNavList, StyledNavItem } from "./NavLinks.styled";
 import PropTypes from "prop-types";
 
-function NavLinks({ isOpen, isScrolled, onAboutClick, closeMenu }) {
+function NavLinks({
+  isOpen,
+  isScrolled,
+  onAboutClick,
+  closeMenu,
+  handleShowIntro,
+}) {
   const location = useLocation();
   const { t } = useTranslation();
   const { openModal } = useContext(PortfolioContext);
@@ -18,6 +24,7 @@ function NavLinks({ isOpen, isScrolled, onAboutClick, closeMenu }) {
           onClick={() => {
             onAboutClick();
             closeMenu();
+            handleShowIntro();
           }}
         >
           {t("homepage.Qui je suis?")}

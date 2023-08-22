@@ -20,6 +20,10 @@ export const PortfolioProvider = ({ children }) => {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    // window.scrollTo({
+    //   top: 0,
+    //   behavior: "smooth",
+    // });
   };
 
   return (

@@ -1,7 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-
+html {
+  scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -10,17 +12,11 @@ const GlobalStyles = createGlobalStyle`
     list-style-type: none;
     text-decoration: none;
     font-family: "Source Sans Pro", sans-serif;
-    
-  }
-//   body {
-//     overflow-y: scroll;
-// }
+}
+
 body.modal-open {
   overflow: hidden;
 }
-
-}
-
 `;
 
 export default GlobalStyles;
