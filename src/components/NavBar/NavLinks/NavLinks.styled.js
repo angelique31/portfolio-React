@@ -66,15 +66,6 @@ export const StyledNavItem = styled.li`
         }
       }
   }
-
-  /* Masquez "Qui je suis?" par défaut lorsque la navbar est défilée */
-  ${({ $isScrolled }) =>
-    $isScrolled &&
-    `
-    &.intro-link {
-      display: none;
-    }
-  `}
   
     @media (max-width: 1009px) {
       border: none;

@@ -212,4 +212,7 @@ export const StyledButton = styled.input.attrs({ type: "submit" })`
   @media (max-width: 860px) {
     margin: 0 0 20px 0;
   }
+  @media (max-width: 450px) {
+    margin: 0px 0px 20px 10px;
+  }
 `;

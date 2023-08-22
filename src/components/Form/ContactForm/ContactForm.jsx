@@ -87,6 +87,26 @@ function ContactForm() {
     }
   };
 
+  //La modale se ferme quand on clique sur un lien de la navBar
+  useEffect(() => {
+    const closeFormOnNavLinkClick = () => {
+      closeModal();
+    };
+
+    const navLinks = document.querySelectorAll("a"); // Sélectionne tous les liens de navigation
+    navLinks.forEach((link) => {
+      link.addEventListener("click", closeFormOnNavLinkClick);
+    });
+
+    // Retirez les écouteurs d'événements lors du nettoyage
+    return () => {
+      navLinks.forEach((link) => {
+        link.removeEventListener("click", closeFormOnNavLinkClick);
+      });
+    };
+  }, [closeModal]);
+
+  //La modale apparait
   useEffect(() => {
     if (isModalOpen) {
       document.body.classList.add("modal-open");
