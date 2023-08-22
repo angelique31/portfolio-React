@@ -8,10 +8,8 @@ import {
   CloseButton,
   StyledH2,
   StyledForm,
-  ButtonDetailsWrapper,
-  StyledButton,
 } from "./ContactForm.styled";
-import ContactDetails from "../ContactDetails/ContactDetails";
+
 import ContactFormFields from "../ContactFormFields/ContactFormFields";
 import ValidateFormData from "../ValidateFormData/ValidateFormData";
 import ConfirmationModal from "../ConfirmationModale/ConfirmationModale";
@@ -26,9 +24,9 @@ function ContactForm() {
   });
 
   const [successMessage, setSuccessMessage] = useState("");
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
   const [formErrors, setFormErrors] = useState({});
-  const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
+  // const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
 
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
@@ -70,6 +68,8 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    console.log("Fonction handleSubmit appelée!");
 
     const validationResults = ValidateFormData(formData);
     setFormErrors(validationResults.errors);
@@ -118,10 +118,6 @@ function ContactForm() {
               formErrors={formErrors}
               setFormErrors={setFormErrors}
             />
-            <ButtonDetailsWrapper>
-              <StyledButton type="submit" value="Envoyer" />
-              <ContactDetails className="contact-details-component" />
-            </ButtonDetailsWrapper>
           </StyledForm>
         </ModalContent>
       </ModalContainer>

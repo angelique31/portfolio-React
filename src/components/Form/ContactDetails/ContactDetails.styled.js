@@ -10,9 +10,9 @@ export const pulseEffect = keyframes`
     opacity: 0.7;          
   }
 `;
-export const Aside = styled.aside`
-  margin-left: 130px;
 
+export const ContactInfoBox = styled.div`
+  margin-right: 165px;
   a {
     color: white;
     animation: ${pulseEffect} 2s infinite;
@@ -22,26 +22,26 @@ export const Aside = styled.aside`
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     color: #daddee;
     font-family: inherit;
+    @media (max-width: 600px) {
+      font-size: 0.8rem;
+      min-width: 150px;
+    }
     @media (max-width: 460px) {
-      font-size: 1rem;
+      font-size: 0.7rem;
     }
   }
 
   @media (max-width: 1115px) {
-    margin-left: 0;
+    margin-right: 112px;
   }
-`;
-
-export const ContactInfoBox = styled.div`
-  margin-top: 50px;
 `;
 
 export const Box = styled.div`
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 `;
 
 export const LogoImage = styled.img`

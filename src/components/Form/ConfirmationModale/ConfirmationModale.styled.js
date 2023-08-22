@@ -11,7 +11,7 @@ export const ConfirmationModalContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 100;
 `;
 
 export const ConfirmationModalContent = styled.div`
@@ -58,9 +58,6 @@ export const StyledButton = styled.button`
   border: none;
   border-radius: 10px;
   cursor: pointer;
-
-  bottom: 5px;
-  left: 35px;
   background-color: transparent;
   border: 1px solid #ffb957;
   color: #daddee;
@@ -74,14 +71,5 @@ export const StyledButton = styled.button`
 
   &:active {
     transform: scale(1.1);
-  }
-  @media (max-width: 1115px) {
-    position: static;
-    margin: auto;
-  }
-  @media (max-width: 460px) {
-    width: 140px;
-    height: 59px;
-    font-size: 1rem;
   }
 `;

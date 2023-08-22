@@ -1,15 +1,22 @@
 import PropTypes from "prop-types";
 
-import { FlexColumnDiv, ErrorText } from "./ContactFormFields.styled";
+import {
+  InputWrapper,
+  FlexColumnDiv,
+  ButtonAndDetailsWrapper,
+  ErrorText,
+} from "./ContactFormFields.styled";
 
 import {
   ContactLeftStyled,
   StyledLabel,
   StyledInput,
   StyledTextarea,
+  StyledButton,
 } from "../ContactForm/ContactForm.styled";
 
 import ValidateFormData from "../ValidateFormData/ValidateFormData";
+import ContactDetails from "../ContactDetails/ContactDetails";
 
 function ContactFormFields({
   formData,
@@ -30,46 +37,53 @@ function ContactFormFields({
   };
 
   return (
-    <ContactLeftStyled className="contact-left">
-      <FlexColumnDiv>
-        <StyledLabel htmlFor="fname">Nom & Prénom</StyledLabel>
-        <StyledInput
-          type="text"
-          id="fname"
-          name="fullname"
-          value={formData.fullname}
-          onChange={handleInputChange}
-          placeholder="Entrez votre nom et votre prénom"
-        />
-        {formErrors.fullname && <ErrorText>{formErrors.fullname}</ErrorText>}
-      </FlexColumnDiv>
-
-      <FlexColumnDiv>
-        <StyledLabel htmlFor="email">Email</StyledLabel>
-        <StyledInput
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          placeholder="Exemple : email@domaine.com"
-        />
-        {formErrors.email && <ErrorText>{formErrors.email}</ErrorText>}
-      </FlexColumnDiv>
-
-      <FlexColumnDiv>
-        <StyledLabel htmlFor="message">Votre message</StyledLabel>
-        <StyledTextarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleInputChange}
-          placeholder="Votre message ici"
-          style={{ height: "200px" }}
-        ></StyledTextarea>
-        {formErrors.message && <ErrorText>{formErrors.message}</ErrorText>}
-      </FlexColumnDiv>
-    </ContactLeftStyled>
+    <>
+      <ContactLeftStyled className="contact-left">
+        <InputWrapper>
+          <FlexColumnDiv>
+            <StyledLabel htmlFor="fname">Nom & Prénom</StyledLabel>
+            <StyledInput
+              type="text"
+              id="fname"
+              name="fullname"
+              value={formData.fullname}
+              onChange={handleInputChange}
+              placeholder="Entrez votre nom et votre prénom"
+            />
+            {formErrors.fullname && (
+              <ErrorText>{formErrors.fullname}</ErrorText>
+            )}
+          </FlexColumnDiv>
+          <FlexColumnDiv>
+            <StyledLabel htmlFor="email">Email</StyledLabel>
+            <StyledInput
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="Exemple : email@domaine.com"
+            />
+            {formErrors.email && <ErrorText>{formErrors.email}</ErrorText>}
+          </FlexColumnDiv>
+        </InputWrapper>
+        <FlexColumnDiv>
+          <StyledLabel htmlFor="message">Votre message</StyledLabel>
+          <StyledTextarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            placeholder="Votre message ici"
+          ></StyledTextarea>
+          {formErrors.message && <ErrorText>{formErrors.message}</ErrorText>}
+        </FlexColumnDiv>
+        <ButtonAndDetailsWrapper>
+          <StyledButton type="submit" value="Envoyer" />
+          <ContactDetails className="contact-details-component" />
+        </ButtonAndDetailsWrapper>
+      </ContactLeftStyled>
+    </>
   );
 }
 

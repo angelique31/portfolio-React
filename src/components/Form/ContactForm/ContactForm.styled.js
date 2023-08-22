@@ -18,8 +18,8 @@ export const ModalBackdrop = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
-  // backdrop-filter: blur(5px);
-  z-index: 7; // Assurez-vous que ce z-index est inférieur à celui de votre modale mais supérieur au reste du contenu
+
+  z-index: 7;
 `;
 
 export const ModalContainer = styled.div`
@@ -28,13 +28,11 @@ export const ModalContainer = styled.div`
   // width: 100%;
   // z-index: 8;
   top: 108px;
-
   position: fixed;
-
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1000; // Assurez-vous que ce nombre est assez élevé pour être au-dessus des autres éléments
+  z-index: 7; // Assurez-vous que ce nombre est assez élevé pour être au-dessus des autres éléments
   overflow-y: auto;
 `;
 
@@ -42,23 +40,27 @@ export const ModalContent = styled.div`
   position: relative;
   border-radius: 15px;
   background-color: #313552;
-  width: 80%;
+  width: 70%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 35px 35px 100px 35px;
+  padding: 10px 30px 10px;
   margin: auto;
   margin-bottom: -16px;
   animation: ${modalopen};
   animation-duration: 0.8s;
+  @media (max-width: 598px) {
+    padding: 10px 10px 10px 20px;
+  }
 `;
 
 export const HeaderModal = styled.div`
   text-align: center;
   color: #d1d5db;
-  margin: 40px 0;
   line-height: 2.5rem;
+  margin-bottom: 30px;
 `;
 
 export const CloseButton = styled.span`
@@ -70,29 +72,29 @@ export const CloseButton = styled.span`
 `;
 
 export const StyledH2 = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1rem;
+  margin-top: 20px;
   @media (max-width: 1050px) {
-    font-size: 1.3rem;
+    font-size: O.9rem;
   }
 `;
 
 export const ContactLeftStyled = styled.div`
-  width: 50%;
+  width: 100%;
+
   @media (max-width: 1115px) {
     width: 100%;
-    margin-bottom: 30px;
   }
 `;
 
 export const StyledForm = styled.form`
-  display: flex;
   width: 100%;
-  align-items: flex-start;
-  @media (max-width: 1115px) {
-    flex-direction: column;
-    align-items: center;
+  margin-left: 130px;
+  @media (max-width: 860px) {
+    margin-left: 10px;
   }
 `;
+
 export const ButtonDetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -105,12 +107,13 @@ export const FlexColumnDiv = styled.div`
 
 export const StyledLabel = styled.label`
   color: #d1d5db;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 400;
 `;
 
 export const StyledInput = styled.input`
-  height: 68px;
+  height: 45px;
+  width: 70%;
   border: none;
   border-radius: 15px;
   font-size: 1rem;
@@ -130,12 +133,20 @@ export const StyledInput = styled.input`
   &:hover {
     border-color: #ffc576;
   }
-  @media (max-width: 460px) {
-    font-size: 1rem;
+  @media (max-width: 990px) {
+    width: 85%;
   }
-  &::placeholder {
+
+  @media (max-width: 549px) {
     font-size: 0.8rem;
   }
+  &::placeholder {
+    font-size: 0.6rem;
+  }
+  @media (max-width: 1165px) {
+    padding-left: 5px;
+  }
+
   @media (max-width: 396px) {
     padding-left: 2px;
   }
@@ -144,9 +155,9 @@ export const StyledInput = styled.input`
 export const StyledTextarea = styled.textarea`
   resize: none;
   font-size: 1rem;
-  height: 170px;
+  height: 100px;
 
-  width: 800px;
+  width: 85%;
   background-color: transparent;
   border: 1px solid hsla(0, 0%, 100%, 0.9);
   border-radius: 15px;
@@ -164,10 +175,7 @@ export const StyledTextarea = styled.textarea`
   &:hover {
     border-color: #ffc576;
   }
-  @media (max-width: 1115px) {
-    // width: 750px;
-    width: 100%;
-  }
+
   @media (max-width: 460px) {
     font-size: 1rem;
   }
@@ -177,18 +185,16 @@ export const StyledTextarea = styled.textarea`
 `;
 
 export const StyledButton = styled.input.attrs({ type: "submit" })`
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-family: inherit;
   color: #ffb957;
   margin: 20px 0;
-  width: 170px;
-  height: 59px;
+  width: 110px;
+  height: 40px;
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  position: absolute;
-  bottom: 5px;
-  left: 35px;
+
   background-color: transparent;
   border: 1px solid #ffb957;
   color: #daddee;
@@ -203,13 +209,7 @@ export const StyledButton = styled.input.attrs({ type: "submit" })`
   &:active {
     transform: scale(1.1);
   }
-  @media (max-width: 1115px) {
-    position: static;
-    margin: auto;
-  }
-  @media (max-width: 460px) {
-    width: 140px;
-    height: 59px;
-    font-size: 1rem;
+  @media (max-width: 860px) {
+    margin: 0 0 20px 0;
   }
 `;
