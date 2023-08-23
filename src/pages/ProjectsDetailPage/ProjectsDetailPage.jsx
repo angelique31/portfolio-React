@@ -37,7 +37,8 @@ const ProjectsDetailPage = () => {
     (project) => project.id === projectId
   );
 
-  const externalLink = projectsData.externalLink;
+  // const externalLink = projectsData.externalLink;
+  const externalLink = projectDetail.externalLink;
 
   if (!projectDetail) {
     return <div>Projet non trouvé</div>;

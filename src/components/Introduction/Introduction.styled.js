@@ -21,7 +21,7 @@ export const IntroContainer = styled.div`
   border-radius: 15px;
   background-color: rgb(78, 76, 76);
   width: 67%;
-  opacity: 0.9;
+  // opacity: 0.9;
   display: flex;
   align-items: center;
   @media (max-width: 700px) {
@@ -73,4 +73,27 @@ export const IntroDescription = styled.div`
   color: #fff;
   font-size: 1rem;
   font-style: italic;
+`;
+
+export const MoreAboutMeButton = styled.button`
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 185, 87);
+  color: rgb(255, 197, 118);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease 0s;
+  box-shadow: rgba(255, 185, 87, 0.6) 0px 0px 10px;
+  background: rgb(49, 53, 82);
+  margin-top: 40px;
+  margin-left: 30px;
+  &:hover {
+    background-color: rgb(255, 185, 87);
+    color: rgb(49, 53, 82);
+    box-shadow: rgba(255, 185, 87, 0.8) 2px 1px 0px;
+  }
+  @media (max-width: 700px) {
+    margin-left: 0px;
+  }
 `;

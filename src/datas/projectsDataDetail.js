@@ -2,6 +2,7 @@ const projectsDataDetail = [
   {
     id: "delicesCulinaires",
     title: "Délices Culinaires",
+    externalLink: "https://interface-phi.vercel.app/",
     description: {
       intro:
         "Projet personnel développé en React. Ce site présente une variété de recettes de cuisine.",
@@ -40,6 +41,7 @@ const projectsDataDetail = [
   {
     id: "meteoFrance",
     title: "Clone de la page d'accueil Météo France",
+    externalLink: "https://angelique31.github.io/clone-site-meteoFrance/",
     description: {
       intro:
         "Ce projet consistait à reproduire fidèlement la page d'accueil du site Météo France en utilisant exclusivement HTML et CSS.",

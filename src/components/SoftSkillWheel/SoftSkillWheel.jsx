@@ -53,7 +53,7 @@ function SoftSkillWheel() {
   }, [isVisible]);
 
   return (
-    <Container ref={containerRef}>
+    <Container id="softSkillsSection" ref={containerRef}>
       <Title>{t("homepage.comp_transverses")}</Title>
       <FlexContainer>
         <BioText>
