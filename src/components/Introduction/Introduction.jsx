@@ -27,19 +27,13 @@ const Introduction = ({ onClose }) => {
 
         <IntroSubtitle>{t("homepage.intro_role")}</IntroSubtitle>
         <IntroDescription>{t("homepage.intro_description")}</IntroDescription>
-        {/* <IntroDescription>
-          {t("homepage.intro_description")}{" "}
-          <a href="#softSkillsSection">
-            Découvrez mes compétences transverses ici.
-          </a>
-        </IntroDescription> */}
         <MoreAboutMeButton
           onClick={(e) => {
             e.stopPropagation();
             window.location.href = "#softSkillsSection";
           }}
         >
-          Au-delà du code : découvrez mon parcours unique.
+          {t("homepage.intro_button_text")}
         </MoreAboutMeButton>
       </div>
       <IntroImage src="/assets/photo-cv-angel_1-removebg.png" alt="Your Name" />

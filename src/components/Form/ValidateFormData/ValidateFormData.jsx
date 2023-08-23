@@ -1,20 +1,13 @@
 const ValidateFormData = (formData) => {
   let errors = {};
 
-  const validateCustomField = (
-    value,
-    minLength,
-    regex,
-    lengthErrorMsg,
-    regexErrorMsg
-  ) => {
-    console.log("Value:", value);
+  const validateCustomField = (value, minLength, regex) => {
     if (value.trim().length < minLength) {
-      return lengthErrorMsg;
+      return "length";
     }
     if (!regex.test(value)) {
       console.log("Regex failed for value:", value);
-      return regexErrorMsg;
+      return "regex";
     }
     return "";
   };

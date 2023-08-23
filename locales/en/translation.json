@@ -1,4 +1,36 @@
 {
+  "contactForm": {
+    "header": {
+      "title": "Would you like to discuss a project, ask a question, or just exchange a \"Hello World\"?"
+    },
+    "fields": {
+      "name": {
+        "label": "First & Last Name",
+        "placeholder": "Enter your first and last name",
+        "error": {
+          "length": "Name must be at least 2 characters.",
+          "regex": "Only letters, spaces, and dashes are allowed."
+        }
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Example: email@domain.com",
+        "error": "Please enter a valid email."
+      },
+      "message": {
+        "label": "Your message",
+        "placeholder": "Your message here",
+        "error": "Message must be at least 5 characters long."
+      },
+      "submit_button": "Send"
+    }
+  },
+  "confirmationModal": {
+    "title": "Thank you!",
+    "message": "Your message has been successfully sent 🚀.",
+    "ok_button": "OK"
+  },
+
   "homepage": {
     "Qui je suis?": "Who I am ?",
     "Mon cv": "CV",
@@ -7,6 +39,7 @@
     "intro_greeting": "Hello, I am",
     "intro_role": "Javascript React Developer",
     "intro_description": "Passionate about creating intuitive user experiences, I turn ideas into concrete realities through programming.",
+    "intro_button_text": "Beyond the code: discover my unique journey.",
     "Mes spécialités": "My specialties",
     "comp_transverses": "My Soft Skills",
     "bio": "After working as a nurse for 20 years, I've learned the value of <Highlight>team work</Highlight>. This experience greatly benefits me in web development. My <Highlight>rigor</Highlight> and <Highlight>listening skills</Highlight>, acquired in the medical world, guide me in every project. I know how important it is to collaborate and understand the needs of others, whether they are patients or <Highlight>website users</Highlight>. Every line of code I write reflects this <Highlight>human-centered</Highlight> approach.",

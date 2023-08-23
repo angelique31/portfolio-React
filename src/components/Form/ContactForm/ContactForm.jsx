@@ -1,5 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import PortfolioContext from "../../../context/portfolioContext";
+import { useTranslation } from "react-i18next";
+
 import {
   ModalBackdrop,
   ModalContainer,
@@ -16,6 +18,7 @@ import ConfirmationModal from "../ConfirmationModale/ConfirmationModale";
 
 function ContactForm() {
   const { isModalOpen, closeModal } = useContext(PortfolioContext);
+  const { t } = useTranslation();
 
   const [formData, setFormData] = useState({
     fullname: "",
@@ -68,8 +71,6 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    console.log("Fonction handleSubmit appelée!");
 
     const validationResults = ValidateFormData(formData);
     setFormErrors(validationResults.errors);
@@ -129,7 +130,8 @@ function ContactForm() {
             <CloseButton className="close" onClick={closeModal}>
               &times;
             </CloseButton>
-            <StyledH2>{`Vous souhaitez discuter d'un projet, poser une question ou juste échanger un "Hello World"?`}</StyledH2>
+            {/* <StyledH2>{`Vous souhaitez discuter d'un projet, poser une question ou juste échanger un "Hello World"?`}</StyledH2> */}
+            <StyledH2>{t("contactForm.header.title")}</StyledH2>
           </HeaderModal>
           <StyledForm id="contact" onSubmit={handleSubmit}>
             <ContactFormFields
@@ -141,10 +143,7 @@ function ContactForm() {
           </StyledForm>
         </ModalContent>
       </ModalContainer>
-      {/* <ConfirmationModal
-        isOpen={isConfirmationModalOpen}
-        onClose={() => setIsConfirmationModalOpen(false)}
-      /> */}
+
       <ConfirmationModal
         isOpen={!!successMessage}
         onClose={() => setSuccessMessage("")}

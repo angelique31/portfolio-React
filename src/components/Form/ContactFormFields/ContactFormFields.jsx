@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
 import {
   InputWrapper,
@@ -35,51 +36,70 @@ function ContactFormFields({
     });
     setFormErrors(validationResults.errors);
   };
+  const { t } = useTranslation();
 
   return (
     <>
       <ContactLeftStyled className="contact-left">
         <InputWrapper>
           <FlexColumnDiv>
-            <StyledLabel htmlFor="fname">Nom & Prénom</StyledLabel>
+            <StyledLabel htmlFor="fname">
+              {t("contactForm.fields.name.label")}
+            </StyledLabel>
             <StyledInput
               type="text"
               id="fname"
               name="fullname"
               value={formData.fullname}
               onChange={handleInputChange}
-              placeholder="Entrez votre nom et votre prénom"
+              placeholder={t("contactForm.fields.name.placeholder")}
             />
+
             {formErrors.fullname && (
-              <ErrorText>{formErrors.fullname}</ErrorText>
+              <ErrorText>
+                {t(`contactForm.fields.name.error.${formErrors.fullname}`)}
+              </ErrorText>
             )}
           </FlexColumnDiv>
           <FlexColumnDiv>
-            <StyledLabel htmlFor="email">Email</StyledLabel>
+            <StyledLabel htmlFor="email">
+              {t("contactForm.fields.email.label")}
+            </StyledLabel>
             <StyledInput
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              placeholder="Exemple : email@domaine.com"
+              placeholder={t("contactForm.fields.email.placeholder")}
             />
-            {formErrors.email && <ErrorText>{formErrors.email}</ErrorText>}
+
+            {formErrors.email && (
+              <ErrorText>{t("contactForm.fields.email.error")}</ErrorText>
+            )}
           </FlexColumnDiv>
         </InputWrapper>
         <FlexColumnDiv>
-          <StyledLabel htmlFor="message">Votre message</StyledLabel>
+          <StyledLabel htmlFor="message">
+            {t("contactForm.fields.message.label")}
+          </StyledLabel>
           <StyledTextarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleInputChange}
-            placeholder="Votre message ici"
+            placeholder={t("contactForm.fields.message.placeholder")}
           ></StyledTextarea>
-          {formErrors.message && <ErrorText>{formErrors.message}</ErrorText>}
+
+          {formErrors.message && (
+            <ErrorText>{t("contactForm.fields.message.error")}</ErrorText>
+          )}
         </FlexColumnDiv>
         <ButtonAndDetailsWrapper>
-          <StyledButton type="submit" value="Envoyer" />
+          <StyledButton
+            type="submit"
+            value={t("contactForm.fields.submit_button")}
+          />
           <ContactDetails className="contact-details-component" />
         </ButtonAndDetailsWrapper>
       </ContactLeftStyled>

@@ -1,4 +1,36 @@
 {
+  "contactForm": {
+    "header": {
+      "title": "Vous souhaitez discuter d'un projet, poser une question ou juste échanger un \"Hello World\"?"
+    },
+    "fields": {
+      "name": {
+        "label": "Nom & Prénom",
+        "placeholder": "Entrez votre nom et votre prénom",
+        "error": {
+          "length": "Le nom & prénom doivent avoir au moins 2 caractères.",
+          "regex": "Seuls les lettres, espaces et tirets sont autorisés."
+        }
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Exemple : email@domaine.com",
+        "error": "Veuillez saisir un email valide"
+      },
+      "message": {
+        "label": "Votre message",
+        "placeholder": "Votre message ici",
+        "error": "Le message doit avoir au moins 5 caractères."
+      },
+      "submit_button": "Envoyer"
+    }
+  },
+  "confirmationModal": {
+    "title": "Merci !",
+    "message": "Votre message a été envoyé avec succès 🚀.",
+    "ok_button": "OK"
+  },
+
   "homepage": {
     "welcome": "Bienvenue sur mon portfolio!",
     "Qui je suis?": "Qui je suis?",
@@ -8,6 +40,7 @@
     "intro_greeting": "Bonjour, je suis",
     "intro_role": "Développeuse Javascript React",
     "intro_description": "Passionnée par la création d'expériences utilisateur intuitives, je transforme les idées en réalités concrètes à travers la programmation.",
+    "intro_button_text": "Au-delà du code : découvrez mon parcours unique.",
     "Mes spécialités": "Mes spécialités",
     "comp_transverses": "Compétences transverses",
     "bio": "Après avoir exercé le métier d'<Highlight>infirmière</Highlight> pendant 20 ans, j'ai appris la valeur du <Highlight>travail en équipe</Highlight>. Cette expérience m'aide énormément en développement web. Ma <Highlight>rigueur</Highlight> et mon <Highlight>sens de l'écoute</Highlight>, acquis dans le monde médical, me guident dans chaque projet. Je sais combien il est important de collaborer et de comprendre les besoins des autres, que ce soit des patients ou des <Highlight>utilisateurs</Highlight> d'un site web. Chaque ligne de code que je rédige reflète cette approche centrée sur l'<Highlight>humain</Highlight>.",
