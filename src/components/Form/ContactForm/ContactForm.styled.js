@@ -18,15 +18,10 @@ export const ModalBackdrop = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
-
   z-index: 7;
 `;
 
 export const ModalContainer = styled.div`
-  //   display: none;
-  // position: absolute;
-  // width: 100%;
-  // z-index: 8;
   top: 108px;
   position: fixed;
   left: 0;
@@ -34,7 +29,21 @@ export const ModalContainer = styled.div`
   bottom: 0;
   z-index: 7; // Assurez-vous que ce nombre est assez élevé pour être au-dessus des autres éléments
   overflow-y: auto;
+  display: none; // C'est la valeur par défaut, qui sera écrasée par le style inline si nécessaire
 `;
+
+// export const ModalContainer = styled.div.attrs((props) => ({
+//   isVisible: props.isVisible,
+// }))`
+//   display: ${(props) => (props.isVisible ? "block" : "none")};
+//   top: 108px;
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   z-index: 7; // Assurez-vous que ce nombre est assez élevé pour être au-dessus des autres éléments
+//   overflow-y: auto;
+// `;
 
 export const ModalContent = styled.div`
   position: relative;

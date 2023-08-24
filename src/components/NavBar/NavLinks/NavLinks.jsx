@@ -14,7 +14,7 @@ function NavLinks({
 }) {
   const location = useLocation();
   const { t } = useTranslation();
-  const { openModal } = useContext(PortfolioContext);
+  const { openModal, setIsFormVisible } = useContext(PortfolioContext);
 
   return (
     <StyledNavList $isOpen={isOpen}>
@@ -64,6 +64,7 @@ function NavLinks({
           onClick={(e) => {
             e.preventDefault();
             openModal();
+            // setIsFormVisible(true); // Rend le formulaire visible
             closeMenu();
           }}
         >

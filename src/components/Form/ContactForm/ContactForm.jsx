@@ -19,6 +19,12 @@ import ConfirmationModal from "../ConfirmationModale/ConfirmationModale";
 function ContactForm() {
   const { isModalOpen, closeModal } = useContext(PortfolioContext);
   const { t } = useTranslation();
+  const [isFormVisible, setIsFormVisible] = useState(true);
+
+  useEffect(() => {
+    console.log("isModalOpen:", isModalOpen);
+    console.log("isFormVisible:", isFormVisible);
+  }, [isModalOpen, isFormVisible]);
 
   const [formData, setFormData] = useState({
     fullname: "",
@@ -123,14 +129,16 @@ function ContactForm() {
 
   return (
     <>
-      <ModalBackdrop />
-      <ModalContainer>
+      {isModalOpen && <ModalBackdrop />}
+
+      <ModalContainer
+        style={{ display: isModalOpen && isFormVisible ? "block" : "none" }}
+      >
         <ModalContent>
           <HeaderModal className="header_modal">
             <CloseButton className="close" onClick={closeModal}>
               &times;
             </CloseButton>
-            {/* <StyledH2>{`Vous souhaitez discuter d'un projet, poser une question ou juste échanger un "Hello World"?`}</StyledH2> */}
             <StyledH2>{t("contactForm.header.title")}</StyledH2>
           </HeaderModal>
           <StyledForm id="contact" onSubmit={handleSubmit}>
@@ -147,6 +155,9 @@ function ContactForm() {
       <ConfirmationModal
         isOpen={!!successMessage}
         onClose={() => setSuccessMessage("")}
+        setIsFormVisible={setIsFormVisible}
+        isFormVisible={isFormVisible}
+        closeModal={closeModal}
       />
     </>
   );

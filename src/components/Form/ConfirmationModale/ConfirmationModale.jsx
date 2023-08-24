@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-
+import { useEffect } from "react";
 import {
   ConfirmationModalContainer,
   ConfirmationModalContent,
@@ -10,14 +10,23 @@ import {
   StyledButton,
 } from "./ConfirmationModale.styled";
 
-function ConfirmationModal({ isOpen, onClose }) {
+function ConfirmationModal({
+  isOpen,
+  onClose,
+  setIsFormVisible,
+  isFormVisible,
+  closeModal,
+}) {
   const { t } = useTranslation();
 
   const navigate = useNavigate();
+
   const handleClose = () => {
     onClose();
 
-    // navigate(-1);
+    setIsFormVisible((prevValue) => !prevValue); // Basculez l'état
+
+    closeModal();
     navigate("/");
   };
 
