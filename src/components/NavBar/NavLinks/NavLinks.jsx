@@ -51,12 +51,6 @@ function NavLinks({
         </StyledNavItem>
       )}
 
-      {/* <StyledNavItem $isScrolled={isScrolled}>
-        <Link to="/contact" onClick={closeMenu}>
-          {t("homepage.Contactez-moi")}
-        </Link>
-      </StyledNavItem> */}
-
       <StyledNavItem $isScrolled={isScrolled}>
         {/* Modification ici pour ouvrir la modale */}
         <a

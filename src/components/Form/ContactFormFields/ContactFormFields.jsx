@@ -1,3 +1,4 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 
@@ -38,6 +39,18 @@ function ContactFormFields({
   };
   const { t } = useTranslation();
 
+  //avoir un état pour chaque champ qui indique si l'utilisateur a déjà interagi avec ce champ ou non
+  const [touchedFields, setTouchedFields] = useState({
+    fullname: false,
+    email: false,
+    message: false,
+  });
+  //Mettre à jour l'état lors de l'interaction avec un champ
+  const handleInputBlur = (e) => {
+    const { name } = e.target;
+    setTouchedFields((prev) => ({ ...prev, [name]: true }));
+  };
+
   return (
     <>
       <ContactLeftStyled className="contact-left">
@@ -53,9 +66,9 @@ function ContactFormFields({
               value={formData.fullname}
               onChange={handleInputChange}
               placeholder={t("contactForm.fields.name.placeholder")}
+              onBlur={handleInputBlur}
             />
-
-            {formErrors.fullname && (
+            {formErrors.fullname && touchedFields.fullname && (
               <ErrorText>
                 {t(`contactForm.fields.name.error.${formErrors.fullname}`)}
               </ErrorText>
@@ -72,9 +85,9 @@ function ContactFormFields({
               value={formData.email}
               onChange={handleInputChange}
               placeholder={t("contactForm.fields.email.placeholder")}
+              onBlur={handleInputBlur}
             />
-
-            {formErrors.email && (
+            {formErrors.email && touchedFields.email && (
               <ErrorText>{t("contactForm.fields.email.error")}</ErrorText>
             )}
           </FlexColumnDiv>
@@ -89,9 +102,9 @@ function ContactFormFields({
             value={formData.message}
             onChange={handleInputChange}
             placeholder={t("contactForm.fields.message.placeholder")}
+            onBlur={handleInputBlur}
           ></StyledTextarea>
-
-          {formErrors.message && (
+          {formErrors.message && touchedFields.message && (
             <ErrorText>{t("contactForm.fields.message.error")}</ErrorText>
           )}
         </FlexColumnDiv>
