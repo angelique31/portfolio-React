@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage/HomePage";
 
 import ProjectsDetailPage from "./pages/ProjectsDetailPage/ProjectsDetailPage";
 import { PortfolioProvider } from "./context/portfolioContext";
+import CvPage from "./pages/CvPage/CvPage";
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -30,6 +31,7 @@ const App = () => {
               path="/project-detail/:projectId"
               element={<ProjectsDetailPage />}
             />
+            <Route path="/cv" element={<CvPage />} />
 
             {/* <Route path="*" element={<NotFoundPage />} /> */}
           </Routes>
