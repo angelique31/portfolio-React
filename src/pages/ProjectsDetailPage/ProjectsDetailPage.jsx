@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import PortfolioContext from "../../context/portfolioContext";
 import projectsDataDetail from "../../datas/projectsDataDetail";
 import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollAwareNavBar";
-import projectsData from "../../datas/projectsData";
 
 import {
   ProjectDetailContainer,

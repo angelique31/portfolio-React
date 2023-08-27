@@ -1,20 +1,32 @@
-import SkillCard from "../../components/BioComponent/SkillCard/SkillCard";
-import SkillsSection from "../../components/BioComponent/SkillsSection/SkillsSection";
-import "./BioPage.styled";
+import { useContext } from "react";
+import PortfolioContext from "../../context/portfolioContext";
+import SkillSection from "../../components/BioComponent/SkillSection/SkillSection";
+import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollAwareNavBar";
+import {
+  BioContainer,
+  StyledH1,
+  BioDescription,
+  SectionTitle,
+} from "./BioPage.styled";
 
 function BioPage() {
+  const { handleShowIntro } = useContext(PortfolioContext);
   return (
     <>
-      <div className="cv-container">
+      <ScrollAwareNavBar onAboutClick={handleShowIntro} />
+      <BioContainer>
         <header>
-          <h1>Angélique Rosin</h1>
-          <p>
-            {`"Après une carrière enrichissante en tant qu'infirmière, je me suis reconvertie dans le développement web. Ultra motivée, je suis prête à relever de nouveaux défis dans ce domaine passionnant"
+          <StyledH1>{`Développeuse d'application Javascript React`}</StyledH1>
+          <BioDescription>
+            {`Après une carrière enrichissante en tant qu'infirmière, je me suis reconvertie dans le développement web. Ultra motivée, je suis prête à relever de nouveaux défis dans ce domaine passionnant.
           `}
-          </p>
+          </BioDescription>
         </header>
 
-        <SkillsSection />
+        <section>
+          <SectionTitle>Mes soft skills</SectionTitle>
+          <SkillSection />
+        </section>
         <section>
           <h2>Hard skills</h2>
           <ul>
@@ -62,7 +74,7 @@ function BioPage() {
             Télécharger le CV
           </a>
         </div>
-      </div>
+      </BioContainer>
     </>
   );
 }
