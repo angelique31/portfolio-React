@@ -30,17 +30,12 @@ function BioPage() {
           <SoftSkillsSection />
         </section>
         <section>
-          <h2>Hard skills</h2>
-          {/* <ul>
-            {["HTML", "CSS", "Javascript", "React", "Sass"].map((skill) => (
-              <li key={skill}>{skill}</li>
-            ))}
-          </ul> */}
+          <SectionTitle>Mes compétences techniques</SectionTitle>
           <HardSkillsSection />
         </section>
 
         <section>
-          <h2>EXPERIENCES PROFESSIONNELLES</h2>
+          <SectionTitle>EXPERIENCES PROFESSIONNELLES</SectionTitle>
           <ul>
             <li>
               2015 – 2022 : Missions d’intérim au Laboratoire Biolab, Clinique

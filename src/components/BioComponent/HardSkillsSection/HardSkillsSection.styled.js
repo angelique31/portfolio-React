@@ -4,6 +4,12 @@ export const SkillsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  @media (max-width: 905px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 550px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const CategoryContainer = styled.div`
@@ -31,5 +37,13 @@ export const CategoryTitle = styled.h3`
 
 export const Skill = styled.span`
   display: inline-block;
-  margin: 5px;
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #ffb957;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px); // Un petit effet de soulèvement au survol
+  }
 `;

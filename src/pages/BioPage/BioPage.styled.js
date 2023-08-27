@@ -17,5 +17,5 @@ export const BioDescription = styled.p`
 `;
 
 export const SectionTitle = styled.h2`
-  margin: 50px 0 30px 0;
+  margin: 70px 0 30px 0;
 `;
