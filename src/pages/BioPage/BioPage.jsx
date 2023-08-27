@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import PortfolioContext from "../../context/portfolioContext";
-import SkillSection from "../../components/BioComponent/SkillSection/SkillSection";
+
 import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollAwareNavBar";
 import {
   BioContainer,
@@ -8,6 +8,8 @@ import {
   BioDescription,
   SectionTitle,
 } from "./BioPage.styled";
+import SoftSkillsSection from "../../components/BioComponent/SoftSkillsSection/SoftSkillsSection";
+import HardSkillsSection from "../../components/BioComponent/HardSkillsSection/HardSkillsSection";
 
 function BioPage() {
   const { handleShowIntro } = useContext(PortfolioContext);
@@ -25,15 +27,16 @@ function BioPage() {
 
         <section>
           <SectionTitle>Mes soft skills</SectionTitle>
-          <SkillSection />
+          <SoftSkillsSection />
         </section>
         <section>
           <h2>Hard skills</h2>
-          <ul>
+          {/* <ul>
             {["HTML", "CSS", "Javascript", "React", "Sass"].map((skill) => (
               <li key={skill}>{skill}</li>
             ))}
-          </ul>
+          </ul> */}
+          <HardSkillsSection />
         </section>
 
         <section>

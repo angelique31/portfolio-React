@@ -3,7 +3,7 @@ import {
   SkillContainer,
   Tooltip,
   TooltipText,
-} from "./SkillTooltip.styled";
+} from "./SkillsTooltip.styled";
 import PropTypes from "prop-types";
 import UseIsMobile from "../UseIsMobile/UseIsMobile";
 

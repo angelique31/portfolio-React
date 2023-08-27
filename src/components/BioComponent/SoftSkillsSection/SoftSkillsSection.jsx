@@ -1,16 +1,15 @@
-// SkillsSection.js
 import { useState } from "react";
 import skillsData from "../../../datas/skillsData";
-import SkillTooltip from "../SkillTooltip/SkillTooltip";
-import { SkillWrapper } from "./SkillSection.styled";
+import SkillsTooltip from "../SkillsTooltip/SkillsTooltip";
+import { SkillWrapper } from "./SoftSkillsSection.styled";
 
-function SkillSection() {
+function SoftSkillsSection() {
   const [activeTooltip, setActiveTooltip] = useState(null);
 
   return (
     <SkillWrapper>
       {skillsData.map((skillData, index) => (
-        <SkillTooltip
+        <SkillsTooltip
           key={skillData.skill}
           skill={skillData.skill}
           description={skillData.description}
@@ -23,4 +22,4 @@ function SkillSection() {
   );
 }
 
-export default SkillSection;
+export default SoftSkillsSection;
