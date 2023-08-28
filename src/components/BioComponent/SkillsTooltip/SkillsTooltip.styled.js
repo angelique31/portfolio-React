@@ -1,8 +1,9 @@
 // Styles pour les compétences
 import styled from "styled-components";
 
-export const Skill = styled.h2`
+export const Skill = styled.h3`
   font-size: 1rem;
+
   margin: 15px 0;
   color: white;
   text-align: center;

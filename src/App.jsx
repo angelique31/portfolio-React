@@ -9,15 +9,28 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import BioPage from "./pages/BioPage/BioPage";
 
+// function ScrollToTop() {
+//   const { pathname } = useLocation();
+
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, [pathname]);
+
+//   return null;
+// }
+
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
 
   return null;
 }
+
 const App = () => {
   return (
     <>

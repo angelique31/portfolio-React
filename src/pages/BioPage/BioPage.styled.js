@@ -8,7 +8,7 @@ export const BioContainer = styled.div`
 
 export const StyledH1 = styled.h1`
   font-size: 1.5rem;
-  font-style: italic;
+
   color: #ffb957;
 `;
 
@@ -17,5 +17,6 @@ export const BioDescription = styled.p`
 `;
 
 export const SectionTitle = styled.h2`
-  margin: 70px 0 30px 0;
+  // margin: 70px 0 30px 0;
+  margin: 130px 0 70px 0;
 `;

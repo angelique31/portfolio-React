@@ -80,7 +80,7 @@ export const CloseButton = styled.span`
   font-size: 2rem;
 `;
 
-export const StyledH2 = styled.h2`
+export const StyledH3 = styled.h3`
   font-size: 1rem;
   margin-top: 20px;
   @media (max-width: 1050px) {

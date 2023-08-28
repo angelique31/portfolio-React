@@ -14,12 +14,13 @@ export const SkillsContainer = styled.div`
 
 export const CategoryContainer = styled.div`
   padding: 20px;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
+  border: 1px solid rgba(255, 197, 118, 0.4);
   transition: box-shadow 0.3s ease;
-
+  background-color: rgb(49, 53, 82);
+  box-shadow: 0 1px 0 0 rgba(255, 197, 118, 0.75);
+  border-radius: 8px 8px 0 0;
   &:hover {
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 0 0 rgba(255, 197, 118, 0.75);
   }
 `;
 
@@ -40,10 +41,11 @@ export const Skill = styled.span`
   margin: 10px;
   padding: 5px 10px;
   border-radius: 20px;
-  border: 1px solid #ffb957;
+  border: 2px solid rgba(255, 197, 118, 0.4);
   transition: transform 0.3s ease;
 
   &:hover {
     transform: translateY(-3px); // Un petit effet de soulèvement au survol
+    border-color: rgb(255, 197, 118);
   }
 `;

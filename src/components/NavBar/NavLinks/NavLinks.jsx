@@ -2,8 +2,16 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
 import PortfolioContext from "../../../context/portfolioContext";
-import { StyledNavList, StyledNavItem } from "./NavLinks.styled";
+import {
+  StyledNavList,
+  StyledNavItem,
+  StyledDownloadButton,
+  StyledIcon,
+  StyledLinkContainer,
+  TextWrapper,
+} from "./NavLinks.styled";
 import PropTypes from "prop-types";
+import DownloadIcon from "../../../assets/Icons/download.svg";
 
 function NavLinks({
   isOpen,
@@ -27,43 +35,59 @@ function NavLinks({
             handleShowIntro();
           }}
         >
-          {t("homepage.Qui je suis?")}
+          <TextWrapper>{t("homepage.Qui je suis?")}</TextWrapper>
         </Link>
       </StyledNavItem>
 
       <StyledNavItem $isScrolled={isScrolled}>
-        <Link to="/cv" onClick={closeMenu}>
-          {t("homepage.Mon cv")}
-        </Link>
-      </StyledNavItem>
-
-      {location.pathname.startsWith("/project-detail/") ? (
-        <StyledNavItem $isScrolled={isScrolled}>
-          <Link to="/mes-realisations" onClick={closeMenu}>
-            {t("homepage.Mes réalisations")}
+        <StyledLinkContainer>
+          <Link to="/cv" onClick={closeMenu}>
+            <TextWrapper>{t("homepage.Mon cv")}</TextWrapper>
           </Link>
-        </StyledNavItem>
-      ) : (
-        <StyledNavItem $isScrolled={isScrolled}>
-          <a href="#mes-realisations" onClick={closeMenu}>
-            {t("homepage.Mes réalisations")}
-          </a>
-        </StyledNavItem>
-      )}
+          <StyledDownloadButton href="/CV_Angelique_Rosin.pdf" download>
+            <StyledIcon
+              src={DownloadIcon}
+              alt="Icône de telechargement de CV"
+            />
+          </StyledDownloadButton>
+        </StyledLinkContainer>
+      </StyledNavItem>
 
       <StyledNavItem $isScrolled={isScrolled}>
-        {/* Modification ici pour ouvrir la modale */}
-        <a
-          href="#contact"
-          onClick={(e) => {
-            e.preventDefault();
-            openModal();
-            // setIsFormVisible(true); // Rend le formulaire visible
-            closeMenu();
-          }}
-        >
-          {t("homepage.Contactez-moi")}
-        </a>
+        {location.pathname === "/" ? (
+          <a href="#mes-realisations" onClick={closeMenu}>
+            <TextWrapper>{t("homepage.Mes réalisations")}</TextWrapper>
+          </a>
+        ) : (
+          <Link to="/#mes-realisations" onClick={closeMenu}>
+            <TextWrapper>{t("homepage.Mes réalisations")}</TextWrapper>
+          </Link>
+        )}
+      </StyledNavItem>
+
+      <StyledNavItem $isScrolled={isScrolled}>
+        {location.pathname === "/" ? (
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              openModal();
+              closeMenu();
+            }}
+          >
+            <TextWrapper>{t("homepage.Contactez-moi")}</TextWrapper>
+          </a>
+        ) : (
+          <Link
+            to="/#contact"
+            onClick={(e) => {
+              openModal();
+              closeMenu();
+            }}
+          >
+            <TextWrapper>{t("homepage.Contactez-moi")}</TextWrapper>
+          </Link>
+        )}
       </StyledNavItem>
     </StyledNavList>
   );

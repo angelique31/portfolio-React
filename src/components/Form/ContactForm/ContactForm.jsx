@@ -8,7 +8,7 @@ import {
   ModalContent,
   HeaderModal,
   CloseButton,
-  StyledH2,
+  StyledH3,
   StyledForm,
 } from "./ContactForm.styled";
 
@@ -139,7 +139,7 @@ function ContactForm() {
             <CloseButton className="close" onClick={closeModal}>
               &times;
             </CloseButton>
-            <StyledH2>{t("contactForm.header.title")}</StyledH2>
+            <StyledH3>{t("contactForm.header.title")}</StyledH3>
           </HeaderModal>
           <StyledForm id="contact" onSubmit={handleSubmit}>
             <ContactFormFields

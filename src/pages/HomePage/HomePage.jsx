@@ -15,12 +15,15 @@ const HomePage = () => {
   const { showIntro, handleShowIntro, handleCloseIntro } =
     useContext(PortfolioContext);
 
+  //Etat pour gérer la navigation dans les sections de la page home
   useEffect(() => {
     if (modal === "que-suis-je") {
       handleShowIntro();
     }
-    // Pour faire défiler jusqu'à "mes réalisations"
-    else if (modal === "mes-realisations") {
+  }, [modal, handleShowIntro]);
+
+  useEffect(() => {
+    if (window.location.hash === "#mes-realisations") {
       const section = document.getElementById("mes-realisations");
       if (section) {
         window.scrollTo({
@@ -29,7 +32,7 @@ const HomePage = () => {
         });
       }
     }
-  }, [modal, handleShowIntro]);
+  }, [modal]);
 
   // Nouvelle fonction pour gérer la fermeture de la modale
   const handleCloseAndNavigate = () => {

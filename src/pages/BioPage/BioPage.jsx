@@ -10,6 +10,9 @@ import {
 } from "./BioPage.styled";
 import SoftSkillsSection from "../../components/BioComponent/SoftSkillsSection/SoftSkillsSection";
 import HardSkillsSection from "../../components/BioComponent/HardSkillsSection/HardSkillsSection";
+import ProfessionalExperience from "../../components/BioComponent/ProfessionalExperience/ProfessionalExperience";
+import EducationSection from "../../components/BioComponent/EducationSection/EducationSection";
+import Hobbies from "../../components/BioComponent/Hobbies/Hobbies";
 
 function BioPage() {
   const { handleShowIntro } = useContext(PortfolioContext);
@@ -29,49 +32,26 @@ function BioPage() {
           <SectionTitle>Mes soft skills</SectionTitle>
           <SoftSkillsSection />
         </section>
+
         <section>
           <SectionTitle>Mes compétences techniques</SectionTitle>
           <HardSkillsSection />
         </section>
 
         <section>
-          <SectionTitle>EXPERIENCES PROFESSIONNELLES</SectionTitle>
-          <ul>
-            <li>
-              2015 – 2022 : Missions d’intérim au Laboratoire Biolab, Clinique
-              Pasteur à Toulouse.
-            </li>
-            <li>2010 – 2015 : Missions en intérim en EHPAD et au CHU.</li>
-            <li>
-              2004 – 2010 : Chirurgie générale, Hôpital Saint Louis à Paris.
-            </li>
-          </ul>
+          <SectionTitle>Mon parcours professionnel</SectionTitle>
+          <ProfessionalExperience />
         </section>
 
         <section>
-          <h2>FORMATIONS</h2>
-          <ul>
-            <li>
-              2022 - 2023 : Formation développeur d’application javascript-react
-            </li>
-            <li>2004 : Diplôme d’Etat Infirmier</li>
-            <li>1999 : Baccalauréat SMS (Sciences Médico-Sociales)</li>
-          </ul>
+          <SectionTitle>Formations et qualifications</SectionTitle>
+          <EducationSection />
         </section>
 
         <section>
-          <h2>CENTRES D’INTÉRÊT</h2>
-          <ul>
-            {["Cuisine", "Lecture", "Randonnée"].map((interest) => (
-              <li key={interest}>{interest}</li>
-            ))}
-          </ul>
+          <SectionTitle>{`Centres d'intérêts`}</SectionTitle>
+          <Hobbies />
         </section>
-        <div className="download-section">
-          <a href="/CV_Angelique_Rosin.pdf" download className="download-btn">
-            Télécharger le CV
-          </a>
-        </div>
       </BioContainer>
     </>
   );

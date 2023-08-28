@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const StyledNavList = styled.ul`
   display: flex;
@@ -12,8 +13,6 @@ export const StyledNavList = styled.ul`
     gap: 33px;
     position: absolute;
     top: 100%;
-    /* background: #5472ae; */
-    // background: #bb5cba;
     background: rgb(70, 70, 70);
     padding: 15px 22px 15px 20px;
     border-right: 1px solid #c5c5c6;
@@ -45,18 +44,18 @@ export const StyledNavItem = styled.li`
     position: relative; 
     overflow: hidden; // pour s'assurer que l'animation reste à l'intérieur du lien
     font-size: ${(props) => (props.$isScrolled ? "0.8rem" : "1.1rem")};
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: 0; 
-      left: 0;
-      width: 0; 
-      height: 2px; 
-      background-color: #ffb957;
-      transition: width 0.4s ease; 
+    // &::after {
+    //   content: '';
+    //   display: block;
+    //   position: absolute;
+    //   bottom: 0; 
+    //   left: 0;
+    //   width: 0; 
+    //   height: 2px; 
+    //   background-color: #ffb957;
+    //   transition: width 0.4s ease; 
       
-    }
+    // }
 
     &:hover {
         color: #ffb957; 
@@ -105,4 +104,40 @@ export const Overlay = styled.div`
     display: block;
     
   `}
+`;
+
+export const StyledDownloadButton = styled.a`
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+`;
+
+export const StyledIcon = styled.img`
+  height: 15px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+`;
+
+export const StyledLinkContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const TextWrapper = styled.span`
+  position: relative;
+  &:hover::after {
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffb957;
+    transition: width 0.4s ease;
+  }
 `;
