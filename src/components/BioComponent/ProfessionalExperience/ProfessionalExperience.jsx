@@ -14,7 +14,7 @@ function ProfessionalExperience() {
   return (
     <TimelineContainer>
       <Arrow />
-      <Event side="left">
+      <Event $side="left">
         <Dot />
         <EventDetails>
           <Position>{`Missions d'intérim`}</Position>
@@ -24,7 +24,7 @@ function ProfessionalExperience() {
         </EventDetails>
       </Event>
 
-      <Event side="right">
+      <Event $side="right">
         <Dot />
         <EventDetails>
           <Position>Missions en intérim au CHU</Position>
@@ -33,7 +33,7 @@ function ProfessionalExperience() {
         </EventDetails>
       </Event>
 
-      <Event side="left">
+      <Event $side="left">
         <Dot />
         <EventDetails>
           <Position>Chirurgie générale</Position>

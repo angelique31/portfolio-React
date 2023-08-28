@@ -93,7 +93,7 @@ function SoftSkillWheel() {
               <SkillTab
                 key={skill}
                 color={colors[index % colors.length]}
-                rotation={step * index}
+                $rotation={step * index}
               >
                 <SkillText>{t(`homepage.skills.${index}`)}</SkillText>
               </SkillTab>

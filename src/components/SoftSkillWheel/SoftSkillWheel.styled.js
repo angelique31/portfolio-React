@@ -139,7 +139,7 @@ export const SkillTab = styled.div`
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background: ${({ color }) => color || "#f4f4f4"};
-  transform: ${({ rotation }) => `rotate(${rotation}deg)`};
+  transform: ${({ $rotation }) => `rotate(${$rotation}deg)`};
   @media (max-width: 470px) {
     width: 130px;
     height: 30px;

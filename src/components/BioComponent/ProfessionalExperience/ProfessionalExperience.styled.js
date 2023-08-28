@@ -19,7 +19,7 @@ export const Event = styled.div`
   display: flex;
   width: 100%;
   justify-content: ${(props) =>
-    props.side === "left" ? "flex-end" : "flex-start"};
+    props.$side === "left" ? "flex-end" : "flex-start"};
   padding: 20px 0;
 
   &:not(:last-child) {

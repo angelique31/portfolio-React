@@ -5,7 +5,6 @@ const PortfolioContext = createContext();
 export const PortfolioProvider = ({ children }) => {
   const [showIntro, setShowIntro] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const [isFormVisible, setIsFormVisible] = useState(true);
 
   const handleShowIntro = () => {
     setShowIntro(true);
@@ -16,12 +15,10 @@ export const PortfolioProvider = ({ children }) => {
   };
 
   const openModal = () => {
-    console.log("Mise à jour de isModalOpen à true");
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    console.log("Mise à jour de isModalOpen à false");
     setIsModalOpen(false);
   };
 

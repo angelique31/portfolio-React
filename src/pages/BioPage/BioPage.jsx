@@ -29,7 +29,7 @@ function BioPage() {
         </header>
 
         <section>
-          <SectionTitle>Mes soft skills</SectionTitle>
+          <SectionTitle>Mes compétences transverses</SectionTitle>
           <SoftSkillsSection />
         </section>
 
