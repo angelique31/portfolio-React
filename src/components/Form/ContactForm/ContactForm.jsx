@@ -21,10 +21,7 @@ function ContactForm() {
   const { t } = useTranslation();
   const [isFormVisible, setIsFormVisible] = useState(true);
 
-  useEffect(() => {
-    console.log("isModalOpen:", isModalOpen);
-    console.log("isFormVisible:", isFormVisible);
-  }, [isModalOpen, isFormVisible]);
+  useEffect(() => {}, [isModalOpen, isFormVisible]);
 
   const [formData, setFormData] = useState({
     fullname: "",
