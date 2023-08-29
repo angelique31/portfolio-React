@@ -118,5 +118,147 @@
         "- CSS: Personnalisation, design, et mise en page responsive du site."
       ]
     }
+  },
+
+  "skillsData": {
+    "empathy": {
+      "skill": "Empathie",
+      "description": "L'utilisateur est au cœur de ma démarche, créant des interfaces intuitives et pertinentes."
+    },
+    "organization": {
+      "skill": "Sens de l’organisation",
+      "description": "De l'hôpital au codage, j'ai appris à prioriser mes actions et à être efficace."
+    },
+    "adaptability": {
+      "skill": "Capacité d’adaptation",
+      "description": "J'adore rejoindre de nouvelles équipes, rapidement m'adapter et collaborer efficacement."
+    },
+    "listening": {
+      "skill": "Écoute",
+      "description": "Je prends le temps d'écouter attentivement et de valoriser chaque feedback."
+    },
+    "curiosity": {
+      "skill": "Curiosité",
+      "description": "Chaque jour est une chance d'apprendre et de perfectionner mes compétences en développement."
+    },
+    "autonomy": {
+      "skill": "Autonomie",
+      "description": "J'aime prendre des initiatives pour avancer efficacement sur mes projets."
+    },
+    "tenacity": {
+      "skill": "Ténacité",
+      "description": "Je reste engagée face à chaque défi, cherchant toujours la solution optimale."
+    },
+    "relationship": {
+      "skill": "Aisance relationnelle",
+      "description": "La collaboration est ma force. Ensemble, nous obtenons les meilleurs résultats."
+    }
+  },
+
+  "hardSkillsData": {
+    "programmingLanguages": {
+      "category": "Langages de Programmation",
+      "skills": ["JavaScript", "HTML", "CSS"]
+    },
+    "librariesFrameworks": {
+      "category": "Bibliothèques / Frameworks",
+      "skills": ["React.js", "Redux", "Context API"]
+    },
+    "preprocessors": {
+      "category": "Préprocesseurs & CSS-in-JS",
+      "skills": ["Styled Components", "Sass"]
+    },
+    "toolsEnvironments": {
+      "category": "Outils et Environnements",
+      "skills": [
+        "Git & GitHub",
+        "Webpack",
+        "Babel",
+        "npm",
+        "Visual Studio Code"
+      ]
+    },
+    "testingTools": {
+      "category": "Outils de test",
+      "skills": [
+        "Jest (tests unitaires et d'intégration)",
+        "Vitest (pour le testing des applications avec Vite)"
+      ]
+    },
+    "otherTechnicalSkills": {
+      "category": "Autres Compétences Techniques",
+      "skills": ["Responsive Web Design", "Web Accessibility"]
+    },
+    "methodologies": {
+      "category": "Méthodologies",
+      "skills": ["Agile & Scrum", "Kanban"]
+    },
+    "languageModelsAI": {
+      "category": "Modèles de Langage et IA",
+      "skills": ["ChatGPT", "Midjourney (notions)"]
+    }
+  },
+  "professionalExperienceData": [
+    {
+      "position": "Missions d'intérim",
+      "institution": "Laboratoire Biolab, Clinique Pasteur",
+      "duration": "2015 – 2022",
+      "location": "Localisation : Toulouse"
+    },
+    {
+      "position": "Missions en intérim au CHU",
+      "duration": "2010 – 2015",
+      "location": "Localisation : Toulouse"
+    },
+    {
+      "position": "Chirurgie générale",
+      "institution": "Hôpital Saint Louis",
+      "duration": "2004 – 2010",
+      "location": "Localisation : Paris"
+    }
+  ],
+
+  "educationSection": {
+    "card1": {
+      "dateRange": "2022 - 2023",
+      "title": "Formation développeur d’application javascript-react"
+    },
+    "card2": {
+      "dateRange": "2004",
+      "title": "Diplôme d’Etat Infirmier"
+    },
+    "card3": {
+      "dateRange": "1999",
+      "title": "Baccalauréat SMS (Sciences Médico-Sociales)"
+    }
+  },
+
+  "hobbies": {
+    "item1": {
+      "text": "Cooking",
+      "alt": "Cooking logo"
+    },
+    "item2": {
+      "text": "Reading",
+      "alt": "Reading logo"
+    },
+    "item3": {
+      "text": "Hiking",
+      "alt": "Hiking logo"
+    }
+  },
+
+  "bioPage": {
+    "header": {
+      "h1": "Développeuse d'application Javascript React",
+      "bioDescription": "Après une carrière enrichissante en tant qu'infirmière, je me suis reconvertie dans le développement web. Ultra motivée, je suis prête à relever de nouveaux défis dans ce domaine passionnant."
+    },
+    "sectionTitles": {
+      "softSkills": "Mes compétences transverses",
+      "hardSkills": "Mes compétences techniques",
+      "professionalExperience": "Mon parcours professionnel",
+      "education": "Formations et qualifications",
+      "hobbies": "Centres d'intérêts"
+    }
   }
 }

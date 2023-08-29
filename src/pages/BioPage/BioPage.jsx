@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 import PortfolioContext from "../../context/portfolioContext";
 
 import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollAwareNavBar";
@@ -16,40 +17,41 @@ import Hobbies from "../../components/BioComponent/Hobbies/Hobbies";
 
 function BioPage() {
   const { handleShowIntro } = useContext(PortfolioContext);
+  const { t } = useTranslation();
+
   return (
     <>
       <ScrollAwareNavBar onAboutClick={handleShowIntro} />
       <BioContainer>
         <header>
-          <StyledH1>{`Développeuse d'application Javascript React`}</StyledH1>
-          <BioDescription>
-            {`Après une carrière enrichissante en tant qu'infirmière, je me suis reconvertie dans le développement web. Ultra motivée, je suis prête à relever de nouveaux défis dans ce domaine passionnant.
-          `}
-          </BioDescription>
+          <StyledH1>{t("bioPage.header.h1")}</StyledH1>
+          <BioDescription>{t("bioPage.header.bioDescription")}</BioDescription>
         </header>
 
         <section>
-          <SectionTitle>Mes compétences transverses</SectionTitle>
+          <SectionTitle>{t("bioPage.sectionTitles.softSkills")}</SectionTitle>
           <SoftSkillsSection />
         </section>
 
         <section>
-          <SectionTitle>Mes compétences techniques</SectionTitle>
+          <SectionTitle>{t("bioPage.sectionTitles.hardSkills")}</SectionTitle>
           <HardSkillsSection />
         </section>
 
         <section>
-          <SectionTitle>Mon parcours professionnel</SectionTitle>
+          <SectionTitle>
+            {t("bioPage.sectionTitles.professionalExperience")}
+          </SectionTitle>
           <ProfessionalExperience />
         </section>
 
         <section>
-          <SectionTitle>Formations et qualifications</SectionTitle>
+          <SectionTitle>{t("bioPage.sectionTitles.education")}</SectionTitle>
           <EducationSection />
         </section>
 
         <section>
-          <SectionTitle>{`Centres d'intérêts`}</SectionTitle>
+          <SectionTitle>{t("bioPage.sectionTitles.hobbies")}</SectionTitle>
           <Hobbies />
         </section>
       </BioContainer>

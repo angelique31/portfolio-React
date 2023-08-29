@@ -117,5 +117,147 @@
         "- CSS: Customization, design, and responsive layout of the site."
       ]
     }
+  },
+
+  "skillsData": {
+    "empathy": {
+      "skill": "Empathy",
+      "description": "The user is at the heart of my approach, creating intuitive and relevant interfaces."
+    },
+    "organization": {
+      "skill": "Organizational Skills",
+      "description": "From hospital work to coding, I've learned how to prioritize my tasks effectively."
+    },
+    "adaptability": {
+      "skill": "Adaptability",
+      "description": "I love joining new teams, quickly adapting and collaborating effectively."
+    },
+    "listening": {
+      "skill": "Listening",
+      "description": "I take the time to listen carefully and value every piece of feedback."
+    },
+    "curiosity": {
+      "skill": "Curiosity",
+      "description": "Every day is a chance to learn and hone my development skills."
+    },
+    "autonomy": {
+      "skill": "Autonomy",
+      "description": "I like taking the initiative to move projects forward effectively."
+    },
+    "tenacity": {
+      "skill": "Tenacity",
+      "description": "I stay committed to every challenge, always seeking the optimal solution."
+    },
+    "relationship": {
+      "skill": "Interpersonal Skills",
+      "description": "Collaboration is my strength. Together, we achieve the best results."
+    }
+  },
+
+  "hardSkillsData": {
+    "programmingLanguages": {
+      "category": "Programming Languages",
+      "skills": ["JavaScript", "HTML", "CSS"]
+    },
+    "librariesFrameworks": {
+      "category": "Libraries / Frameworks",
+      "skills": ["React.js", "Redux", "Context API"]
+    },
+    "preprocessors": {
+      "category": "Preprocessors & CSS-in-JS",
+      "skills": ["Styled Components", "Sass"]
+    },
+    "toolsEnvironments": {
+      "category": "Tools and Environments",
+      "skills": [
+        "Git & GitHub",
+        "Webpack",
+        "Babel",
+        "npm",
+        "Visual Studio Code"
+      ]
+    },
+    "testingTools": {
+      "category": "Testing Tools",
+      "skills": [
+        "Jest (unit and integration tests)",
+        "Vitest (for testing applications with Vite)"
+      ]
+    },
+    "otherTechnicalSkills": {
+      "category": "Other Technical Skills",
+      "skills": ["Responsive Web Design", "Web Accessibility"]
+    },
+    "methodologies": {
+      "category": "Methodologies",
+      "skills": ["Agile & Scrum", "Kanban"]
+    },
+    "languageModelsAI": {
+      "category": "Language Models and AI",
+      "skills": ["ChatGPT", "Midjourney (basic knowledge)"]
+    }
+  },
+  "professionalExperienceData": [
+    {
+      "position": "Temporary Assignments",
+      "institution": "Biolab Laboratory, Pasteur Clinic",
+      "duration": "2015 – 2022",
+      "location": "Location: Toulouse"
+    },
+    {
+      "position": "Temporary Assignments at CHU",
+      "duration": "2010 – 2015",
+      "location": "Location: Toulouse"
+    },
+    {
+      "position": "General Surgery",
+      "institution": "Saint Louis Hospital",
+      "duration": "2004 – 2010",
+      "location": "Location: Paris"
+    }
+  ],
+
+  "educationSection": {
+    "card1": {
+      "dateRange": "2022 - 2023",
+      "title": "JavaScript-React Application Developer Training"
+    },
+    "card2": {
+      "dateRange": "2004",
+      "title": "State Registered Nurse Diploma"
+    },
+    "card3": {
+      "dateRange": "1999",
+      "title": "Baccalaureate in Health and Social Sciences"
+    }
+  },
+
+  "hobbies": {
+    "item1": {
+      "text": "Cooking",
+      "alt": "Cooking logo"
+    },
+    "item2": {
+      "text": "Reading",
+      "alt": "Reading logo"
+    },
+    "item3": {
+      "text": "Hiking",
+      "alt": "Hiking logo"
+    }
+  },
+
+  "bioPage": {
+    "header": {
+      "h1": "Javascript React Application Developer",
+      "bioDescription": "After a fulfilling career as a nurse, I have transitioned into web development. Highly motivated, I am ready to take on new challenges in this exciting field."
+    },
+    "sectionTitles": {
+      "softSkills": "My Soft Skills",
+      "hardSkills": "My Technical Skills",
+      "professionalExperience": "My Professional Experience",
+      "education": "Education and Qualifications",
+      "hobbies": "Interests"
+    }
   }
 }
