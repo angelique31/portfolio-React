@@ -77,6 +77,25 @@ const ProjectsDetailPage = () => {
             {t(`projects.${projectId}.description.challenge`)}
           </TextParagraph>
         </ChallengeContainer>
+
+        {/* New section for useOfChatGPT */}
+        {/* <ChallengeContainer>
+          <SectionTitle>{t("projectDetails.IA")}</SectionTitle>
+          <TextParagraph>
+            {t(`projects.${projectId}.description.useOfChatGPT`)}
+          </TextParagraph>
+        </ChallengeContainer> */}
+        {projectDetail.usesAI && (
+          <ChallengeContainer>
+            <SectionTitle>{t("projectDetails.IA")}</SectionTitle>
+            <TextParagraph>
+              {t(`projects.${projectId}.description.useOfChatGPT`)}
+            </TextParagraph>
+          </ChallengeContainer>
+        )}
+
+        {/* End of new section */}
+
         <AlignedImageContainer>
           <ImageChallengeContainer>
             <ProjectImage

@@ -36,6 +36,7 @@ const projectsDataDetail = [
       "- Figma: Conception et prototypage de l'UI/UX.",
       "- Vercel: Déploiement et hébergement de l'application.",
     ],
+    usesAI: true,
   },
 
   {
@@ -66,6 +67,7 @@ const projectsDataDetail = [
       "HTML: Structure de base du site et mise en place des éléments principaux.",
       "CSS: Personnalisation, design, et mise en page responsive du site.",
     ],
+    usesAI: false,
   },
 ];
 
