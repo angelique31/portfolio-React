@@ -44,7 +44,8 @@ function NavLinks({
           <Link to="/cv" onClick={closeMenu}>
             <TextWrapper>{t("homepage.Mon cv")}</TextWrapper>
           </Link>
-          <StyledDownloadButton href="/CV_Angelique_Rosin.pdf" download>
+          {/* <StyledDownloadButton href="/CV_Angelique_Rosin.pdf" download> */}
+          <StyledDownloadButton href="/CV_Angelique_Rosin-prompt.pdf" download>
             <StyledIcon
               src={DownloadIcon}
               alt="Icône de telechargement de CV"
