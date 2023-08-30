@@ -15,6 +15,7 @@ import ProfessionalExperience from "../../components/BioComponent/ProfessionalEx
 import EducationSection from "../../components/BioComponent/EducationSection/EducationSection";
 import Hobbies from "../../components/BioComponent/Hobbies/Hobbies";
 import VisibilityAwareContainer from "../../pages/ProjectsDetailPage/VisibilityAwareContainer";
+import Footer from "../../components/Footer/Footer";
 
 function BioPage() {
   const { handleShowIntro } = useContext(PortfolioContext);
@@ -61,6 +62,7 @@ function BioPage() {
           <Hobbies />
         </section>
       </BioContainer>
+      <Footer />
     </>
   );
 }

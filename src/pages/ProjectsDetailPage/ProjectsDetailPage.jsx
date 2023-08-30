@@ -28,6 +28,7 @@ import {
   AccessibilityImage,
   MobileImage,
 } from "./ProjectsDetailPage.styled";
+import Footer from "../../components/Footer/Footer";
 
 const ProjectsDetailPage = () => {
   const { handleShowIntro } = useContext(PortfolioContext);
@@ -167,6 +168,7 @@ const ProjectsDetailPage = () => {
           </TechnologyContainer>
         </VisibilityAwareContainer>
       </ProjectDetailContainer>
+      <Footer />
     </>
   );
 };

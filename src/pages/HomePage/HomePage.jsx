@@ -8,6 +8,7 @@ import SoftSkillWheel from "../../components/SoftSkillWheel/SoftSkillWheel";
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollAwareNavBar";
 import ContactForm from "../../components/Form/ContactForm/ContactForm";
+import Footer from "../../components/Footer/Footer";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -53,6 +54,7 @@ const HomePage = () => {
         <ProjectsSection />
         <ContactForm />
       </div>
+      <Footer />
     </div>
   );
 };
