@@ -1,4 +1,3 @@
-import { useRef, useEffect } from "react";
 import { useTranslation, Trans } from "react-i18next";
 
 import {
@@ -14,7 +13,7 @@ import {
   CenterCircle,
 } from "./SoftSkillWheel.styled";
 
-import UseIntersectionObservers from "../UseIntersectionObservers/UseIntersectionObservers";
+import UseVisibilityEffect from "../ScrollAwareComponents/UseVisibilityEffect";
 
 function SoftSkillWheel() {
   const skills = [
@@ -38,19 +37,9 @@ function SoftSkillWheel() {
     "#FFC6FF",
   ];
 
-  const step = 360 / skills.length; // cela déterminera l'angle entre chaque languette
-  const containerRef = useRef(null);
-  const isVisible = UseIntersectionObservers(containerRef);
-
+  const step = 360 / skills.length; // détermine l'angle entre chaque languette
+  const containerRef = UseVisibilityEffect();
   const { t } = useTranslation();
-
-  useEffect(() => {
-    if (isVisible) {
-      containerRef.current.classList.add("visible");
-    } else {
-      containerRef.current.classList.remove("visible");
-    }
-  }, [isVisible]);
 
   return (
     <Container id="softSkillsSection" ref={containerRef}>

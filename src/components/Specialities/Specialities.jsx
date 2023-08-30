@@ -14,20 +14,21 @@ import ReactLogo from "../../assets/logos/logoReact.svg";
 import SassLogo from "../../assets/logos/SassLogo.png";
 import StyledCompLogo from "../../assets/logos/logo_styled_component.png";
 import GitLogo from "../../assets/logos/GitLogo.png";
-import UseIntersectionObservers from "../UseIntersectionObservers/UseIntersectionObservers";
+// import UseIntersectionObservers from "../ScrollAwareComponents/UseIntersectionObservers/UseIntersectionObservers";
+import UseVisibilityEffect from "../ScrollAwareComponents/UseVisibilityEffect";
 
 const Specialties = () => {
   const { t } = useTranslation();
-  const containerRef = useRef(null);
-  const isVisible = UseIntersectionObservers(containerRef);
-
-  useEffect(() => {
-    if (isVisible) {
-      containerRef.current.classList.add("visible");
-    } else {
-      containerRef.current.classList.remove("visible");
-    }
-  }, [isVisible]);
+  // const containerRef = useRef(null);
+  // const isVisible = UseIntersectionObservers(containerRef);
+  const containerRef = UseVisibilityEffect();
+  // useEffect(() => {
+  //   if (isVisible) {
+  //     containerRef.current.classList.add("visible");
+  //   } else {
+  //     containerRef.current.classList.remove("visible");
+  //   }
+  // }, [isVisible]);
 
   return (
     <SpecialtiesContainer ref={containerRef}>

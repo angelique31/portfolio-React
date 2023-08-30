@@ -1,9 +1,9 @@
 import styled, { keyframes } from "styled-components";
 
-const fadeIn = keyframes`
+const fadeInText = keyframes`
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   100% {
     opacity: 1;
@@ -39,6 +39,15 @@ export const SharedTextStyles = `
   margin-top: 20px;
 `;
 
+const Container = styled.div`
+  ${SharedContainerStyles}
+  margin: 70px 0;
+  width: 100%;
+  .visible & {
+    animation: ${fadeInText} 1.5s forwards;
+  }
+`;
+
 export const ProjectDetailContainer = styled.div`
   padding: 115px 7%;
   color: #333;
@@ -55,15 +64,10 @@ export const IntroContainer = styled.div`
   }
 `;
 
-const Container = styled.div`
-  ${SharedContainerStyles}
-  margin: 70px 0;
-  width: 100%;
-`;
-
 export const ObjectiveContainer = styled(Container)`
   width: 70%;
   margin: 70px auto;
+
   @media (max-width: 872px) {
     width: 100%;
   }
@@ -79,9 +83,11 @@ export const ChallengeContainer = styled(Container)`
   }
 `;
 
-export const ResponsiveContainer = styled(Container)`
+export const ResponsiveContainer = styled.div`
   width: 50%;
-
+  .visible & {
+    animation: ${fadeInText} 1.5s forwards;
+  }
   @media (max-width: 1060px) {
     width: 70%;
   }
@@ -90,7 +96,7 @@ export const ResponsiveContainer = styled(Container)`
   }
 `;
 
-export const AlignedImageContainer = styled.div`
+export const AlignedImageContainer = styled(Container)`
   display: flex;
   gap: 60px;
   align-items: center;

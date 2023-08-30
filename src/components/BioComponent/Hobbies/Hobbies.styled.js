@@ -1,4 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeInText = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const InterestsContainer = styled.div`
   display: flex;
@@ -6,6 +17,9 @@ export const InterestsContainer = styled.div`
   padding: 40px 0;
   background-color: rgb(49, 53, 82); // une couleur cohérente avec le reste
   border-radius: 15px;
+  .visible & {
+    animation: ${fadeInText} 1.5s forwards;
+  }
 `;
 
 export const InterestItem = styled.div`

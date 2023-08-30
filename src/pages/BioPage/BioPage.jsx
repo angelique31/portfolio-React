@@ -14,6 +14,7 @@ import HardSkillsSection from "../../components/BioComponent/HardSkillsSection/H
 import ProfessionalExperience from "../../components/BioComponent/ProfessionalExperience/ProfessionalExperience";
 import EducationSection from "../../components/BioComponent/EducationSection/EducationSection";
 import Hobbies from "../../components/BioComponent/Hobbies/Hobbies";
+import VisibilityAwareContainer from "../../pages/ProjectsDetailPage/VisibilityAwareContainer";
 
 function BioPage() {
   const { handleShowIntro } = useContext(PortfolioContext);
@@ -22,10 +23,15 @@ function BioPage() {
   return (
     <>
       <ScrollAwareNavBar onAboutClick={handleShowIntro} />
+
       <BioContainer>
         <header>
           <StyledH1>{t("bioPage.header.h1")}</StyledH1>
-          <BioDescription>{t("bioPage.header.bioDescription")}</BioDescription>
+          <VisibilityAwareContainer>
+            <BioDescription>
+              {t("bioPage.header.bioDescription")}
+            </BioDescription>
+          </VisibilityAwareContainer>
         </header>
 
         <section>

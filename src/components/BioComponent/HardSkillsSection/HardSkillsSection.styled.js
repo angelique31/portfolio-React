@@ -1,9 +1,23 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeInText = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const SkillsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  .visible & {
+    animation: ${fadeInText} 1.5s forwards;
+  }
   @media (max-width: 905px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -29,12 +43,6 @@ export const CategoryTitle = styled.h3`
   align-items: center;
   margin-bottom: 20px;
 `;
-
-// export const Icon = styled.img`
-//   width: 24px;
-//   height: 24px;
-//   margin-right: 10px;
-// `;
 
 export const Skill = styled.span`
   display: inline-block;

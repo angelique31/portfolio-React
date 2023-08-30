@@ -10,6 +10,7 @@ import {
   Description,
   Arrow,
 } from "./ProfessionalExperience.styled";
+import VisibilityAwareContainer from "../../../pages/ProjectsDetailPage/VisibilityAwareContainer";
 
 function ProfessionalExperience() {
   const { t } = useTranslation();
@@ -19,22 +20,24 @@ function ProfessionalExperience() {
   });
 
   return (
-    <TimelineContainer>
-      <Arrow />
-      {professionalExperienceData.map(
-        ({ position, institution, duration, location }, index) => (
-          <Event $side={index % 2 === 0 ? "left" : "right"} key={index}>
-            <Dot />
-            <EventDetails>
-              <Position>{position}</Position>
-              {institution && <Institution>{institution}</Institution>}
-              <Duration>{duration}</Duration>
-              <Description>{location}</Description>
-            </EventDetails>
-          </Event>
-        )
-      )}
-    </TimelineContainer>
+    <VisibilityAwareContainer>
+      <TimelineContainer>
+        <Arrow />
+        {professionalExperienceData.map(
+          ({ position, institution, duration, location }, index) => (
+            <Event $side={index % 2 === 0 ? "left" : "right"} key={index}>
+              <Dot />
+              <EventDetails>
+                <Position>{position}</Position>
+                {institution && <Institution>{institution}</Institution>}
+                <Duration>{duration}</Duration>
+                <Description>{location}</Description>
+              </EventDetails>
+            </Event>
+          )
+        )}
+      </TimelineContainer>
+    </VisibilityAwareContainer>
   );
 }
 

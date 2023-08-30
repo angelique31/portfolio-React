@@ -42,24 +42,27 @@ import {
   Icon,
   FormationTitle,
 } from "./EducationSection.styled";
+import VisibilityAwareContainer from "../../../pages/ProjectsDetailPage/VisibilityAwareContainer";
 
 function EducationSection() {
   const { t } = useTranslation();
 
   return (
-    <FormationContainer>
-      {[1, 2, 3].map((cardNumber) => (
-        <Card key={cardNumber}>
-          <Icon />
-          <DateRange>
-            {t(`educationSection.card${cardNumber}.dateRange`)}
-          </DateRange>
-          <FormationTitle>
-            {t(`educationSection.card${cardNumber}.title`)}
-          </FormationTitle>
-        </Card>
-      ))}
-    </FormationContainer>
+    <VisibilityAwareContainer>
+      <FormationContainer>
+        {[1, 2, 3].map((cardNumber) => (
+          <Card key={cardNumber}>
+            <Icon />
+            <DateRange>
+              {t(`educationSection.card${cardNumber}.dateRange`)}
+            </DateRange>
+            <FormationTitle>
+              {t(`educationSection.card${cardNumber}.title`)}
+            </FormationTitle>
+          </Card>
+        ))}
+      </FormationContainer>
+    </VisibilityAwareContainer>
   );
 }
 

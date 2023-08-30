@@ -6,6 +6,8 @@ import {
   Skill,
 } from "./HardSkillsSection.styled";
 
+import VisibilityAwareContainer from "../../../pages/ProjectsDetailPage/VisibilityAwareContainer";
+
 function HardSkillsSection() {
   const { t } = useTranslation();
 
@@ -13,19 +15,21 @@ function HardSkillsSection() {
   const hardSkillsData = t("hardSkillsData", { returnObjects: true });
 
   return (
-    <SkillsContainer>
-      {Object.keys(hardSkillsData).map((key) => {
-        const { category, skills } = hardSkillsData[key];
-        return (
-          <CategoryContainer key={key}>
-            <CategoryTitle>{category}</CategoryTitle>
-            {skills.map((skill, index) => (
-              <Skill key={index}>{skill}</Skill>
-            ))}
-          </CategoryContainer>
-        );
-      })}
-    </SkillsContainer>
+    <VisibilityAwareContainer>
+      <SkillsContainer>
+        {Object.keys(hardSkillsData).map((key) => {
+          const { category, skills } = hardSkillsData[key];
+          return (
+            <CategoryContainer key={key}>
+              <CategoryTitle>{category}</CategoryTitle>
+              {skills.map((skill, index) => (
+                <Skill key={index}>{skill}</Skill>
+              ))}
+            </CategoryContainer>
+          );
+        })}
+      </SkillsContainer>
+    </VisibilityAwareContainer>
   );
 }
 

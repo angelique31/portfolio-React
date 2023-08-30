@@ -49,7 +49,6 @@ const HomePage = () => {
       <ContactForm />
       <Specialties />
       <SoftSkillWheel />
-      {/* <ProjectsSection /> */}
       <div id="mes-realisations">
         <ProjectsSection />
         <ContactForm />

@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import PortfolioContext from "../../context/portfolioContext";
 import projectsDataDetail from "../../datas/projectsDataDetail";
 import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollAwareNavBar";
+import Section from "./Section";
+import VisibilityAwareContainer from "./VisibilityAwareContainer";
 
 import {
   ProjectDetailContainer,
@@ -36,7 +38,6 @@ const ProjectsDetailPage = () => {
     (project) => project.id === projectId
   );
 
-  // const externalLink = projectsData.externalLink;
   const externalLink = projectDetail.externalLink;
 
   if (!projectDetail) {
@@ -62,21 +63,21 @@ const ProjectsDetailPage = () => {
           {t(`projects.${projectId}.description.intro`)}
         </TextParagraph>
 
-        <ObjectiveContainer>
-          <SectionTitle>{t(`projectDetails.projectObjectives`)}</SectionTitle>
-          <TextParagraph>
-            {t(`projects.${projectId}.description.objective`)}
-          </TextParagraph>
-        </ObjectiveContainer>
+        <VisibilityAwareContainer>
+          <ObjectiveContainer>
+            <Section title={t(`projectDetails.projectObjectives`)}>
+              {t(`projects.${projectId}.description.objective`)}
+            </Section>
+          </ObjectiveContainer>
+        </VisibilityAwareContainer>
 
-        <ChallengeContainer>
-          <SectionTitle>
-            {t("projectDetails.challengesAndAchievements")}
-          </SectionTitle>
-          <TextParagraph>
-            {t(`projects.${projectId}.description.challenge`)}
-          </TextParagraph>
-        </ChallengeContainer>
+        <VisibilityAwareContainer>
+          <ChallengeContainer>
+            <Section title={t("projectDetails.challengesAndAchievements")}>
+              {t(`projects.${projectId}.description.challenge`)}
+            </Section>
+          </ChallengeContainer>
+        </VisibilityAwareContainer>
 
         {/* New section for useOfChatGPT */}
         {/* <ChallengeContainer>
@@ -86,78 +87,85 @@ const ProjectsDetailPage = () => {
           </TextParagraph>
         </ChallengeContainer> */}
         {projectDetail.usesAI && (
-          <ChallengeContainer>
-            <SectionTitle>{t("projectDetails.IA")}</SectionTitle>
-            <TextParagraph>
-              {t(`projects.${projectId}.description.useOfChatGPT`)}
-            </TextParagraph>
-          </ChallengeContainer>
+          <VisibilityAwareContainer>
+            <ChallengeContainer>
+              <Section title={t("projectDetails.IA")}>
+                {t(`projects.${projectId}.description.useOfChatGPT`)}
+              </Section>
+            </ChallengeContainer>
+          </VisibilityAwareContainer>
         )}
-
         {/* End of new section */}
 
-        <AlignedImageContainer>
-          <ImageChallengeContainer>
-            <ProjectImage
-              src={projectDetail.additionalImages[0]}
-              alt={`${projectDetail.title} - Image 1`}
-            />
-            <MobileImage
-              src={projectDetail.additionalImages[1]}
-              alt={`${projectDetail.title} - Image 1`}
-            />
-          </ImageChallengeContainer>
+        <VisibilityAwareContainer>
+          <AlignedImageContainer>
+            <ImageChallengeContainer>
+              <ProjectImage
+                src={projectDetail.additionalImages[0]}
+                alt={`${projectDetail.title} - Image 1`}
+              />
+              <MobileImage
+                src={projectDetail.additionalImages[1]}
+                alt={`${projectDetail.title} - Image 1`}
+              />
+            </ImageChallengeContainer>
 
-          <ResponsiveContainer>
-            <SectionTitle>{t("projectDetails.adaptability")}</SectionTitle>
+            <ResponsiveContainer>
+              <Section title={t("projectDetails.adaptability")}>
+                {t(`projects.${projectId}.description.responsive`)}
+              </Section>
+            </ResponsiveContainer>
+          </AlignedImageContainer>
+        </VisibilityAwareContainer>
+
+        <VisibilityAwareContainer>
+          <AccessibilityContainer>
+            <SectionTitle>
+              {t("projectDetails.performanceAndAccessibility")}
+            </SectionTitle>
             <TextParagraph>
-              {t(`projects.${projectId}.description.responsive`)}
+              {t(
+                `projects.${projectId}.description.optimizationAndAccessibility`
+              )}
             </TextParagraph>
-          </ResponsiveContainer>
-        </AlignedImageContainer>
+            <AccessibilityImage
+              src={projectDetail.additionalImages[2]}
+              alt={`${projectDetail.title} - Image 1`}
+            />
+          </AccessibilityContainer>
+        </VisibilityAwareContainer>
 
-        <AccessibilityContainer>
-          <SectionTitle>
-            {t("projectDetails.performanceAndAccessibility")}
-          </SectionTitle>
-          <TextParagraph>
-            {t(
-              `projects.${projectId}.description.optimizationAndAccessibility`
-            )}
-          </TextParagraph>
-          <AccessibilityImage
-            src={projectDetail.additionalImages[2]}
-            alt={`${projectDetail.title} - Image 1`}
-          />
-        </AccessibilityContainer>
+        <VisibilityAwareContainer>
+          <CollaborationContainer>
+            <SectionTitle>
+              {t("projectDetails.towardsCollaboration")}
+            </SectionTitle>
 
-        <CollaborationContainer>
-          <SectionTitle>
-            {t("projectDetails.towardsCollaboration")}
-          </SectionTitle>
+            <UnorderedList>
+              {t(`projects.${projectId}.description.collaboration`, {
+                returnObjects: true,
+              }).map((point, index) => (
+                <ListItem key={`collab-${index}`}>{point}</ListItem>
+              ))}
+            </UnorderedList>
+          </CollaborationContainer>
+        </VisibilityAwareContainer>
 
-          <UnorderedList>
-            {t(`projects.${projectId}.description.collaboration`, {
-              returnObjects: true,
-            }).map((point, index) => (
-              <ListItem key={`collab-${index}`}>{point}</ListItem>
-            ))}
-          </UnorderedList>
-        </CollaborationContainer>
+        <VisibilityAwareContainer>
+          <TechnologyContainer>
+            <SectionTitle>
+              {t("projectDetails.toolsAndTechnologies")}
+            </SectionTitle>
 
-        <TechnologyContainer>
-          <SectionTitle>
-            {t("projectDetails.toolsAndTechnologies")}
-          </SectionTitle>
-
-          <UnorderedList>
-            {t(`projects.${projectId}.toolsAndTech`, {
-              returnObjects: true,
-            }).map((point, index) => (
-              <ListItem key={`collab-${index}`}>{point}</ListItem>
-            ))}
-          </UnorderedList>
-        </TechnologyContainer>
+            <UnorderedList>
+              {t(`projects.${projectId}.toolsAndTech`, {
+                returnObjects: true,
+              }).map((point, index) => (
+                <ListItem key={`collab-${index}`}>{point}</ListItem>
+              ))}
+            </UnorderedList>
+          </TechnologyContainer>
+        </VisibilityAwareContainer>
       </ProjectDetailContainer>
     </>
   );

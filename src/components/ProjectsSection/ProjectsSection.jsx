@@ -1,8 +1,10 @@
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import projectsData from "../../datas/projectsData";
-import UseIntersectionObservers from "../UseIntersectionObservers/UseIntersectionObservers";
+
+import UseVisibilityEffect from "../ScrollAwareComponents/UseVisibilityEffect";
+
 import {
   Title,
   Subtitle,
@@ -24,17 +26,8 @@ import {
 import GitLogo from "../../assets/logos/GitLogo2.png";
 
 const ProjectsSection = () => {
-  const containerRef = useRef(null);
-  const isVisible = UseIntersectionObservers(containerRef);
+  const containerRef = UseVisibilityEffect();
   const { t } = useTranslation();
-
-  useEffect(() => {
-    if (isVisible) {
-      containerRef.current.classList.add("visible");
-    } else {
-      containerRef.current.classList.remove("visible");
-    }
-  }, [isVisible]);
 
   return (
     <div id="mes-realisations">
