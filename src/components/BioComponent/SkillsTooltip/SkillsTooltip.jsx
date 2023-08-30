@@ -44,7 +44,7 @@ function SkillTooltip({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <SkillContainer>
+      <SkillContainer className={isMobile ? "clickable" : ""}>
         <Skill>{skill}</Skill>
       </SkillContainer>
       <TooltipText $isVisible={isActive}>{description}</TooltipText>

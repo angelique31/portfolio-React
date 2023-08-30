@@ -1,5 +1,14 @@
 // Styles pour les compétences
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const borderColorChange = keyframes`
+0%, 100% {
+  border-color: rgba(255, 197, 118, 0.4);
+}
+50% {
+  border-color: #ffb957;
+}
+`;
 
 export const Skill = styled.h3`
   font-size: 1rem;
@@ -25,6 +34,9 @@ export const SkillContainer = styled.div`
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
+  &.clickable {
+    animation: ${borderColorChange} 3s ease-in-out infinite;
+  }
 
   &:hover {
     border-color: rgb(255, 197, 118);
