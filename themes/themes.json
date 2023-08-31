@@ -1,0 +1,20 @@
+{
+  "darkTheme": {
+    "navBar": {
+      "background": "rgba(78, 76, 76, 0.8)",
+      "text": "white",
+      "buttonBackground": "#dfe0dc",
+      "buttonText": "white",
+      "specialColor": "#ff9a3d"
+    }
+  },
+  "lightTheme": {
+    "navBar": {
+      "background": "#F7F7F8",
+      "text": "#374151",
+      "buttonBackground": "rgba(78, 76, 76)",
+      "buttonText": "black",
+      "specialColor": "#AB68FF"
+    }
+  }
+}

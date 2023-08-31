@@ -31,7 +31,6 @@ export const PortfolioProvider = ({ children }) => {
         isModalOpen,
         openModal,
         closeModal,
-        // setIsFormVisible,
       }}
     >
       {children}

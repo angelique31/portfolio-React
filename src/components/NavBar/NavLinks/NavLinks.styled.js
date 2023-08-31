@@ -32,6 +32,7 @@ export const StyledNavItem = styled.li`
   a,
   a:visited,
   button {
+    
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 20px;

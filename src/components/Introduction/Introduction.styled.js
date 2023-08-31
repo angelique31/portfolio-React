@@ -21,11 +21,14 @@ export const IntroContainer = styled.div`
   border-radius: 15px;
   background-color: rgb(78, 76, 76);
   width: 67%;
-  // opacity: 0.9;
+
   display: flex;
   align-items: center;
   @media (max-width: 700px) {
     display: block;
+  }
+  @media (max-width: 510px) {
+    width: 90%;
   }
 `;
 
@@ -65,12 +68,13 @@ export const IntroHighlight = styled.span`
 export const NameSpan = styled.span``;
 export const IntroSubtitle = styled.div`
   color: #fff;
+
   font-size: 1.2rem;
   padding: 20px 0px 10px 0px;
 `;
 
 export const IntroDescription = styled.div`
-  color: #fff;
+  color: #d1d5db;
   font-size: 1rem;
   font-style: italic;
 `;
