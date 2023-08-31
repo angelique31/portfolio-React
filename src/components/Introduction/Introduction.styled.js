@@ -28,7 +28,7 @@ export const IntroContainer = styled.div`
     display: block;
   }
   @media (max-width: 510px) {
-    width: 90%;
+    width: 80%;
   }
 `;
 
