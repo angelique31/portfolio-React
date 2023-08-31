@@ -259,5 +259,12 @@
       "education": "Education and Qualifications",
       "hobbies": "Interests"
     }
+  },
+  "footer": {
+    "paragraphs": {
+      "designedBy": "Designed and built by",
+      "copyright": "© 2023 - Angélique Rosin",
+      "findMe": "Find me on:"
+    }
   }
 }

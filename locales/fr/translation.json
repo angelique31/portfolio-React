@@ -261,5 +261,12 @@
       "education": "Formations et qualifications",
       "hobbies": "Centres d'intérêts"
     }
+  },
+  "footer": {
+    "paragraphs": {
+      "designedBy": "Conçu et développé par",
+      "copyright": "© 2023 - Angélique Rosin",
+      "findMe": "Retrouvez-moi sur :"
+    }
   }
 }
