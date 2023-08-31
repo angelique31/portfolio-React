@@ -69,6 +69,9 @@ export const LogoItem = styled.div`
 export const LogoImage = styled.img`
   width: 100px;
   height: auto;
+  &.javascript-logo {
+    width: 50px;
+  }
   &.react-logo {
     animation: ${AppLogoSpin} 20s linear infinite;
   }
@@ -77,7 +80,10 @@ export const LogoImage = styled.img`
   }
 
   &.git-logo {
-    width: 70px;
+    width: 60px;
+  }
+  &.chatGPT-logo {
+    width: 50px;
   }
 `;
 

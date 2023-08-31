@@ -21,7 +21,7 @@ function ContactForm() {
   const { t } = useTranslation();
   const [isFormVisible, setIsFormVisible] = useState(true);
 
-  useEffect(() => {}, [isModalOpen, isFormVisible]);
+  // useEffect(() => {}, [isModalOpen, isFormVisible]);
 
   const [formData, setFormData] = useState({
     fullname: "",
@@ -30,47 +30,9 @@ function ContactForm() {
   });
 
   const [successMessage, setSuccessMessage] = useState("");
-  // const [error, setError] = useState("");
+  const [error, setError] = useState("");
   const [formErrors, setFormErrors] = useState({});
-  // const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   const validationResults = ValidateFormData(formData);
-  //   setFormErrors(validationResults.errors);
-
-  //   if (validationResults.isValid) {
-  //     try {
-  //       const response = await fetch("YOUR_FORMSPREE_API_URL", {
-  //         method: "POST",
-  //         headers: {
-  //           Accept: "application/json",
-  //           "Content-Type": "application/x-www-form-urlencoded",
-  //         },
-  //         body: new URLSearchParams(formData).toString(),
-  //       });
-
-  //       if (response.ok) {
-  //         setSuccessMessage("Merci ! Votre message a été envoyé.");
-  //         setIsConfirmationModalOpen(true);
-  //         setFormData({
-  //           fullname: "",
-  //           email: "",
-  //           message: "",
-  //         });
-  //       } else {
-  //         setError(
-  //           "Il y a eu une erreur lors de l'envoi de votre message. Veuillez réessayer."
-  //         );
-  //       }
-  //     } catch (error) {
-  //       setError(
-  //         "Il y a eu une erreur lors de l'envoi de votre message. Veuillez vérifier votre connexion et réessayer."
-  //       );
-  //     }
-  //   }
-  // };
+  const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -79,17 +41,55 @@ function ContactForm() {
     setFormErrors(validationResults.errors);
 
     if (validationResults.isValid) {
-      // Simuler une attente de requête réseau
-      setTimeout(() => {
-        setSuccessMessage("Merci ! Votre message a été envoyé.");
-        setFormData({
-          fullname: "",
-          email: "",
-          message: "",
+      try {
+        const response = await fetch("https://formspree.io/f/xvojagbp", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams(formData).toString(),
         });
-      }, 1000); // Attente d'une seconde
+
+        if (response.ok) {
+          setSuccessMessage("Merci ! Votre message a été envoyé.");
+          setIsConfirmationModalOpen(true);
+          setFormData({
+            fullname: "",
+            email: "",
+            message: "",
+          });
+        } else {
+          setError(
+            "Il y a eu une erreur lors de l'envoi de votre message. Veuillez réessayer."
+          );
+        }
+      } catch (error) {
+        setError(
+          "Il y a eu une erreur lors de l'envoi de votre message. Veuillez vérifier votre connexion et réessayer."
+        );
+      }
     }
   };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   const validationResults = ValidateFormData(formData);
+  //   setFormErrors(validationResults.errors);
+
+  //   if (validationResults.isValid) {
+  //     // Simuler une attente de requête réseau
+  //     setTimeout(() => {
+  //       setSuccessMessage("Merci ! Votre message a été envoyé.");
+  //       setFormData({
+  //         fullname: "",
+  //         email: "",
+  //         message: "",
+  //       });
+  //     }, 1000); // Attente d'une seconde
+  //   }
+  // };
 
   //La modale se ferme quand on clique sur un lien de la navBar
   useEffect(() => {
