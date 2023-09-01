@@ -38,8 +38,8 @@
     "Mes réalisations": "Mes réalisations",
     "Contactez-moi": "Contactez-moi",
     "intro_greeting": "Bonjour, je suis",
-    "intro_role": "Développeuse Javascript React - Aspirante Prompt Engineer",
-    "intro_description": "Passionnée par la création d'expériences utilisateur intuitives et la génération de texte, je transforme les idées en réalités concrètes à travers la programmation.",
+    "intro_role": "Développeuse Javascript React",
+    "intro_description": "Passionnée par la création d'expériences utilisateur intuitives, je transforme les idées en réalités concrètes à travers la programmation.",
     "intro_button_text": "Au-delà du code : découvrez mon parcours unique.",
     "Mes spécialités": "Mes spécialités",
     "comp_transverses": "Compétences transverses",
@@ -59,14 +59,13 @@
     "project_0_description": "Projet personnel développé en React, ce site présente une variété de recettes de cuisine.",
     "project_1_title": "Page d'accueil Météo France",
     "project_1_description": "Réplique de la page d'accueil de Météo France réalisée uniquement avec HTML et CSS.",
-    "projects_subtitle": "Réalisations personnelles menées indépendamment de mon parcours académique, reflétant ma passion et mon engagement envers le développement. J'ai particulièrement utilisé ChatGPT comme assistant de développement pour mon projet Délices Culinaires, notamment pour la génération de texte et l'aide à la décision en matière de conception."
+    "projects_subtitle": "Réalisations personnelles menées indépendamment de mon parcours académique, reflétant ma passion et mon engagement envers le développement."
   },
 
   "projectDetails": {
     "viewWebsite": "Voir le site",
     "projectObjectives": "Objectifs du Projet",
     "challengesAndAchievements": "Défis et Réalisations",
-    "IA": "Contribution de l'IA au Projet",
     "adaptability": "Adaptabilité : Répondre à Chaque Dispositif",
     "performanceAndAccessibility": "Performance et Accessibilité",
     "towardsCollaboration": "Vers une Collaboration : Comment le travail d'équipe aurait pu enrichir le projet",
@@ -80,9 +79,7 @@
       "description": {
         "intro": "Projet personnel développé en React. Ce site présente une variété de recettes de cuisine.",
         "objective": "L'objectif principal était de créer une plateforme intuitive et réactive de recettes de cuisine, tout en maîtrisant la gestion d'état avec Redux. Je voulais également concevoir une architecture modulaire avec des composants réutilisables, optimiser les performances de l'application et garantir sa fluidité sur tous les appareils grâce à un design adapté.",
-        "challenge": "La principale difficulté du projet a été de réfléchir à la structure à adopter pour une navigation intuitive de l'utilisateur. La conceptualisation de l'UI/UX m'a demandé une réflexion approfondie. J'ai utilisé ChatGPT pour générer des exemples de micro-textes et des suggestions de design, ce qui a enrichi mon processus de prise de décision.",
-
-        "useOfChatGPT": "J'ai utilisé ChatGPT pour générer les descriptions de recettes, ce qui m'a permis de me concentrer sur d'autres aspects cruciaux du développement. J'ai également utilisé cet outil pour simuler des interactions utilisateur et tester l'efficacité des prompts dans l'interface.",
+        "challenge": "La principale difficulté du projet a été de réfléchir à la structure à adopter pour une navigation intuitive de l'utilisateur. La conceptualisation de l'UI/UX m'a demandé une réflexion approfondie. L’outil Figma m’a permis de tester différents prototypes avant d'arriver à la version finale.",
         "responsive": "La responsivité du site garantit une expérience utilisateur optimale sur tous les dispositifs, des mobiles aux ordinateurs de bureau.",
         "optimizationAndAccessibility": "J'ai activement cherché à rendre ce site inclusif en mettant l'accent sur l'accessibilité. Ainsi, j'ai adapté les contrastes de couleurs selon les normes WCAG . J'ai également privilégié une conception sur mesure avec une utilisation minimale de librairies externes, garantissant performance et chargements rapides",
         "collaboration": [
@@ -95,7 +92,9 @@
       },
 
       "toolsAndTech": [
-        "- ChatGPT: Utilisé pour la génération de texte et les tests d'interaction utilisateur.",
+        "- React & React-Router-Dom: Création et gestion de l'interface utilisateur, y compris la navigation.",
+        "- Redux & React-Redux: Gestion centralisée de l'état de l'application.",
+        "- Styled-Components: Styling CSS-in-JS pour une conception personnalisée.",
         "- Vite: Outil de développement pour une construction rapide et un développement efficace.",
         "- Figma: Conception et prototypage de l'UI/UX.",
         "- Vercel: Déploiement et hébergement de l'application."
@@ -196,7 +195,7 @@
     },
     "languageModelsAI": {
       "category": "Modèles de Langage et IA",
-      "skills": ["ChatGPT", "Midjourney (notions)"]
+      "skills": ["ChatGPT version 4"]
     }
   },
   "professionalExperienceData": [
@@ -252,7 +251,7 @@
   "bioPage": {
     "header": {
       "h1": "Développeuse d'application Javascript React",
-      "bioDescription": "Après une carrière enrichissante en tant qu'infirmière, je me suis reconvertie dans le développement web et me spécialise maintenant dans l'ingénierie de prompts. Ultra motivée, je suis prête à relever de nouveaux défis dans ce domaine passionnant."
+      "bioDescription": "Après une carrière enrichissante en tant qu'infirmière, je me suis reconvertie dans le développement web avec une spécialisation dans le front-end. Ultra motivée, je suis prête à relever de nouveaux défis dans ce domaine passionnant."
     },
     "sectionTitles": {
       "softSkills": "Mes compétences transverses",

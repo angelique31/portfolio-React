@@ -132,6 +132,7 @@ ContactFormFields.propTypes = {
     email: PropTypes.string,
     message: PropTypes.string,
   }).isRequired,
+  setFormErrors: PropTypes.func.isRequired,
 };
 
 export default ContactFormFields;
