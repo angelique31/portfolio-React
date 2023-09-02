@@ -7,10 +7,7 @@ const VideoSection = () => {
   return (
     <VideoContainer>
       <video controls>
-        <source
-          src="../../../public/assets/video/tutorial.mp4"
-          type="video/mp4"
-        />
+        <source src="/assets/video/tutorial.mp4" type="video/mp4" />
         {/* {t("video.notSupported")} */}
         Votre navigateur ne prend pas en charge la vidéo
       </video>

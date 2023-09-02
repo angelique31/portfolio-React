@@ -73,6 +73,12 @@ export const PlayIconStyled = styled.img`
   right: 0;
   margin: auto;
   width: 28px;
+  opacity: 0.8;
+
+  // border-radius: 50%; /* Forme circulaire */
+  // background-color: rgba(255, 255, 255, 0.6); /* Fond blanc avec opacité */
+  // padding: 10px; /* Espace entre l'icône et la bordure */
+  // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 `;
 
 export const ProjectsContainer = styled.section`
