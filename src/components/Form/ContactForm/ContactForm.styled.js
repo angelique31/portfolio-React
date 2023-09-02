@@ -27,23 +27,10 @@ export const ModalContainer = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 7; // Assurez-vous que ce nombre est assez élevé pour être au-dessus des autres éléments
+  z-index: 7;
   overflow-y: auto;
-  display: none; // C'est la valeur par défaut, qui sera écrasée par le style inline si nécessaire
+  display: none;
 `;
-
-// export const ModalContainer = styled.div.attrs((props) => ({
-//   isVisible: props.isVisible,
-// }))`
-//   display: ${(props) => (props.isVisible ? "block" : "none")};
-//   top: 108px;
-//   position: fixed;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   z-index: 7; // Assurez-vous que ce nombre est assez élevé pour être au-dessus des autres éléments
-//   overflow-y: auto;
-// `;
 
 export const ModalContent = styled.div`
   position: relative;

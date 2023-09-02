@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import PortfolioContext from "../../context/portfolioContext";
+
 import { useTranslation } from "react-i18next";
 import projectsData from "../../datas/projectsData";
 
@@ -8,6 +11,7 @@ import {
   Title,
   Subtitle,
   ProjectsWrapper,
+  PlayIconStyled,
   ProjectsContainer,
   ProjectCard,
   ProjectImageWrapper,
@@ -23,13 +27,17 @@ import {
   StyledExternalIcon,
 } from "./ProjectsSection.styled";
 import GitLogo from "../../assets/logos/GitLogo2.png";
+import PlayIcon from "../../assets/Icons/play.svg";
+import VideoModal from "../Video/VideoModal/VideoModal";
 
 const ProjectsSection = () => {
   const containerRef = UseVisibilityEffect();
+  const { openVideoModal } = useContext(PortfolioContext);
   const { t } = useTranslation();
 
   return (
     <div id="mes-realisations">
+      <VideoModal />
       <ProjectsContainer ref={containerRef}>
         <Title>{t("homepage.projects_title")}</Title>
 
@@ -39,14 +47,29 @@ const ProjectsSection = () => {
           {projectsData.map((project, index) => (
             <ProjectCard key={index} delayIndex={index}>
               <ProjectImageWrapper>
-                <Link
-                  to={project.externalLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                {index !== 0 && (
+                  <Link
+                    to={project.externalLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ProjectImage src={project.images[0]} alt={project.title} />
+                  </Link>
+                )}
+
+                {index === 0 && (
                   <ProjectImage src={project.images[0]} alt={project.title} />
-                </Link>
+                )}
+
+                {index === 0 && (
+                  <PlayIconStyled
+                    src={PlayIcon}
+                    alt="Play Video"
+                    onClick={openVideoModal}
+                  />
+                )}
               </ProjectImageWrapper>
+
               <ProjectInfoWrapper>
                 <ProjectTechnologies>
                   {project.technologies.join(", ")}
@@ -61,6 +84,8 @@ const ProjectsSection = () => {
                   <StyledLink to={`/project-detail/${project.id}`}>
                     {t("homepage.projects_learn_more")}
                   </StyledLink>
+
+                  {/* La video apparait que pour le projet delices culinaires */}
 
                   <IconWrapper>
                     <Link

@@ -63,6 +63,18 @@ export const ProjectsWrapper = styled.div`
   flex-wrap: wrap;
   gap: 8em;
 `;
+
+export const PlayIconStyled = styled.img`
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 28px;
+`;
+
 export const ProjectsContainer = styled.section`
   padding: 5em 0;
   background-color: rgb(31, 34, 53);
@@ -89,10 +101,11 @@ export const ProjectCard = styled.div.withConfig({
 `;
 
 export const ProjectImageWrapper = styled.div`
+  position: relative;
   width: 100%;
   max-height: 250px;
   overflow: hidden;
-  border-radius: 12px;
+  // border-radius: 12px;
   padding: 5px;
 `;
 
