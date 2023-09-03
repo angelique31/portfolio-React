@@ -24,14 +24,15 @@ const fadeIn = keyframes`
   }
 `;
 
-export const pulseEffect = keyframes`
-  0%, 100% {
+const pulse = keyframes`
+  0% {
     transform: scale(1);
-    opacity: 0.3;
   }
   50% {
-    transform: scale(1.1);  
-    opacity: 0.7;          
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 `;
 
@@ -74,11 +75,7 @@ export const PlayIconStyled = styled.img`
   margin: auto;
   width: 28px;
   opacity: 0.8;
-
-  // border-radius: 50%; /* Forme circulaire */
-  // background-color: rgba(255, 255, 255, 0.6); /* Fond blanc avec opacité */
-  // padding: 10px; /* Espace entre l'icône et la bordure */
-  // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  animation: ${pulse} 3s infinite;
 `;
 
 export const ProjectsContainer = styled.section`
@@ -188,7 +185,7 @@ export const LogoImage = styled.img`
   border-radius: 50%;
   opacity: 0.3;
   transition: color 0.3s, transform 0.3s;
-  // animation: ${pulseEffect} 2s infinite;
+
   &:hover {
     opacity: 1;
     color: white;
@@ -203,7 +200,6 @@ export const StyledExternalIcon = styled(ExternalLinkIcon)`
 
   color: #d1d5db;
   transition: color 0.3s, transform 0.3s, opacity 0.3s, box-shadow 0.3s;
-  // animation: ${pulseEffect} 2s infinite;
 
   &:hover {
     opacity: 1;
