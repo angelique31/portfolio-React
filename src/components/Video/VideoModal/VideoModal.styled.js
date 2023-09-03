@@ -10,11 +10,6 @@ const modalopen = keyframes`
   }
 `;
 
-// export const Button = styled.button`
-//   // ajoutez les styles pour le bouton ici
-// `;
-
-// Ajout d'un style pour le fond de la modale
 export const ModalBackdrop = styled.div`
   position: fixed;
   top: 0;
@@ -39,7 +34,6 @@ export const ModalContainer = styled.div`
 export const ModalContent = styled.div`
   position: relative;
   border-radius: 15px;
-  // background-color: #313552;
   width: 70%;
 
   display: flex;
