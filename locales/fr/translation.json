@@ -104,7 +104,7 @@
       "id": "meteoFrance",
       "title": "Clone de la page d'accueil Météo France",
       "description": {
-        "intro": "Ce projet consistait à reproduire fidèlement la page d'accueil du site Météo France en utilisant exclusivement HTML et CSS.",
+        "intro": "Ce projet consistait à reproduire fidèlement la page d'accueil du site Météo France en utilisant exclusivement HTML et SCSS.",
         "objective": "L'objectif principal de ce projet était de comprendre et de maîtriser les bases fondamentales du développement web. En travaillant sans frameworks ni bibliothèques, j'ai cherché à affiner mes compétences en matière de mise en page, de typographie et de responsivité.",
         "challenge": "La plus grande difficulté de ce projet a été de reproduire avec précision les différents éléments de design du site original, tout en assurant une compatibilité sur les différents navigateurs et tailles d'écran. Ce défi m'a permis d'approfondir ma compréhension des nuances et subtilités du CSS.",
         "responsive": "La responsivité du site garantit une expérience utilisateur optimale sur tous les dispositifs, des mobiles aux ordinateurs de bureau.",
@@ -115,7 +115,7 @@
       },
       "toolsAndTech": [
         "- HTML: Structure de base du site et mise en place des éléments principaux..",
-        "- CSS: Personnalisation, design, et mise en page responsive du site."
+        "- SCSS: Personnalisation, design, et mise en page responsive du site."
       ]
     }
   },

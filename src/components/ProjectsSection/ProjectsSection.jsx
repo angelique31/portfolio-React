@@ -85,8 +85,6 @@ const ProjectsSection = () => {
                     {t("homepage.projects_learn_more")}
                   </StyledLink>
 
-                  {/* La video apparait que pour le projet delices culinaires */}
-
                   <IconWrapper>
                     <Link
                       to={project.githubLink}

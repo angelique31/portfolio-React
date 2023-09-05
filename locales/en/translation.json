@@ -103,7 +103,7 @@
       "id": "meteoFrance",
       "title": "Météo France Homepage Clone",
       "description": {
-        "intro": "This project consisted of faithfully reproducing the homepage of the Météo France site using exclusively HTML and CSS.",
+        "intro": "This project consisted of faithfully reproducing the homepage of the Météo France site using exclusively HTML and SCSS.",
         "objective": "The main goal of this project was to understand and master the fundamental basics of web development. Working without frameworks or libraries, I sought to hone my skills in layout, typography, and responsiveness.",
         "challenge": "The biggest challenge of this project was to accurately reproduce the various design elements of the original site while ensuring compatibility across different browsers and screen sizes. This challenge allowed me to deepen my understanding of the nuances and subtleties of CSS.",
         "responsive": "The site's responsiveness ensures an optimal user experience on all devices, from mobiles to desktop computers.",
@@ -114,7 +114,7 @@
       },
       "toolsAndTech": [
         "- HTML: Basic site structure and setting up main elements.",
-        "- CSS: Customization, design, and responsive layout of the site."
+        "- SCSS: Customization, design, and responsive layout of the site."
       ]
     }
   },
