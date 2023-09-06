@@ -53,7 +53,12 @@ export const ModalContent = styled.div`
 export const CloseButton = styled.span`
   cursor: pointer;
   position: absolute;
-  right: 3rem;
+  right: 2.6rem;
   top: 2.5rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  &:hover {
+    color: #ff0000;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
 `;
