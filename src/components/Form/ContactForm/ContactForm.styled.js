@@ -62,7 +62,7 @@ export const HeaderModal = styled.div`
 export const CloseButton = styled.span`
   cursor: pointer;
   position: absolute;
-  right: 1.5rem;
+  right: 1rem;
   top: 0.4rem;
   font-size: 2rem;
 `;
@@ -132,6 +132,9 @@ export const StyledInput = styled.input`
   @media (max-width: 990px) {
     width: 85%;
   }
+  @media (max-width: 860px) {
+    width: 97%;
+  }
 
   @media (max-width: 549px) {
     font-size: 0.8rem;
@@ -170,6 +173,9 @@ export const StyledTextarea = styled.textarea`
   }
   &:hover {
     border-color: #ffc576;
+  }
+  @media (max-width: 860px) {
+    width: 97%;
   }
 
   @media (max-width: 460px) {
