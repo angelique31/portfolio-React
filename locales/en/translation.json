@@ -40,7 +40,7 @@
     "intro_role": "React JavaScript Developer",
     "intro_description": "Passionate about creating intuitive user experiences, I turn ideas into tangible realities through programming.",
     "intro_button_text": "Beyond the code: discover my unique journey.",
-    "Mes spécialités": "My specialties",
+    "Mes spécialités": "My Hard Skills",
     "comp_transverses": "My Soft Skills",
     "bio": "After working as a nurse for 20 years, I've learned the value of <Highlight>team work</Highlight>. This experience greatly benefits me in web development. My <Highlight>rigor</Highlight> and <Highlight>listening skills</Highlight>, acquired in the medical world, guide me in every project. I know how important it is to collaborate and understand the needs of others, whether they are patients or <Highlight>website users</Highlight>. Every line of code I write reflects this <Highlight>human-centered</Highlight> approach.",
     "skills": [
@@ -191,10 +191,6 @@
     "methodologies": {
       "category": "Methodologies",
       "skills": ["Agile & Scrum", "Kanban"]
-    },
-    "languageModelsAI": {
-      "category": "Language Models and AI",
-      "skills": ["ChatGPT"]
     }
   },
   "professionalExperienceData": [

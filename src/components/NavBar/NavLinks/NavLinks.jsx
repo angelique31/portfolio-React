@@ -66,7 +66,7 @@ function NavLinks({
         )}
       </StyledNavItem>
 
-      <StyledNavItem $isScrolled={isScrolled}>
+      <StyledNavItem className="contact" $isScrolled={isScrolled}>
         {location.pathname === "/" ? (
           <a
             href="#contact"

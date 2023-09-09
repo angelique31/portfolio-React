@@ -7,7 +7,6 @@ import MenuHamburger from "../MenuHamburger/MenuHamburger";
 import NavLinks from "../NavLinks/NavLinks";
 import LanguageSelector from "../../LangageSelector/LangageSelector";
 import PropTypes from "prop-types";
-import ThemeToggleButton from "../ThemeToggleButton/ThemeToggleButton";
 
 const NavBarColor = ({ isScrolled, isMobile, onAboutClick }) => {
   const [isOpen, setIsOpen] = useState(false);

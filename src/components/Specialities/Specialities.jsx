@@ -71,17 +71,6 @@ const Specialties = () => {
           </ImageWrapper>
           <LogoText>GitHub</LogoText>
         </LogoItem>
-
-        <LogoItem>
-          <ImageWrapper>
-            <LogoImage
-              className="chatGPT-logo"
-              src={ChatGPT4}
-              alt="ChatGPT 4 Logo"
-            />
-          </ImageWrapper>
-          <LogoText>ChatGPT 4</LogoText>
-        </LogoItem>
       </LogoContainer>
     </SpecialtiesContainer>
   );

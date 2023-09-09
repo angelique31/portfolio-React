@@ -41,7 +41,7 @@
     "intro_role": "Développeuse Javascript React",
     "intro_description": "Passionnée par la création d'expériences utilisateur intuitives, je transforme les idées en réalités concrètes à travers la programmation.",
     "intro_button_text": "Au-delà du code : découvrez mon parcours unique.",
-    "Mes spécialités": "Mes spécialités",
+    "Mes spécialités": "Compétences techniques",
     "comp_transverses": "Compétences transverses",
     "bio": "Après avoir exercé le métier d'<Highlight>infirmière</Highlight> pendant 20 ans, j'ai appris la valeur du <Highlight>travail en équipe</Highlight>. Cette expérience m'aide énormément en développement web. Ma <Highlight>rigueur</Highlight> et mon <Highlight>sens de l'écoute</Highlight>, acquis dans le monde médical, me guident dans chaque projet. Je sais combien il est important de collaborer et de comprendre les besoins des autres, que ce soit des patients ou des <Highlight>utilisateurs</Highlight> d'un site web. Chaque ligne de code que je rédige reflète cette approche centrée sur l'<Highlight>humain</Highlight>.",
     "skills": [
@@ -192,10 +192,6 @@
     "methodologies": {
       "category": "Méthodologies",
       "skills": ["Agile & Scrum", "Kanban"]
-    },
-    "languageModelsAI": {
-      "category": "Modèles de Langage et IA",
-      "skills": ["ChatGPT version 4"]
     }
   },
   "professionalExperienceData": [
@@ -235,15 +231,15 @@
 
   "hobbies": {
     "item1": {
-      "text": "Cooking",
+      "text": "Cuisine",
       "alt": "Cooking logo"
     },
     "item2": {
-      "text": "Reading",
+      "text": "Lecture",
       "alt": "Reading logo"
     },
     "item3": {
-      "text": "Hiking",
+      "text": "Randonnée",
       "alt": "Hiking logo"
     }
   },

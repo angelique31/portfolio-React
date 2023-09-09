@@ -17,7 +17,7 @@ export const ModalBackdrop = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgb(31, 34, 53);
   z-index: 7;
 `;
 
@@ -37,7 +37,6 @@ export const ModalContent = styled.div`
   border-radius: 15px;
   background-color: #313552;
   width: 70%;
-
   display: flex;
   flex-direction: column;
   align-items: center;

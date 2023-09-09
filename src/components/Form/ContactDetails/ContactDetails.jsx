@@ -18,7 +18,7 @@ export const ContactDetails = () => {
           src={SignsPosts}
           alt="signs posts Logo"
         />
-        <AddressText>25 rue Jean Moulin, 31600 Muret</AddressText>
+        <AddressText>31600 MURET</AddressText>
       </Box>
       <Box>
         <LogoImage className="phone" src={Phone} alt="Phone Logo" />

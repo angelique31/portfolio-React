@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const StyledNavList = styled.ul`
   display: flex;
@@ -9,12 +8,13 @@ export const StyledNavList = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    // justify-content: center;
+
     gap: 33px;
     position: absolute;
     top: 100%;
     background: rgb(70, 70, 70);
-    padding: 15px 22px 15px 20px;
+    padding: 200px 22px 15px 20px;
     border-right: 1px solid #c5c5c6;
     height: 100vh;
     left: -212px; /*pour cacher vers la gauche les li*/
@@ -32,7 +32,6 @@ export const StyledNavItem = styled.li`
   a,
   a:visited,
   button {
-    
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 20px;
@@ -45,19 +44,6 @@ export const StyledNavItem = styled.li`
     position: relative; 
     overflow: hidden; // pour s'assurer que l'animation reste à l'intérieur du lien
     font-size: ${(props) => (props.$isScrolled ? "0.8rem" : "1.1rem")};
-    // &::after {
-    //   content: '';
-    //   display: block;
-    //   position: absolute;
-    //   bottom: 0; 
-    //   left: 0;
-    //   width: 0; 
-    //   height: 2px; 
-    //   background-color: #ffb957;
-    //   transition: width 0.4s ease; 
-      
-    // }
-
     &:hover {
         color: #ffb957; 
   
@@ -68,6 +54,10 @@ export const StyledNavItem = styled.li`
   }
   
     @media (max-width: 1009px) {
+      &.contact {
+        margin-top: 10px; 
+      }
+
       border: none;
       padding: 0;
 
@@ -95,7 +85,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7); /* noir avec 70% d'opacité */
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
   display: none; /* Par défaut, il sera caché */
 

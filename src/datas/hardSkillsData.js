@@ -30,10 +30,6 @@ const hardSkillsData = [
     category: "Méthodologies",
     skills: ["Agile & Scrum", "Kanban"],
   },
-  {
-    category: "Modèles de Langage et IA",
-    skills: ["ChatGPT", "Midjourney (notions)"],
-  },
 ];
 
 export default hardSkillsData;
