@@ -19,7 +19,8 @@ export const IntroContainer = styled.div`
   border: 1px solid #dfe0dc;
   padding: 20px;
   border-radius: 15px;
-  background-color: rgb(78, 76, 76);
+  // background-color: rgb(78, 76, 76);
+  background-color: #313552;
   width: 67%;
 
   display: flex;

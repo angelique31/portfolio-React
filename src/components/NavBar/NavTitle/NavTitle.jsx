@@ -10,10 +10,9 @@ function NavTitle({ isScrolled }) {
   return (
     <StyledNavTitle $isScrolled={isScrolled}>
       <Link to="/" onClick={handleClick}>
-        <strong>
-          <span>P</span>ortfolio
-          <br />
-          Angélique <span>Rosin</span>
+        <strong className="special-title">
+          <span className="special-title highlight">A</span>ngélique{" "}
+          <span className="special-title highlight">R</span>osin
         </strong>
       </Link>
     </StyledNavTitle>

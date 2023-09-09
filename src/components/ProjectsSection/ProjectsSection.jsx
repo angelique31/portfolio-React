@@ -71,12 +71,13 @@ const ProjectsSection = () => {
               </ProjectImageWrapper>
 
               <ProjectInfoWrapper>
-                <ProjectTechnologies>
-                  {project.technologies.join(", ")}
-                </ProjectTechnologies>
                 <ProjectTitle>
                   {t(`homepage.project_${index}_title`)}
                 </ProjectTitle>
+                <ProjectTechnologies>
+                  {project.technologies.join(", ")}
+                </ProjectTechnologies>
+
                 <ProjectDescription>
                   {t(`homepage.project_${index}_description`)}
                 </ProjectDescription>

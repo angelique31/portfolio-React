@@ -131,18 +131,20 @@ export const ProjectInfoWrapper = styled.div`
 export const ProjectTechnologies = styled.div`
   margin: 1em 0;
   color: #ffb957;
+  font-size: 0.9rem;
 `;
 
 export const ProjectTitle = styled.h3`
   margin-top: 1em;
   color: white;
-  font-size: 0.9rem;
+  opacity: 0.9;
 `;
 
 export const ProjectDescription = styled.p`
   color: #d1d5db;
   margin: 1em 0;
   font-size: 0.8rem;
+  line-height: 1.5;
 `;
 
 export const FlexContainer = styled.div`

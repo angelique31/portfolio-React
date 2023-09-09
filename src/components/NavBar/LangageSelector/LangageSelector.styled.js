@@ -6,7 +6,7 @@ export const LanguageDropdown = styled.div`
 
   button {
     color: white;
-    border-radius: 0;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
     text-transform: uppercase;
@@ -59,6 +59,7 @@ export const DropdownContent = styled.div`
     gap: 10px;
     cursor: pointer;
     margin: 5px 0;
+    border-radius: 5px;
     &:hover {
       color: #ffb957;
     }

@@ -22,7 +22,7 @@ function NavLinks({
 }) {
   const location = useLocation();
   const { t } = useTranslation();
-  const { openModal, setIsFormVisible } = useContext(PortfolioContext);
+  const { openModal } = useContext(PortfolioContext);
 
   return (
     <StyledNavList $isOpen={isOpen}>
@@ -45,7 +45,6 @@ function NavLinks({
             <TextWrapper>{t("homepage.Mon cv")}</TextWrapper>
           </Link>
           <StyledDownloadButton href="/CV_Angelique_Rosin.pdf" download>
-            {/* <StyledDownloadButton href="/CV_Angelique_Rosin-prompt.pdf" download> */}
             <StyledIcon
               src={DownloadIcon}
               alt="Icône de telechargement de CV"
@@ -81,7 +80,7 @@ function NavLinks({
         ) : (
           <Link
             to="/#contact"
-            onClick={(e) => {
+            onClick={() => {
               openModal();
               closeMenu();
             }}
@@ -99,6 +98,7 @@ NavLinks.propTypes = {
   isScrolled: PropTypes.bool.isRequired,
   onAboutClick: PropTypes.func.isRequired,
   closeMenu: PropTypes.func,
+  handleShowIntro: PropTypes.func,
 };
 
 export default NavLinks;

@@ -2,19 +2,28 @@ import styled from "styled-components";
 
 export const StyledNavTitle = styled.h1`
   color: white;
-  font-family: "Poppins", sans-serif;
-  padding-bottom: 20px;
-  font-size: ${(props) => (props.$isScrolled ? "1.2rem" : "1.5rem")};
+  font-family: "Dancing Script", cursive;
+
+  font-size: ${(props) => (props.$isScrolled ? "1.5rem" : "2rem")};
   visibility: visible;
-  span {
-    color: #ffb957;
-  }
-  strong {
-    font-weight: 100;
-  }
+
   a {
     color: white;
+
+    strong {
+      color: white;
+      font-family: "Dancing Script", cursive;
+      span.special-title.highlight {
+        color: #ffb957;
+        font-family: "Dancing Script", cursive;
+      }
+    }
   }
+
+  span:not(.highlight) {
+    color: #ffb957;
+  }
+
   @media (max-width: 1009px) {
     margin: auto;
     text-align: center;

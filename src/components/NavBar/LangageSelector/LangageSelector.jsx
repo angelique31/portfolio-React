@@ -6,8 +6,8 @@ import {
   DropdownContent,
 } from "./LangageSelector.styled";
 
-import EnglishFlag from "../../assets/logos/english_flag.png";
-import FrenchFlag from "../../assets/logos/french_flag.png";
+import EnglishFlag from "../../../assets/logos/english_flag.png";
+import FrenchFlag from "../../../assets/logos/french_flag.png";
 
 function LanguageSelector() {
   const { i18n } = useTranslation();
