@@ -7,7 +7,7 @@ I created this portfolio to share with you my journey, my skills, and some of th
 - React
 - Vite
 - Styled-components
-- Context API.
+- Context API
 
 ## Installation
 
