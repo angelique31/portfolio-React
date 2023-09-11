@@ -45,7 +45,8 @@ const fadeInSun = keyframes`
 
 export const Container = styled.div`
   position: relative;
-  background: rgb(78, 76, 76);
+  // background: rgb(78, 76, 76);
+  background: #313552;
   height: 600px;
   @media (max-width: 1010px) {
     height: 900px;

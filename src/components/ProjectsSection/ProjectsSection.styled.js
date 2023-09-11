@@ -24,14 +24,15 @@ const fadeIn = keyframes`
   }
 `;
 
-export const pulseEffect = keyframes`
-  0%, 100% {
+const pulse = keyframes`
+  0% {
     transform: scale(1);
-    opacity: 0.3;
   }
   50% {
-    transform: scale(1.1);  
-    opacity: 0.7;          
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 `;
 
@@ -63,6 +64,20 @@ export const ProjectsWrapper = styled.div`
   flex-wrap: wrap;
   gap: 8em;
 `;
+
+export const PlayIconStyled = styled.img`
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 28px;
+  opacity: 0.8;
+  animation: ${pulse} 3s infinite;
+`;
+
 export const ProjectsContainer = styled.section`
   padding: 5em 0;
   background-color: rgb(31, 34, 53);
@@ -89,10 +104,11 @@ export const ProjectCard = styled.div.withConfig({
 `;
 
 export const ProjectImageWrapper = styled.div`
+  position: relative;
   width: 100%;
   max-height: 250px;
   overflow: hidden;
-  border-radius: 12px;
+  // border-radius: 12px;
   padding: 5px;
 `;
 
@@ -115,18 +131,20 @@ export const ProjectInfoWrapper = styled.div`
 export const ProjectTechnologies = styled.div`
   margin: 1em 0;
   color: #ffb957;
+  font-size: 0.9rem;
 `;
 
 export const ProjectTitle = styled.h3`
   margin-top: 1em;
   color: white;
-  font-size: 0.9rem;
+  opacity: 0.9;
 `;
 
 export const ProjectDescription = styled.p`
   color: #d1d5db;
   margin: 1em 0;
   font-size: 0.8rem;
+  line-height: 1.5;
 `;
 
 export const FlexContainer = styled.div`
@@ -169,7 +187,7 @@ export const LogoImage = styled.img`
   border-radius: 50%;
   opacity: 0.3;
   transition: color 0.3s, transform 0.3s;
-  // animation: ${pulseEffect} 2s infinite;
+
   &:hover {
     opacity: 1;
     color: white;
@@ -184,7 +202,6 @@ export const StyledExternalIcon = styled(ExternalLinkIcon)`
 
   color: #d1d5db;
   transition: color 0.3s, transform 0.3s, opacity 0.3s, box-shadow 0.3s;
-  // animation: ${pulseEffect} 2s infinite;
 
   &:hover {
     opacity: 1;

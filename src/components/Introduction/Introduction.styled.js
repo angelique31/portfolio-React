@@ -16,10 +16,11 @@ export const IntroContainer = styled.div`
   transform: translate(-50%, -50%);
 
   animation: ${fadeIn} 2s ease-in-out;
-  border: 2px solid #dfe0dc;
+  border: 1px solid #dfe0dc;
   padding: 20px;
   border-radius: 15px;
-  background-color: rgb(78, 76, 76);
+  // background-color: rgb(78, 76, 76);
+  background-color: #313552;
   width: 67%;
 
   display: flex;
@@ -60,7 +61,6 @@ export const IntroTitle = styled.span`
 `;
 
 export const IntroHighlight = styled.span`
-  // color: #e93de6;
   color: #ffb957;
   font-weight: 100;
 `;

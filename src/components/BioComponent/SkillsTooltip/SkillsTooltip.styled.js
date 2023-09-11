@@ -1,4 +1,3 @@
-// Styles pour les compétences
 import styled, { keyframes } from "styled-components";
 
 const borderColorChange = keyframes`
@@ -34,10 +33,10 @@ export const SkillContainer = styled.div`
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
-  &.clickable {
-    animation: ${borderColorChange} 3s ease-in-out infinite;
-  }
-
+  // &.clickable {
+  //   animation: ${borderColorChange} 3s ease-in-out infinite;
+  // }
+  animation: ${borderColorChange} 3s ease-in-out infinite;
   &:hover {
     border-color: rgb(255, 197, 118);
     ${Skill} {

@@ -4,7 +4,10 @@ const PortfolioContext = createContext();
 
 export const PortfolioProvider = ({ children }) => {
   const [showIntro, setShowIntro] = useState(true);
+  //Modale du formulaire de contact
   const [isModalOpen, setIsModalOpen] = useState(false);
+  //Modale de la video
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   const handleShowIntro = () => {
     setShowIntro(true);
@@ -22,6 +25,14 @@ export const PortfolioProvider = ({ children }) => {
     setIsModalOpen(false);
   };
 
+  const openVideoModal = () => {
+    setIsVideoModalOpen(true);
+  };
+
+  const closeVideoModal = () => {
+    setIsVideoModalOpen(false);
+  };
+
   return (
     <PortfolioContext.Provider
       value={{
@@ -31,6 +42,9 @@ export const PortfolioProvider = ({ children }) => {
         isModalOpen,
         openModal,
         closeModal,
+        isVideoModalOpen,
+        openVideoModal,
+        closeVideoModal,
       }}
     >
       {children}

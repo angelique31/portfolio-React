@@ -36,7 +36,6 @@ const projectsDataDetail = [
       "- Figma: Conception et prototypage de l'UI/UX.",
       "- Vercel: Déploiement et hébergement de l'application.",
     ],
-    usesAI: true,
   },
 
   {
@@ -45,7 +44,7 @@ const projectsDataDetail = [
     externalLink: "https://angelique31.github.io/clone-site-meteoFrance/",
     description: {
       intro:
-        "Ce projet consistait à reproduire fidèlement la page d'accueil du site Météo France en utilisant exclusivement HTML et CSS.",
+        "Ce projet consistait à reproduire fidèlement la page d'accueil du site Météo France en utilisant exclusivement HTML et SCSS.",
       objective:
         "L'objectif principal de ce projet était de comprendre et de maîtriser les bases fondamentales du développement web. En travaillant sans frameworks ni bibliothèques, j'ai cherché à affiner mes compétences en matière de mise en page, de typographie et de responsivité.",
       challenge:
@@ -61,13 +60,12 @@ const projectsDataDetail = [
     additionalImages: [
       "/assets/clone_meteoFrance/meteoFrance_desktop.png",
       "/assets/clone_meteoFrance/meteoFrance_mobile.png",
-      "/assets/delices_culinaires/rapportLighthouse.png",
+      "/assets/clone_meteoFrance/rapportLighthouse.png",
     ],
     toolsAndTech: [
       "HTML: Structure de base du site et mise en place des éléments principaux.",
-      "CSS: Personnalisation, design, et mise en page responsive du site.",
+      "SCSS: Personnalisation, design, et mise en page responsive du site.",
     ],
-    usesAI: false,
   },
 ];
 

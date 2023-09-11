@@ -21,8 +21,6 @@ function ContactForm() {
   const { t } = useTranslation();
   const [isFormVisible, setIsFormVisible] = useState(true);
 
-  // useEffect(() => {}, [isModalOpen, isFormVisible]);
-
   const [formData, setFormData] = useState({
     fullname: "",
     email: "",
@@ -71,25 +69,6 @@ function ContactForm() {
       }
     }
   };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   const validationResults = ValidateFormData(formData);
-  //   setFormErrors(validationResults.errors);
-
-  //   if (validationResults.isValid) {
-  //     // Simuler une attente de requête réseau
-  //     setTimeout(() => {
-  //       setSuccessMessage("Merci ! Votre message a été envoyé.");
-  //       setFormData({
-  //         fullname: "",
-  //         email: "",
-  //         message: "",
-  //       });
-  //     }, 1000); // Attente d'une seconde
-  //   }
-  // };
 
   //La modale se ferme quand on clique sur un lien de la navBar
   useEffect(() => {

@@ -14,7 +14,6 @@ import ReactLogo from "../../assets/logos/logoReact.svg";
 import SassLogo from "../../assets/logos/SassLogo.png";
 import StyledCompLogo from "../../assets/logos/logo_styled_component.png";
 import GitLogo from "../../assets/logos/GitLogo.png";
-import ChatGPT4 from "../../assets/Icons/chatgpt.svg";
 import UseVisibilityEffect from "../ScrollAwareComponents/UseVisibilityEffect";
 
 const Specialties = () => {
@@ -70,17 +69,6 @@ const Specialties = () => {
             <LogoImage className="git-logo" src={GitLogo} alt="Git Logo" />
           </ImageWrapper>
           <LogoText>GitHub</LogoText>
-        </LogoItem>
-
-        <LogoItem>
-          <ImageWrapper>
-            <LogoImage
-              className="chatGPT-logo"
-              src={ChatGPT4}
-              alt="ChatGPT 4 Logo"
-            />
-          </ImageWrapper>
-          <LogoText>ChatGPT 4</LogoText>
         </LogoItem>
       </LogoContainer>
     </SpecialtiesContainer>

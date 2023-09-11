@@ -3,11 +3,11 @@ import styled, { keyframes } from "styled-components";
 export const pulseEffect = keyframes`
   0%, 100% {
     transform: scale(1);
-    opacity: 0.3;
+    opacity: 0.6;
   }
   50% {
-    transform: scale(1.1);  
-    opacity: 0.7;          
+    transform: scale(1.1);
+    opacity: 1;
   }
 `;
 
@@ -25,6 +25,7 @@ export const ContactInfoBox = styled.div`
     font-size: 0.9rem;
     color: #daddee;
     font-family: inherit;
+
     @media (max-width: 600px) {
       font-size: 0.8rem;
       min-width: 150px;

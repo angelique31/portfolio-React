@@ -80,24 +80,6 @@ const ProjectsDetailPage = () => {
           </ChallengeContainer>
         </VisibilityAwareContainer>
 
-        {/* New section for useOfChatGPT */}
-        {/* <ChallengeContainer>
-          <SectionTitle>{t("projectDetails.IA")}</SectionTitle>
-          <TextParagraph>
-            {t(`projects.${projectId}.description.useOfChatGPT`)}
-          </TextParagraph>
-        </ChallengeContainer> */}
-        {projectDetail.usesAI && (
-          <VisibilityAwareContainer>
-            <ChallengeContainer>
-              <Section title={t("projectDetails.IA")}>
-                {t(`projects.${projectId}.description.useOfChatGPT`)}
-              </Section>
-            </ChallengeContainer>
-          </VisibilityAwareContainer>
-        )}
-        {/* End of new section */}
-
         <VisibilityAwareContainer>
           <AlignedImageContainer>
             <ImageChallengeContainer>
