@@ -38,6 +38,7 @@ const NavBarColor = ({ isScrolled, isMobile, onAboutClick }) => {
         isScrolled={isScrolled}
         onAboutClick={onAboutClick}
       />
+
       <LanguageSelector />
     </NavBarStyled>
   );
