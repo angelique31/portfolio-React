@@ -18,7 +18,7 @@ import {
 } from "../ContactForm/ContactForm.styled";
 
 import ValidateFormData from "../ValidateFormData/ValidateFormData";
-import ContactDetails from "../ContactDetails/ContactDetails";
+// import ContactDetails from "../ContactDetails/ContactDetails";
 
 function ContactFormFields({
   formData,
@@ -113,7 +113,7 @@ function ContactFormFields({
             type="submit"
             value={t("contactForm.fields.submit_button")}
           />
-          <ContactDetails className="contact-details-component" />
+          {/* <ContactDetails className="contact-details-component" /> */}
         </ButtonAndDetailsWrapper>
       </ContactLeftStyled>
     </>
