@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
-import ExternalLinkIcon from "../ExternalLinkIcon/ExternalLinkIcon";
+import ExternalLinkIcon from "../../ExternalLinkIcon/ExternalLinkIcon";
 
 const fadeInTitle = keyframes`
   0% {

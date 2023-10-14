@@ -58,7 +58,13 @@
     "project_0_description": "Personal project developed in React, this website presents a variety of cooking recipes.",
     "project_1_title": "Météo France Home Page",
     "project_1_description": "Clone of the Météo France homepage made solely with HTML and CSS.",
-    "projects_subtitle": "Personal achievements carried out independently of my academic journey, reflecting my passion and commitment to development."
+    "projects_subtitle": "Personal achievements carried out independently of my academic journey, reflecting my passion and commitment to development.",
+
+    "training_projects_subtitle": "Projects completed as part of my web development training, highlighting the technical skills I've acquired.",
+    "training_project_0_title": "Accessible Website for a Photographers' Platform",
+    "training_project_0_description": "Development of an accessible web platform, to enable photographers to showcase their work.",
+    "training_project_1_title": "Platform for peer-to-peer apartment rentals",
+    "training_project_1_description": "Project aimed at rebuilding the Kasa apartment rental platform using React and React Router."
   },
 
   "projectDetails": {
@@ -99,6 +105,7 @@
         "- Vercel: Deployment and hosting of the application."
       ]
     },
+
     "meteoFrance": {
       "id": "meteoFrance",
       "title": "Météo France Homepage Clone",
@@ -115,6 +122,66 @@
       "toolsAndTech": [
         "- HTML: Basic site structure and setting up main elements.",
         "- SCSS: Customization, design, and responsive layout of the site."
+      ]
+    },
+    "fisheye": {
+      "id": "fisheye",
+      "title": "Accessible Website for a Photographer Platform",
+      "description": {
+        "intro": "Project aimed at creating an accessible website for a photographer platform.",
+        "objective": "The main objective was to ensure the website's accessibility while writing maintainable JavaScript code.",
+        "challenge": "The main challenge of this project was to ensure complete accessibility in compliance with WCAG standards. To overcome these challenges, I consulted WCAG recommendations, which guided me in implementing keyboard navigation and the correct use of ARIA tags. I also used accessibility verification tools and sought user feedback to ensure that these features were indeed accessible.",
+        "responsive": "The site's responsiveness ensures an optimal user experience on all devices, from mobiles to desktop computers.",
+        "collaboration": [
+          "Working in a team, and especially adopting methodologies like Agile and Scrum, several improvements would have been possible for this project.",
+          "1. Regular code reviews would have ensured better quality through exchanges and knowledge sharing.",
+          "2. Collaboration during UI/UX design phases would have brought different perspectives, contributing to a richer and more refined design.",
+          "3. By collaborating with a team, we could have solicited a wider range of users to test the project, thus offering more varied feedback.",
+          "4. Task sharing would have accelerated development, each member bringing their specific skills."
+        ],
+        "optimizationAndAccessibility": "In terms of performance, I used Webpack to reduce loading times and offer a more responsive user experience. In parallel, I adapted color choices to be in compliance with WCAG standards, thus strengthening the site's accessibility."
+      },
+      "toolsAndTech": [
+        "- CSS: Layout and styling of the user interface.",
+        "- Webpack: Performance optimization and reduction of loading times.",
+        "- ESLint: Ensuring JavaScript code quality through static analysis.",
+        "- JavaScript: Programming language used to create client-side dynamic interactions.",
+        "- WCAG: Compliance with accessibility guidelines to make the site usable by the widest audience.",
+        "- Wave: Accessibility evaluation tool based on WCAG standards.",
+        "- Figma: Design and prototyping of the UI/UX.",
+        "- GitHub Pages: Deployment and hosting of the application."
+      ]
+    },
+    "kasa": {
+      "id": "kasa",
+      "title": "Platform for peer-to-peer apartment rentals",
+      "externalLink": "https://github.com/angelique31/P11--kasa",
+      "description": {
+        "intro": "Project aimed at rebuilding the Kasa apartment rental platform using React and React Router.",
+        "objective": "The primary objective was to modernize an existing application with a more recent technology stack while respecting performance and accessibility constraints.",
+        "challenge": "The main challenge of this project was migrating from an aging ASP.NET codebase to React, ensuring compatibility and accessibility. I followed Kasa's coding guidelines to ensure code quality.",
+        "responsive": "The site is designed to be fully responsive, ensuring a smooth user experience across all devices.",
+        "collaboration": [
+          "Working in a team, particularly when adopting methodologies such as Agile and Scrum, several improvements would have been possible for this project.",
+          "1. Regular code reviews would have ensured better quality through discussions and knowledge sharing.",
+          "2. Collaboration during the UI/UX design phases would have provided different perspectives, leading to a richer and more polished design.",
+          "3. By collaborating with a team, we could have solicited a broader range of users to test the project, thus obtaining more diverse feedback.",
+          "4. Task sharing would have sped up the development, with each member bringing their specific skills."
+        ],
+        "optimizationAndAccessibility": "As this project was an academic exercise, I was unable to modify the source images for educational reasons. This impacted the site's performance score, specifically in the Lighthouse report where it reached 92%. In a real project, I would have used image compression tools, reducing file sizes, which would have accelerated loading times. Regarding the accessibility score, the color constraints in the academic mockup prevented me from achieving a higher score. In a professional context, I would have adjusted the colors to meet WCAG standards and improve accessibility."
+      },
+      "additionalImages": [
+        "/assets/kasa/kasa_desktop.png",
+        "/assets/kasa/kasa_mobile.png",
+        "/assets/kasa/performance.png"
+      ],
+      "toolsAndTech": [
+        "- Create React App tool: Creating dynamic user interfaces.",
+        "- React Router: Managing routing within the application.",
+        "- Sass: Layout and styling.",
+        "- ESLint: Used to ensure code robustness.",
+        "- Lighthouse: Measuring performance and accessibility.",
+        "- GitHub: Source code management and collaboration."
       ]
     }
   },

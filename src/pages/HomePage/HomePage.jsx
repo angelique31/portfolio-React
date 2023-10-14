@@ -5,10 +5,11 @@ import Slider from "../../components/Slider/Slider";
 import Introduction from "../../components/Introduction/Introduction";
 import Specialties from "../../components/Specialities/Specialities";
 import SoftSkillWheel from "../../components/SoftSkillWheel/SoftSkillWheel";
-import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
+import ProfessionalProjectsSection from "../../components/ProjectsSection/ProfessionalProjectsSection/ProfessionalProjectsSection";
 import ScrollAwareNavBar from "../../components/NavBar/ScrollAwareNavBar/ScrollAwareNavBar";
 import ContactForm from "../../components/Form/ContactForm/ContactForm";
 import Footer from "../../components/Footer/Footer";
+import EducationalProjectsSection from "../../components/ProjectsSection/EducationalProjectsSection/EducationalProjectsSection";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -51,7 +52,8 @@ const HomePage = () => {
       <Specialties />
       <SoftSkillWheel />
       <div id="mes-realisations">
-        <ProjectsSection />
+        <ProfessionalProjectsSection />
+        <EducationalProjectsSection />
         <ContactForm />
       </div>
       <Footer />

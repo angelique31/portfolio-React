@@ -1,18 +1,11 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import PortfolioContext from "../../context/portfolioContext";
-
 import { useTranslation } from "react-i18next";
-import projectsData from "../../datas/projectsData";
-
-import UseVisibilityEffect from "../ScrollAwareComponents/UseVisibilityEffect";
+import educationalProjectsData from "../../../datas/educationalProjectsData";
 
 import {
-  Title,
+  ProjectsContainer,
   Subtitle,
   ProjectsWrapper,
-  PlayIconStyled,
-  ProjectsContainer,
   ProjectCard,
   ProjectImageWrapper,
   ProjectImage,
@@ -25,61 +18,44 @@ import {
   IconWrapper,
   LogoImage,
   StyledExternalIcon,
-} from "./ProjectsSection.styled";
-import GitLogo from "../../assets/logos/GitLogo2.png";
-import PlayIcon from "../../assets/Icons/play.svg";
-import VideoModal from "../Video/VideoModal/VideoModal";
+} from "../ProfessionalProjectsSection/ProfessionalProjectsSection.styled";
 
-const ProjectsSection = () => {
-  const containerRef = UseVisibilityEffect();
-  const { openVideoModal } = useContext(PortfolioContext);
+import GitLogo from "../../../assets/logos/GitLogo2.png";
+
+import UseVisibilityEffect from "../../ScrollAwareComponents/UseVisibilityEffect";
+
+const EducationalProjectsSection = () => {
   const { t } = useTranslation();
+  const containerRef = UseVisibilityEffect();
 
   return (
-    <div id="mes-realisations">
-      <VideoModal />
+    <div id="mes-projets-formation">
       <ProjectsContainer ref={containerRef}>
-        <Title>{t("homepage.projects_title")}</Title>
-
-        <Subtitle>{t("homepage.projects_subtitle")}</Subtitle>
+        <Subtitle>{t("homepage.training_projects_subtitle")}</Subtitle>
 
         <ProjectsWrapper>
-          {projectsData.map((project, index) => (
+          {educationalProjectsData.map((project, index) => (
             <ProjectCard key={index} delayIndex={index}>
               <ProjectImageWrapper>
-                {index !== 0 && (
-                  <Link
-                    to={project.externalLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <ProjectImage src={project.images[0]} alt={project.title} />
-                  </Link>
-                )}
-
-                {index === 0 && (
+                <Link
+                  to={project.externalLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <ProjectImage src={project.images[0]} alt={project.title} />
-                )}
-
-                {index === 0 && (
-                  <PlayIconStyled
-                    src={PlayIcon}
-                    alt="Play Video"
-                    onClick={openVideoModal}
-                  />
-                )}
+                </Link>
               </ProjectImageWrapper>
 
               <ProjectInfoWrapper>
                 <ProjectTitle>
-                  {t(`homepage.project_${index}_title`)}
+                  {t(`homepage.training_project_${index}_title`)}
                 </ProjectTitle>
                 <ProjectTechnologies>
                   {project.technologies.join(", ")}
                 </ProjectTechnologies>
 
                 <ProjectDescription>
-                  {t(`homepage.project_${index}_description`)}
+                  {t(`homepage.training_project_${index}_description`)}
                 </ProjectDescription>
                 <FlexContainer>
                   <StyledLink to={`/project-detail/${project.id}`}>
@@ -117,4 +93,4 @@ const ProjectsSection = () => {
   );
 };
 
-export default ProjectsSection;
+export default EducationalProjectsSection;
