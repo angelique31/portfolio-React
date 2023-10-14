@@ -20,6 +20,26 @@ const educationalProjectsData = [
     externalLink: "https://angelique31.github.io/P11--kasa/",
     githubLink: "https://github.com/angelique31/P11--kasa",
   },
+  {
+    id: "argentBank",
+    title: "Plateforme de gestion bancaire",
+    description:
+      "Projet visant à développer une application web pour Argent Bank.",
+    images: ["/assets/argent_bank/argent_bank_desktop.png"],
+    technologies: ["STYLED COMPONENT", "REACT", "MONGO DB"],
+    externalLink: "https://angelique31.github.io/P13--Argent-bank/",
+    githubLink: "https://github.com/angelique31/P13--Argent-bank",
+  },
+  {
+    id: "wealthHealth",
+    title: "Gestion des dossiers des employés de Wealth-Health",
+    description:
+      "Projet visant à moderniser l'application en la basculant sur une architecture React",
+    images: ["/assets/wealth_health/wealth_health_desktop.png"],
+    technologies: ["STYLED COMPONENT", "REACT", "VITEST", "VITE"],
+    externalLink: "https://wealth-health-tau.vercel.app/",
+    githubLink: "https://github.com/angelique31/P14---Wealth-Health",
+  },
 ];
 
 export default educationalProjectsData;

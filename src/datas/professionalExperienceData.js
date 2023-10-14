@@ -1,4 +1,3 @@
-// professionalExperienceData.js
 const professionalExperienceData = [
   {
     position: "Missions d'intérim",

@@ -63,8 +63,12 @@
     "training_projects_subtitle": "Projects completed as part of my web development training, highlighting the technical skills I've acquired.",
     "training_project_0_title": "Accessible Website for a Photographers' Platform",
     "training_project_0_description": "Development of an accessible web platform, to enable photographers to showcase their work.",
-    "training_project_1_title": "Platform for peer-to-peer apartment rentals",
-    "training_project_1_description": "Project aimed at rebuilding the Kasa apartment rental platform using React and React Router."
+    "training_project_1_title": "Peer-to-peer apartment rentals",
+    "training_project_1_description": "Project aimed at rebuilding the Kasa apartment rental platform using React and React Router.",
+    "training_project_2_title": "Banking Management Platform",
+    "training_project_2_description": "Project aimed at developing a web application for Argent Bank.",
+    "training_project_3_title": "Employee Records Management",
+    "training_project_3_description": "Wealth-Health is a major financial corporation that uses an internal web application to manage employee records."
   },
 
   "projectDetails": {
@@ -182,6 +186,67 @@
         "- ESLint: Used to ensure code robustness.",
         "- Lighthouse: Measuring performance and accessibility.",
         "- GitHub: Source code management and collaboration."
+      ]
+    },
+    "argentBank": {
+      "id": "argentBank",
+      "title": "Banking Management Platform",
+
+      "description": {
+        "intro": "Project aimed at developing a web application for Argent Bank. The platform offers authentication features, account and profile management, and a potential extension for transaction management. For demonstration purposes, use the following credentials: \n\nTony Stark\nEmail: tony@stark.com\nPassword: password123\n\nSteve Rogers\nEmail: steve@rogers.com\nPassword: password456",
+        "objective": "The main goal is to provide Argent Bank with a robust solution to break into the online banking sector. The project is divided into two phases, starting with user authentication and ending with transaction management.",
+        "challenge": "Challenges of this project include the integration of JWT authentication, state management with Redux, creating a responsive interface with React, and securely storing data in MongoDB.",
+        "responsive": "The site is designed to be fully responsive, ensuring a smooth user experience on all devices.",
+        "collaboration": [
+          "Working as a team, and notably adopting methodologies like Agile and Scrum, several improvements could have been possible for this project.",
+          "1. Regular code reviews would have ensured better quality through exchanges and knowledge sharing.",
+          "2. Collaboration during UI/UX design phases would have brought different perspectives, contributing to a richer and more accomplished design.",
+          "3. By collaborating with a team, we could have solicited a wider range of users to test the project, thus providing more varied feedback.",
+          "4. Task sharing would have accelerated development, each member bringing their specific skills."
+        ],
+        "optimizationAndAccessibility": "The application has been optimized for fast performance and high accessibility. Tools such as Lighthouse will be used to measure and improve these aspects."
+      },
+
+      "toolsAndTech": [
+        "- Creat React app tool: Creating dynamic user interfaces.",
+        "- React Router: Managing routing in the application.",
+        "- Redux: Manages the global state of the application.",
+        "- Styled components: JavaScript library for CSS management.",
+        "- ESLint: Used to ensure code robustness.",
+        "- Lighthouse: Measures performance and accessibility.",
+        "- MongoDB: Database used to store user information.",
+        "- GitHub: Source code management and collaboration."
+      ]
+    },
+    "wealthHealth": {
+      "id": "wealthHealth",
+      "title": "Employee Records Management of Wealth-Health",
+
+      "description": {
+        "intro": "Wealth-Health is a major financial corporation that uses an internal web application to manage employee records. The application is dated and employs jQuery on the front-end, leading to significant bugs.",
+        "objective": "Modernize the application by transitioning it to a React-based architecture and replace jQuery plugins with React components. The goal is to enhance performance and reduce user complaints.",
+        "challenge": "During Phase 1, migrating to React posed challenges due to architectural differences. I utilized the Vite tool to ease this transition and tested each component post-rewrite. For Phase 2, replacing jQuery plugins with React components presented compatibility challenges. However, a thorough review of the plugins and targeted rewriting enabled a smooth transition.",
+        "responsive": "The website is designed to be fully responsive, ensuring a smooth user experience across all devices.",
+        "collaboration": [
+          "Working as a team, and especially adopting methodologies like Agile and Scrum, several improvements would have been possible for this project.",
+          "1. Regular code reviews would have ensured higher quality through discussions and knowledge sharing.",
+          "2. Collaborating during the UI/UX design phases would have brought in varied perspectives, leading to a richer and more finalized design.",
+          "3. By collaborating with a team, we could have tapped into a broader user base for project testing, thus getting more diverse feedback.",
+          "4. Task sharing would have sped up the development, each member bringing their specific skills."
+        ],
+        "optimizationAndAccessibility": "Conduct performance tests using Lighthouse by comparing the old and the new application."
+      },
+
+      "toolsAndTech": [
+        "- Vite Tool: Creation of dynamic user interfaces.",
+        "- React Router: Managing application routing.",
+        "- React Context: Manages the global state of the application.",
+        "- Styled components: Javascript library for CSS management",
+        "- ESLint: Used to ensure code robustness.",
+        "- Lighthouse: Measures performance and accessibility.",
+        "- GitHub: Manages source code and collaboration.",
+        "- Vercel: Deployment platform.",
+        "- NPM: For publishing the library"
       ]
     }
   },

@@ -64,8 +64,12 @@
     "training_projects_subtitle": "Projets réalisés dans le cadre de ma formation en développement web, mettant en avant les compétences techniques que j'ai acquises.",
     "training_project_0_title": "Site accessible pour une plateforme de photographes",
     "training_project_0_description": "Développement d'une plateforme web accessible, pour permettre aux photographes de présenter leurs travaux.",
-    "training_project_1_title": "Plateforme permettant le location d'appartements entre particuliers",
-    "training_project_1_description": "Projet visant à reconstruire la plateforme de location d'appartements de Kasa avec React et React Router."
+    "training_project_1_title": "Location d'appartements entre particuliers",
+    "training_project_1_description": "Projet visant à reconstruire la plateforme de location d'appartements de Kasa avec React et React Router.",
+    "training_project_2_title": "Plateforme de gestion bancaire",
+    "training_project_2_description": "Projet visant à développer une application web pour Argent Bank.",
+    "training_project_3_title": "Gestion des dossiers des employés ",
+    "training_project_3_description": "Wealth-Health est une grande société financière qu'il a fallu moderniser en la basculant sur une architecture React"
   },
 
   "projectDetails": {
@@ -155,7 +159,7 @@
 
     "kasa": {
       "id": "kasa",
-      "title": "Plateforme permettant le location d'appartements entre particuliers",
+      "title": "Location d'appartements entre particuliers",
 
       "description": {
         "intro": "Projet visant à reconstruire la plateforme de location d'appartements de Kasa avec React et React Router.",
@@ -179,6 +183,67 @@
         "- ESLint: Employé pour garantir la robustesse du code.",
         "- Lighthouse: Mesure des performances et de l'accessibilité.",
         "- GitHub: Gestion du code source et collaboration."
+      ]
+    },
+    "argentBank": {
+      "id": "argentBank",
+      "title": "Plateforme de gestion bancaire",
+
+      "description": {
+        "intro": "Projet visant à développer une application web pour Argent Bank. La plateforme offre des fonctionnalités d'authentification, de gestion de comptes et de profil, et une éventuelle extension pour la gestion des transactions. Pour des fins de démonstration, utilisez les identifiants suivants : \n\nTony Stark: \nEmail: tony@stark.com\nPassword: password123\n\n ou Steve Rogers: \nEmail: steve@rogers.com\nPassword: password456",
+        "objective": "L'objectif principal est de fournir à Argent Bank une solution robuste pour percer dans le secteur bancaire en ligne. Le projet est divisé en deux phases, commençant par l'authentification des utilisateurs et se terminant par la gestion des transactions.",
+        "challenge": "Les défis de ce projet incluent l'intégration d'authentification JWT, la gestion d'états avec Redux, la création d'une interface réactive avec React, et le stockage sécurisé des données dans MongoDB.",
+        "responsive": "Le site est conçu pour être pleinement réactif, assurant une expérience utilisateur fluide sur tous les appareils.",
+        "collaboration": [
+          "En travaillant en équipe, et notamment en adoptant des méthodologies comme Agile et Scrum, plusieurs améliorations auraient été possibles pour ce projet.",
+          "1. Des revues de code régulières auraient assuré une meilleure qualité grâce aux échanges et au partage de connaissances.",
+          "2. La collaboration lors des phases de conception UI/UX aurait apporté différentes perspectives, contribuant à un design plus riche et abouti.",
+          "3. En collaborant avec une équipe, nous aurions pu solliciter un éventail plus large d'utilisateurs pour tester le projet, offrant ainsi des retours plus variés.",
+          "4. Le partage des tâches aurait accéléré le développement, chaque membre apportant ses compétences spécifiques."
+        ],
+        "optimizationAndAccessibility": "L'application a été optimisée pour des performances rapides et une grande accessibilité. Des outils tels que Lighthouse seront utilisés pour mesurer et améliorer ces aspects."
+      },
+
+      "toolsAndTech": [
+        "- Outil Creat React app: Création d'interfaces utilisateur dynamiques.",
+        "- React Router: Gestion du routage dans l'application.",
+        "- Redux: Gère l'état global de l'application.",
+        "- Styled components = bibliothèque javascript pour la gestion du CSS",
+        "- ESLint: Employé pour garantir la robustesse du code.",
+        "- Lighthouse: Mesure des performances et de l'accessibilité.",
+        "- MongoDB: Base de données utilisée pour stocker les informations des utilisateurs.",
+        "- GitHub: Gestion du code source et collaboration."
+      ]
+    },
+    "wealthHealth": {
+      "id": "wealthHealth",
+      "title": "Gestion des dossiers des employés de Wealth-Health",
+
+      "description": {
+        "intro": "Wealth-Health est une grande société financière qui utilise une application web interne pour gérer les dossiers des employés. L'application est ancienne et utilise jQuery côté front-end, entraînant des bugs considérables",
+        "objective": "Moderniser l'application en la basculant sur une architecture React et remplacer les plugins jQuery par des composants React. Le but est d'améliorer les performances et de réduire les plaintes des utilisateurs.",
+        "challenge": "Durant la Phase 1, migrer vers React a été un défi à cause des différences d'architecture. J'ai utilisé l'outil Vite pour faciliter cette transition et j'ai testé chaque composant après sa réécriture. Pour la Phase 2, remplacer les plugins jQuery par des composants React a présenté des défis de compatibilité. Cependant, une analyse minutieuse des plugins et une réécriture ciblée ont permis une transition en douceur.",
+        "responsive": "Le site est conçu pour être pleinement réactif, assurant une expérience utilisateur fluide sur tous les appareils.",
+        "collaboration": [
+          "En travaillant en équipe, et notamment en adoptant des méthodologies comme Agile et Scrum, plusieurs améliorations auraient été possibles pour ce projet.",
+          "1. Des revues de code régulières auraient assuré une meilleure qualité grâce aux échanges et au partage de connaissances.",
+          "2. La collaboration lors des phases de conception UI/UX aurait apporté différentes perspectives, contribuant à un design plus riche et abouti.",
+          "3. En collaborant avec une équipe, nous aurions pu solliciter un éventail plus large d'utilisateurs pour tester le projet, offrant ainsi des retours plus variés.",
+          "4. Le partage des tâches aurait accéléré le développement, chaque membre apportant ses compétences spécifiques."
+        ],
+        "optimizationAndAccessibility": "Effectuer des tests de performance Lighthouse en comparant l'ancienne et la nouvelle application."
+      },
+
+      "toolsAndTech": [
+        "- Outil Vite: Création d'interfaces utilisateur dynamiques.",
+        "- React Router: Gestion du routage dans l'application.",
+        "- React Context : Gère l'état global de l'application.",
+        "- Styled components = bibliothèque javascript pour la gestion du CSS",
+        "- ESLint: Employé pour garantir la robustesse du code.",
+        "- Lighthouse: Mesure des performances et de l'accessibilité.",
+        "- GitHub: Gestion du code source et collaboration.",
+        "- Vercel: Plateforme de déploiement.",
+        "- NPM: Pour publier la librairie"
       ]
     }
   },

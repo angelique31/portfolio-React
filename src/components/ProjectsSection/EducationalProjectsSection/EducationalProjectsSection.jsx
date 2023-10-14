@@ -4,6 +4,7 @@ import educationalProjectsData from "../../../datas/educationalProjectsData";
 
 import {
   ProjectsContainer,
+  // Title,
   Subtitle,
   ProjectsWrapper,
   ProjectCard,
@@ -31,6 +32,7 @@ const EducationalProjectsSection = () => {
   return (
     <div id="mes-projets-formation">
       <ProjectsContainer ref={containerRef}>
+        {/* <Title>{t("homepage.projects_title")}</Title> */}
         <Subtitle>{t("homepage.training_projects_subtitle")}</Subtitle>
 
         <ProjectsWrapper>
