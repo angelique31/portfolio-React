@@ -27,6 +27,7 @@ import {
   ProjectImage,
   AccessibilityImage,
   MobileImage,
+  OrangeText,
 } from "./ProjectsDetailPage.styled";
 import Footer from "../../components/Footer/Footer";
 
@@ -143,8 +144,10 @@ const ProjectsDetailPage = () => {
             <UnorderedList>
               {t(`projects.${projectId}.toolsAndTech`, {
                 returnObjects: true,
-              }).map((point, index) => (
-                <ListItem key={`collab-${index}`}>{point}</ListItem>
+              }).map((tech, index) => (
+                <ListItem key={`tech-${index}`}>
+                  <OrangeText>{tech.tool}</OrangeText>: {tech.description}
+                </ListItem>
               ))}
             </UnorderedList>
           </TechnologyContainer>

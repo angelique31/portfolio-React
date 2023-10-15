@@ -5,7 +5,7 @@ const projectsData = [
     description:
       "Projet personnel développé en React, ce site présente une variété de recettes de cuisine.",
     images: ["/assets/delices_culinaires/accueil_desktop.png"],
-    technologies: ["HTML", "Styled-Components", "React"],
+    technologies: ["HTML", "Styled Components", "React"],
     externalLink: "https://interface-phi.vercel.app/",
     githubLink: "https://github.com/angelique31/cooking-recipes-site",
   },

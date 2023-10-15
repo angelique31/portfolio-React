@@ -101,12 +101,30 @@
       },
 
       "toolsAndTech": [
-        "- React & React-Router-Dom: Creation and management of the user interface, including navigation.",
-        "- Redux & React-Redux: Centralized management of the application's state.",
-        "- Styled-Components: CSS-in-JS styling for custom design.",
-        "- Vite: Development tool for fast builds and efficient development.",
-        "- Figma: Design and prototyping of the UI/UX.",
-        "- Vercel: Deployment and hosting of the application."
+        {
+          "tool": "React & React-Router-Dom",
+          "description": "Creation and management of the user interface, including navigation."
+        },
+        {
+          "tool": "Redux & React-Redux",
+          "description": "Centralized management of the application's state."
+        },
+        {
+          "tool": "Styled-Components",
+          "description": "CSS-in-JS styling for custom design."
+        },
+        {
+          "tool": "Vite",
+          "description": "Development tool for fast builds and efficient development."
+        },
+        {
+          "tool": "Figma",
+          "description": "Design and prototyping of the UI/UX."
+        },
+        {
+          "tool": "Vercel",
+          "description": "Deployment and hosting of the application."
+        }
       ]
     },
 
@@ -124,8 +142,14 @@
         ]
       },
       "toolsAndTech": [
-        "- HTML: Basic site structure and setting up main elements.",
-        "- SCSS: Customization, design, and responsive layout of the site."
+        {
+          "tool": "HTML",
+          "description": "Basic site structure and setting up main elements."
+        },
+        {
+          "tool": "SCSS",
+          "description": "Customization, design, and responsive layout of the site."
+        }
       ]
     },
     "fisheye": {
@@ -146,14 +170,38 @@
         "optimizationAndAccessibility": "In terms of performance, I used Webpack to reduce loading times and offer a more responsive user experience. In parallel, I adapted color choices to be in compliance with WCAG standards, thus strengthening the site's accessibility."
       },
       "toolsAndTech": [
-        "- CSS: Layout and styling of the user interface.",
-        "- Webpack: Performance optimization and reduction of loading times.",
-        "- ESLint: Ensuring JavaScript code quality through static analysis.",
-        "- JavaScript: Programming language used to create client-side dynamic interactions.",
-        "- WCAG: Compliance with accessibility guidelines to make the site usable by the widest audience.",
-        "- Wave: Accessibility evaluation tool based on WCAG standards.",
-        "- Figma: Design and prototyping of the UI/UX.",
-        "- GitHub Pages: Deployment and hosting of the application."
+        {
+          "tool": "CSS",
+          "description": "Layout and styling of the user interface."
+        },
+        {
+          "tool": "Webpack",
+          "description": "Performance optimization and reduction of loading times."
+        },
+        {
+          "tool": "ESLint",
+          "description": "Ensuring JavaScript code quality through static analysis."
+        },
+        {
+          "tool": "JavaScript",
+          "description": "Programming language used to create client-side dynamic interactions."
+        },
+        {
+          "tool": "WCAG",
+          "description": "Compliance with accessibility guidelines to make the site usable by the widest audience."
+        },
+        {
+          "tool": "Wave",
+          "description": "Accessibility evaluation tool based on WCAG standards."
+        },
+        {
+          "tool": "Figma",
+          "description": "Design and prototyping of the UI/UX."
+        },
+        {
+          "tool": "GitHub Pages",
+          "description": "Deployment and hosting of the application."
+        }
       ]
     },
     "kasa": {
@@ -180,12 +228,30 @@
         "/assets/kasa/performance.png"
       ],
       "toolsAndTech": [
-        "- Create React App tool: Creating dynamic user interfaces.",
-        "- React Router: Managing routing within the application.",
-        "- Sass: Layout and styling.",
-        "- ESLint: Used to ensure code robustness.",
-        "- Lighthouse: Measuring performance and accessibility.",
-        "- GitHub: Source code management and collaboration."
+        {
+          "tool": "Create React App tool",
+          "description": "Creating dynamic user interfaces."
+        },
+        {
+          "tool": "React Router",
+          "description": "Managing routing within the application."
+        },
+        {
+          "tool": "Sass",
+          "description": "Layout and styling."
+        },
+        {
+          "tool": "ESLint",
+          "description": "Used to ensure code robustness."
+        },
+        {
+          "tool": "Lighthouse",
+          "description": "Measuring performance and accessibility."
+        },
+        {
+          "tool": "GitHub",
+          "description": "Source code management and collaboration."
+        }
       ]
     },
     "argentBank": {
@@ -206,16 +272,39 @@
         ],
         "optimizationAndAccessibility": "The application has been optimized for fast performance and high accessibility. Tools such as Lighthouse will be used to measure and improve these aspects."
       },
-
       "toolsAndTech": [
-        "- Creat React app tool: Creating dynamic user interfaces.",
-        "- React Router: Managing routing in the application.",
-        "- Redux: Manages the global state of the application.",
-        "- Styled components: JavaScript library for CSS management.",
-        "- ESLint: Used to ensure code robustness.",
-        "- Lighthouse: Measures performance and accessibility.",
-        "- MongoDB: Database used to store user information.",
-        "- GitHub: Source code management and collaboration."
+        {
+          "tool": "Creat React app tool",
+          "description": "Creating dynamic user interfaces."
+        },
+        {
+          "tool": "React Router",
+          "description": "Managing routing in the application."
+        },
+        {
+          "tool": "Redux",
+          "description": "Manages the global state of the application."
+        },
+        {
+          "tool": "Styled components",
+          "description": "JavaScript library for CSS management."
+        },
+        {
+          "tool": "ESLint",
+          "description": "Used to ensure code robustness."
+        },
+        {
+          "tool": "Lighthouse",
+          "description": "Measures performance and accessibility."
+        },
+        {
+          "tool": "MongoDB",
+          "description": "Database used to store user information."
+        },
+        {
+          "tool": "GitHub",
+          "description": "Source code management and collaboration."
+        }
       ]
     },
     "wealthHealth": {
@@ -238,15 +327,42 @@
       },
 
       "toolsAndTech": [
-        "- Vite Tool: Creation of dynamic user interfaces.",
-        "- React Router: Managing application routing.",
-        "- React Context: Manages the global state of the application.",
-        "- Styled components: Javascript library for CSS management",
-        "- ESLint: Used to ensure code robustness.",
-        "- Lighthouse: Measures performance and accessibility.",
-        "- GitHub: Manages source code and collaboration.",
-        "- Vercel: Deployment platform.",
-        "- NPM: For publishing the library"
+        {
+          "tool": "Vite Tool",
+          "description": "Creation of dynamic user interfaces."
+        },
+        {
+          "tool": "React Router",
+          "description": "Managing application routing."
+        },
+        {
+          "tool": "React Context",
+          "description": "Manages the global state of the application."
+        },
+        {
+          "tool": "Styled components",
+          "description": "Javascript library for CSS management."
+        },
+        {
+          "tool": "ESLint",
+          "description": "Used to ensure code robustness."
+        },
+        {
+          "tool": "Lighthouse",
+          "description": "Measures performance and accessibility."
+        },
+        {
+          "tool": "GitHub",
+          "description": "Manages source code and collaboration."
+        },
+        {
+          "tool": "Vercel",
+          "description": "Deployment platform."
+        },
+        {
+          "tool": "NPM",
+          "description": "For publishing the library."
+        }
       ]
     }
   },
@@ -289,40 +405,117 @@
   "hardSkillsData": {
     "programmingLanguages": {
       "category": "Programming Languages",
-      "skills": ["JavaScript", "HTML", "CSS"]
-    },
-    "librariesFrameworks": {
-      "category": "Libraries / Frameworks",
-      "skills": ["React.js", "Redux", "Context API"]
-    },
-    "preprocessors": {
-      "category": "Preprocessors & CSS-in-JS",
-      "skills": ["Styled Components", "Sass"]
-    },
-    "toolsEnvironments": {
-      "category": "Tools and Environments",
       "skills": [
-        "Git & GitHub",
-        "Webpack",
-        "Babel",
-        "npm",
-        "Visual Studio Code"
+        {
+          "name": "JavaScript",
+          "url": "https://developer.mozilla.org/fr/docs/Web/JavaScript"
+        },
+        {
+          "name": "HTML",
+          "url": "https://developer.mozilla.org/fr/docs/Web/HTML"
+        },
+        {
+          "name": "CSS",
+          "url": "https://developer.mozilla.org/fr/docs/Web/CSS"
+        }
       ]
     },
-    "testingTools": {
-      "category": "Testing Tools",
+    "librariesFrameworks": {
+      "category": "Bibliothèques / Frameworks",
       "skills": [
-        "Jest (unit and integration tests)",
-        "Vitest (for testing applications with Vite)"
+        {
+          "name": "React.js",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "name": "Redux",
+          "url": "https://redux.js.org/"
+        },
+        {
+          "name": "Context API",
+          "url": "https://react.dev/"
+        }
+      ]
+    },
+
+    "preprocessors": {
+      "category": "Preprocessors & CSS-in-JS",
+      "skills": [
+        {
+          "name": "Styled Components",
+          "url": "https://styled-components.com/"
+        },
+        {
+          "name": "Sass",
+          "url": "https://sass-lang.com/"
+        }
+      ]
+    },
+    "toolsEnvironments": {
+      "category": "Outils et Environnements",
+      "skills": [
+        {
+          "name": "Git & GitHub",
+          "url": "https://github.com/"
+        },
+        {
+          "name": "Webpack",
+          "url": "https://webpack.js.org/"
+        },
+        {
+          "name": "Babel",
+          "url": "https://babeljs.io/"
+        },
+        {
+          "name": "npm",
+          "url": "https://www.npmjs.com/"
+        },
+        {
+          "name": "Visual Studio Code",
+          "url": "https://code.visualstudio.com/"
+        }
+      ]
+    },
+
+    "testingTools": {
+      "category": "Outils de test",
+      "skills": [
+        {
+          "name": "Jest",
+          "url": "https://jestjs.io/"
+        },
+        {
+          "name": "Vitest",
+          "url": "https://vitest.dev/guide/"
+        }
       ]
     },
     "otherTechnicalSkills": {
-      "category": "Other Technical Skills",
-      "skills": ["Responsive Web Design", "Web Accessibility"]
+      "category": "Autres Compétences Techniques",
+      "skills": [
+        {
+          "name": "Responsive Web Design",
+          "url": "https://developer.mozilla.org/fr/docs/Apprendre/CSS/CSS_layout/Responsive_Design"
+        },
+        {
+          "name": "Web Accessibility",
+          "url": "https://www.w3.org/WAI/fundamentals/accessibility-intro/"
+        }
+      ]
     },
+
     "methodologies": {
-      "category": "Methodologies",
-      "skills": ["Agile & Scrum", "Kanban"]
+      "category": "Méthodologies",
+      "skills": [
+        {
+          "name": "Agile & Scrum",
+          "url": "https://www.scrumguides.org/scrum-guide.html"
+        },
+        {
+          "name": "Kanban",
+          "url": "https://kanbanguides.org/francais/"
+        }
+      ]
     }
   },
   "professionalExperienceData": [

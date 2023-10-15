@@ -4,6 +4,7 @@ import {
   CategoryContainer,
   CategoryTitle,
   Skill,
+  SkillLink,
 } from "./HardSkillsSection.styled";
 
 import VisibilityAwareContainer from "../../../pages/ProjectsDetailPage/VisibilityAwareContainer";
@@ -23,7 +24,15 @@ function HardSkillsSection() {
             <CategoryContainer key={key}>
               <CategoryTitle>{category}</CategoryTitle>
               {skills.map((skill, index) => (
-                <Skill key={index}>{skill}</Skill>
+                <Skill key={index}>
+                  <SkillLink
+                    href={skill.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {skill.name}
+                  </SkillLink>
+                </Skill>
               ))}
             </CategoryContainer>
           );

@@ -5,7 +5,7 @@ const educationalProjectsData = [
     description:
       "Développement d'une plateforme web accessible, conforme aux normes WCAG, pour permettre aux photographes indépendants de présenter leurs travaux.",
     images: ["/assets/fishEye/fishEye.png"],
-    technologies: ["HTML", "CSS", "JAVASCRIPT", "WEBPACK"],
+    technologies: ["HTML", "CSS", "Javascript", "Webpack", "Github"],
     externalLink: "https://angelique31.github.io/P6--Fisheye/",
     githubLink: "https://github.com/angelique31/P6--Fisheye",
   },
@@ -16,7 +16,7 @@ const educationalProjectsData = [
     description:
       "Projet visant à reconstruire la plateforme de location d'appartements de Kasa avec React et React Router.",
     images: ["/assets/kasa/kasa_desktop.png"],
-    technologies: ["SCSS", "REACT", "REACT ROUTER"],
+    technologies: ["SCSS", "React", "React Router", "Github"],
     externalLink: "https://angelique31.github.io/P11--kasa/",
     githubLink: "https://github.com/angelique31/P11--kasa",
   },
@@ -26,7 +26,7 @@ const educationalProjectsData = [
     description:
       "Projet visant à développer une application web pour Argent Bank.",
     images: ["/assets/argent_bank/argent_bank_desktop.png"],
-    technologies: ["STYLED COMPONENT", "REACT", "MONGO DB"],
+    technologies: ["Styled Components", "React", "Mongo DB", "Github"],
     externalLink: "https://angelique31.github.io/P13--Argent-bank/",
     githubLink: "https://github.com/angelique31/P13--Argent-bank",
   },
@@ -36,7 +36,7 @@ const educationalProjectsData = [
     description:
       "Projet visant à moderniser l'application en la basculant sur une architecture React",
     images: ["/assets/wealth_health/wealth_health_desktop.png"],
-    technologies: ["STYLED COMPONENT", "REACT", "VITEST", "VITE"],
+    technologies: ["Styled Components", "React", "Vitest", "Vite", "Github"],
     externalLink: "https://wealth-health-tau.vercel.app/",
     githubLink: "https://github.com/angelique31/P14---Wealth-Health",
   },

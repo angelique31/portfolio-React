@@ -17,17 +17,27 @@ export const SectionTitle = styled.h2`
   color: white;
 `;
 
+export const OrangeText = styled.span`
+  font-weight: 600;
+  font-style: italic;
+`;
+
 export const SharedContainerStyles = `
   border: 1px solid rgba(255, 197, 118, 0.4);
   border-radius: 7px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   background-color: rgb(49, 53, 82);
+  
   &:hover {
     border-color: #ffc576;
-
+   
     ${SectionTitle} {
       color: #ffc576;
+    }
+    ${OrangeText} {
+      color: #ffc576;
+      
     }
   }
 `;

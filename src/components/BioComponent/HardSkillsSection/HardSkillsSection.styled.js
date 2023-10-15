@@ -51,9 +51,13 @@ export const Skill = styled.span`
   border-radius: 20px;
   border: 2px solid rgba(255, 197, 118, 0.4);
   transition: transform 0.3s ease;
-
+  cursor: pointer;
   &:hover {
     transform: translateY(-3px); // Un petit effet de soulèvement au survol
     border-color: rgb(255, 197, 118);
   }
+`;
+
+export const SkillLink = styled.a`
+  color: rgb(209, 213, 219);
 `;
