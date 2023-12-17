@@ -92,10 +92,10 @@ export const ProjectCard = styled.div.withConfig({
   height: 462px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 5px;
   opacity: 0;
   .visible & {
-    animation: ${fadeIn} 1.5s forwards 0.5s;
+    animation: ${fadeIn} 1s forwards 0.5s;
     animation-delay: ${(props) => 0.5 + props.delayIndex * 0.4}s;
   }
   @media (max-width: 446px) {
@@ -108,15 +108,15 @@ export const ProjectImageWrapper = styled.div`
   width: 100%;
   max-height: 250px;
   overflow: hidden;
-  // border-radius: 12px;
-  padding: 5px;
+
+  padding: 3px;
 `;
 
 export const ProjectImage = styled.img`
   width: 100%;
   height: auto;
   transition: transform 0.3s;
-
+  border-radius: 5px;
   &:hover {
     transform: scale(1.1);
   }
@@ -125,7 +125,7 @@ export const ProjectImage = styled.img`
 export const ProjectInfoWrapper = styled.div`
   background: #313552;
   padding: 1em;
-  margin-top: 10px;
+  margin-top: 3px;
 `;
 
 export const ProjectTechnologies = styled.div`

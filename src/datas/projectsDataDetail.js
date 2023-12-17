@@ -25,7 +25,7 @@ const projectsDataDetail = [
     additionalImages: [
       "/assets/studyNetifly/studyNetifly_desktop.png",
       "/assets/studyNetifly/studyNetifly_mobile.png",
-      "/assets/delices_culinaires/rapportLighthouse.png",
+      "/assets/studyNetifly/lighthouse.png",
     ],
   },
 

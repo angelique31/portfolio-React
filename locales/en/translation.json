@@ -158,7 +158,7 @@
       "id": "studyNetifly",
       "title": "Replication of the Netflix Site",
       "description": {
-        "intro": "This project involved creating a replica of the Netflix site, using NextJS.",
+        "intro": "Currently developing a Netflix-like site using NextJS, with updates and new features to be added soon.",
         "objective": "The main objective was to develop advanced skills in creating modern web applications, particularly in managing global state, authentication, and database communication.",
         "challenge": "The main challenge was managing user authentication and data, while ensuring a smooth and responsive user experience, similar to that of Netflix.",
         "responsive": "The site is fully responsive, providing an optimal user experience on all devices, from mobiles to desktop computers.",

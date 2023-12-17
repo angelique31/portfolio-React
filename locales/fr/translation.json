@@ -158,7 +158,7 @@
       "id": "studyNetifly",
       "title": "Reproduction du site de Netflix",
       "description": {
-        "intro": "Ce projet consistait à créer une reproduction du site de Netflix, en utilisant NextJS.",
+        "intro": "Développement en cours d'une version similaire du site Netflix avec NextJS, où des mises à jour et de nouvelles fonctionnalités seront ajoutées prochainement.",
         "objective": "L'objectif principal était de développer des compétences avancées dans la création d'applications web modernes, notamment la gestion de l'état global, l'authentification, et la communication avec les bases de données.",
         "challenge": "Le défi principal a été de gérer l'authentification et les données utilisateur, tout en assurant une expérience utilisateur fluide et réactive, similaire à celle de Netflix.",
         "responsive": "Le site est entièrement responsive, offrant une expérience utilisateur optimale sur tous les appareils, des mobiles aux ordinateurs de bureau.",
