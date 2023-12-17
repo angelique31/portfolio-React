@@ -58,6 +58,8 @@
     "project_0_description": "Personal project developed in React, this website presents a variety of cooking recipes.",
     "project_1_title": "Météo France Home Page",
     "project_1_description": "Clone of the Météo France homepage made solely with HTML and CSS.",
+    "project_2_title": "Replication of the Netflix Site",
+    "project_2_description": "A personal project developed with NextJS, this site is a replication of the Netflix site.",
     "projects_subtitle": "Personal achievements carried out independently of my academic journey, reflecting my passion and commitment to development.",
 
     "training_projects_subtitle": "Projects completed as part of my web development training, highlighting the technical skills I've acquired.",
@@ -149,6 +151,62 @@
         {
           "tool": "SCSS",
           "description": "Customization, design, and responsive layout of the site."
+        }
+      ]
+    },
+    "studyNetifly": {
+      "id": "studyNetifly",
+      "title": "Replication of the Netflix Site",
+      "description": {
+        "intro": "This project involved creating a replica of the Netflix site, using NextJS.",
+        "objective": "The main objective was to develop advanced skills in creating modern web applications, particularly in managing global state, authentication, and database communication.",
+        "challenge": "The main challenge was managing user authentication and data, while ensuring a smooth and responsive user experience, similar to that of Netflix.",
+        "responsive": "The site is fully responsive, providing an optimal user experience on all devices, from mobiles to desktop computers.",
+        "optimizationAndAccessibility": "Special attention was given to performance optimization and accessibility, using best practices in web development.",
+        "collaboration": [
+          "Working as a team on this Netflix clone, and particularly adopting methodologies like Agile and Scrum, would have allowed for several improvements to this project.",
+          "1. Regular code reviews would have ensured better quality and a more robust architecture through exchange and knowledge sharing, especially useful for advanced technologies like Redux and Next.js.",
+          "2. Collaborating with a team, we could have sought a wider range of users to test the project, thus providing more varied feedback and improving accessibility and responsiveness.",
+          "3. Task sharing, particularly in areas like data management with MongoDB and secure communication with tools like JWT, would have sped up development, with each member bringing their specific skills.",
+          "4. Implementing collaborative development practices, such as continuous integration and frequent deployments, would have fostered a more efficient workflow and better management of the site's features."
+        ]
+      },
+      "toolsAndTech": [
+        {
+          "tool": "Next.js",
+          "description": "Framework used for building and server-side rendering of the site."
+        },
+        {
+          "tool": "Styled Components",
+          "description": "Used for customization and design, facilitating the implementation of themes and responsive styles."
+        },
+        {
+          "tool": "Redux",
+          "description": "Global state management of the application, facilitating communication between components."
+        },
+        {
+          "tool": "MongoDB & Mongoose",
+          "description": "Database for storing user information and integration with Mongoose for data modeling."
+        },
+        {
+          "tool": "API REST TMDB",
+          "description": "Used to retrieve information on movies and series to simulate the Netflix experience."
+        },
+        {
+          "tool": "JWT (JSON Web Tokens)",
+          "description": "Used for secure management of user sessions and authentication."
+        },
+        {
+          "tool": "Nodemailer",
+          "description": "Tool for sending emails, such as for password resets or account confirmations."
+        },
+        {
+          "tool": "Nookies",
+          "description": "Used for cookie manipulation, essential in managing sessions and user preferences."
+        },
+        {
+          "tool": "Bcrypt",
+          "description": "For secure hashing of passwords, ensuring the security of user data."
         }
       ]
     },

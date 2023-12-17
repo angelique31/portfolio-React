@@ -39,21 +39,21 @@ export const StyledNavItem = styled.li`
     border: none;
     cursor: pointer;
     outline: none;
-    position: relative; 
+    position: relative;
     overflow: hidden; // pour s'assurer que l'animation reste à l'intérieur du lien
     font-size: ${(props) => (props.$isScrolled ? "0.8rem" : "1.1rem")};
     &:hover {
-        color: #ffb957; 
-  
+        color: #ffb957;
+
         &::after {
           width: 100%;
         }
       }
   }
-  
+
     @media (max-width: 1009px) {
       &.contact {
-        margin-top: 10px; 
+        margin-top: 10px;
       }
 
       border: none;

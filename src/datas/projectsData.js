@@ -19,6 +19,16 @@ const projectsData = [
     externalLink: "https://angelique31.github.io/clone-site-meteoFrance/",
     githubLink: "https://github.com/angelique31/clone-site-meteoFrance",
   },
+  {
+    id: "studyNetifly",
+    title: "Reproduction du site de Netflix",
+    description:
+      "Projet personnel développé avec NextJS, ce site est la reproduction du site de Netflix.",
+    images: ["/assets/studyNetifly/studyNetifly_desktop2.png"],
+    technologies: ["Styled Components", "NextJS", "Mongodb", "API REST TMDB"],
+    externalLink: "https://stream-study.vercel.app/",
+    githubLink: "https://github.com/angelique31/stream-study",
+  },
 ];
 
 export default projectsData;

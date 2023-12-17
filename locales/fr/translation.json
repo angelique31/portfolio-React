@@ -59,6 +59,8 @@
     "project_0_description": "Projet personnel développé en React, ce site présente une variété de recettes de cuisine.",
     "project_1_title": "Page d'accueil Météo France",
     "project_1_description": "Réplique de la page d'accueil de Météo France réalisée uniquement avec HTML et CSS.",
+    "project_2_title": "Reproduction du site de Netflix",
+    "project_2_description": "Projet personnel développé avec NextJS, ce site est la reproduction du site de Netflix.",
     "projects_subtitle": "Réalisations personnelles menées indépendamment de mon parcours académique, reflétant ma passion et mon engagement envers le développement.",
 
     "training_projects_subtitle": "Projets réalisés dans le cadre de ma formation en développement web, mettant en avant les compétences techniques que j'ai acquises.",
@@ -149,6 +151,62 @@
         {
           "tool": "SCSS",
           "description": "Personnalisation, design, et mise en page responsive du site."
+        }
+      ]
+    },
+    "studyNetifly": {
+      "id": "studyNetifly",
+      "title": "Reproduction du site de Netflix",
+      "description": {
+        "intro": "Ce projet consistait à créer une reproduction du site de Netflix, en utilisant NextJS.",
+        "objective": "L'objectif principal était de développer des compétences avancées dans la création d'applications web modernes, notamment la gestion de l'état global, l'authentification, et la communication avec les bases de données.",
+        "challenge": "Le défi principal a été de gérer l'authentification et les données utilisateur, tout en assurant une expérience utilisateur fluide et réactive, similaire à celle de Netflix.",
+        "responsive": "Le site est entièrement responsive, offrant une expérience utilisateur optimale sur tous les appareils, des mobiles aux ordinateurs de bureau.",
+        "optimizationAndAccessibility": "Une attention particulière a été accordée à l'optimisation des performances et à l'accessibilité, en utilisant les meilleures pratiques de développement web.",
+        "collaboration": [
+          "En travaillant en équipe sur ce clone de Netflix, et notamment en adoptant des méthodologies comme Agile et Scrum, plusieurs améliorations auraient été possibles pour ce projet.",
+          "1. Des revues de code régulières auraient permis d'assurer une meilleure qualité et une architecture plus solide grâce aux échanges et au partage de connaissances, particulièrement utile pour les technologies avancées comme Redux et Next.js.",
+          "2. En collaborant avec une équipe, nous aurions pu solliciter un éventail plus large d'utilisateurs pour tester le projet, offrant ainsi des retours plus variés et améliorant l'accessibilité et la responsivité.",
+          "3. Le partage des tâches, particulièrement dans les domaines de la gestion des données avec MongoDB et la sécurisation des communications avec des outils comme JWT, aurait accéléré le développement, chaque membre apportant ses compétences spécifiques.",
+          "4. La mise en œuvre de pratiques de développement collaboratif, comme l'intégration continue et les déploiements fréquents, aurait favorisé un workflow plus efficace et une meilleure gestion des fonctionnalités du site."
+        ]
+      },
+      "toolsAndTech": [
+        {
+          "tool": "Next.js",
+          "description": "Framework utilisé pour la construction et le rendu côté serveur du site."
+        },
+        {
+          "tool": "Styled Components",
+          "description": "Utilisé pour la personnalisation et le design, facilitant la mise en œuvre de thèmes et de styles réactifs."
+        },
+        {
+          "tool": "Redux",
+          "description": "Gestion de l'état global de l'application, facilitant la communication entre les composants."
+        },
+        {
+          "tool": "MongoDB & Mongoose",
+          "description": "Base de données pour stocker les informations des utilisateurs et intégration avec Mongoose pour la modélisation des données."
+        },
+        {
+          "tool": "API REST TMDB",
+          "description": "Utilisée pour récupérer des informations sur les films et les séries pour simuler l'expérience Netflix."
+        },
+        {
+          "tool": "JWT (JSON Web Tokens)",
+          "description": "Utilisé pour la gestion sécurisée des sessions utilisateurs et l'authentification."
+        },
+        {
+          "tool": "Nodemailer",
+          "description": "Outil pour l'envoi d'emails, comme pour la réinitialisation des mots de passe ou la confirmation des comptes."
+        },
+        {
+          "tool": "Nookies",
+          "description": "Utilisé pour la manipulation des cookies, essentiel dans la gestion des sessions et des préférences utilisateurs."
+        },
+        {
+          "tool": "Bcrypt",
+          "description": "Pour le hachage sécurisé des mots de passe, assurant la sécurité des données utilisateurs."
         }
       ]
     },

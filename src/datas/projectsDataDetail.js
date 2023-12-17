@@ -20,6 +20,16 @@ const projectsDataDetail = [
   },
 
   {
+    id: "studyNetifly",
+    externalLink: "https://stream-study.vercel.app/",
+    additionalImages: [
+      "/assets/studyNetifly/studyNetifly_desktop.png",
+      "/assets/studyNetifly/studyNetifly_mobile.png",
+      "/assets/delices_culinaires/rapportLighthouse.png",
+    ],
+  },
+
+  {
     id: "fisheye",
     externalLink: "https://angelique31.github.io/P6--Fisheye/",
     additionalImages: [
